@@ -1,0 +1,362 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+TRABAJO DE FIN DE GRADO
+\begin_inset Newline newline
+\end_inset
+
+ESTUDIO DE ALGORITMOS CUÁNTICOS Y RELACIÓN DE LOS MISMOS CON LA FÍSICA
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Título a concretar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Raúl Osuna Sánchez-Infante
+\end_layout
+
+\begin_layout Date
+Mayo de 2021
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Resumen o abstract
+\end_layout
+
+\begin_layout Standard
+Esta parte queda mejor si se rellena la última.
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Subsection
+Fundamentos matemáticos y lógicos
+\end_layout
+
+\begin_layout Standard
+En principio, simplemente enunciarlas y quizás incluir una simple información
+ al respecto de las herramientas que se emplearán, ya que ya se han estudiado
+ en los cursos anteriores del grado y no es el objetivo de este TFG.
+ Conviene considerar si se debería mover todo este punto a la sección 
+\end_layout
+
+\begin_layout Subsubsection
+Números complejos
+\end_layout
+
+\begin_layout Subsubsection
+Vectores
+\end_layout
+
+\begin_layout Subsubsection
+Álgebra de Boole y puertas lógicas clásicas
+\end_layout
+
+\begin_layout Subsection
+Bases físicas y particularidades de la física cuántica
+\end_layout
+
+\begin_layout Standard
+Para no caer en el error de hacer un TFG con poca relación con la física,
+ extenderse aquí.
+\end_layout
+
+\begin_layout Subsubsection
+Mecánica cuántica y aplicación a algoritmos
+\end_layout
+
+\begin_layout Itemize
+Dualidad onda-partícula
+\end_layout
+
+\begin_layout Itemize
+Superposición
+\end_layout
+
+\begin_layout Itemize
+Entrelazamiento
+\end_layout
+
+\begin_layout Itemize
+Interferencia
+\end_layout
+
+\begin_layout Itemize
+Qubits y esfera de Bloch.
+ Notación bra-ket.
+ Probabilidades de un estado
+\end_layout
+
+\begin_layout Itemize
+Postulados cuánticos
+\end_layout
+
+\begin_layout Itemize
+Puertas cuánticas
+\end_layout
+
+\begin_layout Itemize
+Representación matemática de los circuitos cuánticos
+\end_layout
+
+\begin_layout Itemize
+Supremacía cuántica
+\end_layout
+
+\begin_layout Itemize
+Codificación superdensa
+\end_layout
+
+\begin_layout Itemize
+Criptografía cuántica (BB84)
+\end_layout
+
+\begin_layout Itemize
+Teleportación cuántica
+\end_layout
+
+\begin_layout Subsection
+Fundamentos computacionales
+\end_layout
+
+\begin_layout Subsubsection
+Algoritmos
+\end_layout
+
+\begin_layout Standard
+Algoritmos cuánticos.
+ Oráculos.
+ Descripción de algoritmos (Deutsch-Josza, Grover, etc...)
+\end_layout
+
+\begin_layout Section
+Objetivos
+\end_layout
+
+\begin_layout Itemize
+Estudio de diversos ejemplos de algoritmos cuánticos
+\end_layout
+
+\begin_layout Itemize
+Comparación de los mismos con los algoritmos clásicos equivalentes, en términos
+ como velocidad y eficiencia
+\end_layout
+
+\begin_layout Itemize
+Implementación práctica personal de un algoritmos ya existente (Deutsch-Josza)
+\end_layout
+
+\begin_layout Itemize
+Implementación personal y ampliación de un algoritmo ya existente (Grover
+ para 3 qubits, implementando la búsqueda de cualquier posible solución
+ dentre de las 
+\begin_inset Formula $2^{3}=8$
+\end_inset
+
+ posibles, incluyendo soluciones dobles)
+\end_layout
+
+\begin_layout Itemize
+Ejecución de los algoritmos tanto en simuladores cuánticos, como en ordenadores
+ cuánticos reales.
+\end_layout
+
+\begin_layout Section
+Métodos y material
+\end_layout
+
+\begin_layout Itemize
+Lenguaje Python para la programación de los algoritmos.
+\end_layout
+
+\begin_layout Itemize
+Librería Qiskit para, entre otras cosas, la implementación de puertas cuánticas
+ de una manera simple mediante código.
+\end_layout
+
+\begin_layout Itemize
+Cuenta gratuita de IBM Quantum Experience para acceder a la ejecución del
+ código en hardware cuántico real.
+\end_layout
+
+\begin_layout Section
+Resultados
+\end_layout
+
+\begin_layout Itemize
+Comparación de la mejora en la eficiencia según el número de pasos necesario
+\end_layout
+
+\begin_layout Section
+Discusión
+\end_layout
+
+\begin_layout Itemize
+Discusión de los errores en el hardware real.
+ Explicaciones al respecto.
+\end_layout
+
+\begin_layout Itemize
+Limitaciones de los algoritmos.
+ Hardware.
+ Estado del arte para la generación de qubits.
+ Caracterización de los circuitos y puertas cuánticas.
+\end_layout
+
+\begin_layout Section
+Conclusiones
+\end_layout
+
+\begin_layout Section
+Anexos
+\end_layout
+
+\begin_layout Subsection
+Código fuente
+\end_layout
+
+\begin_layout Standard
+Disponible en Github: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://github.com/raulillo82/TFG-Fisica-2021"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Listado de archivos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+license.txt
+\end_layout
+
+\begin_layout Plain Layout
+
+d-j.py
+\end_layout
+
+\begin_layout Plain Layout
+
+grover.py
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Bibliografía
+\end_layout
+
+\end_body
+\end_document
