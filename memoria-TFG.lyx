@@ -164,19 +164,33 @@ Fundamentos matemáticos y lógicos
 En principio, simplemente enunciarlas y quizás incluir una simple información
  al respecto de las herramientas que se emplearán, ya que ya se han estudiado
  en los cursos anteriores del grado y no es el objetivo de este TFG.
- Conviene considerar si se debería mover todo este punto a la sección 
+ Conviene considerar si se debería mover todo este punto a la sección de
+ anexos.
 \end_layout
 
 \begin_layout Subsubsection
 Números complejos
 \end_layout
 
+\begin_layout Standard
+Simple introducción.
+\end_layout
+
 \begin_layout Subsubsection
 Vectores
 \end_layout
 
+\begin_layout Standard
+Análogo a los números complejos.
+\end_layout
+
 \begin_layout Subsubsection
 Álgebra de Boole y puertas lógicas clásicas
+\end_layout
+
+\begin_layout Standard
+Seguir la idea de los dos puntos anteriores.
+ Breve.
 \end_layout
 
 \begin_layout Subsection
@@ -185,7 +199,8 @@ Bases físicas y particularidades de la física cuántica
 
 \begin_layout Standard
 Para no caer en el error de hacer un TFG con poca relación con la física,
- extenderse aquí.
+ extenderse algo más aquí (en comparación con la implementación de los algoritmo
+).
 \end_layout
 
 \begin_layout Subsubsection
@@ -227,19 +242,19 @@ Representación matemática de los circuitos cuánticos
 \end_layout
 
 \begin_layout Itemize
-Supremacía cuántica
+Supremacía cuántica (resumen)
 \end_layout
 
 \begin_layout Itemize
-Codificación superdensa
+Codificación superdensa (resumen)
 \end_layout
 
 \begin_layout Itemize
-Criptografía cuántica (BB84)
+Criptografía cuántica (BB84) (resumen)
 \end_layout
 
 \begin_layout Itemize
-Teleportación cuántica
+Teleportación cuántica (resument)
 \end_layout
 
 \begin_layout Subsection
@@ -253,7 +268,10 @@ Algoritmos
 \begin_layout Standard
 Algoritmos cuánticos.
  Oráculos.
- Descripción de algoritmos (Deutsch-Josza, Grover, etc...)
+ Descripción de algoritmos (Deutsch-Josza, Grover, etc...).
+ Puede que haya que mover parte de la explicación dada del punto 5 aquí
+ (o en su defecto, añadir una introducción aquí, pero evitando repetir informaci
+ón).
 \end_layout
 
 \begin_layout Section
@@ -265,16 +283,16 @@ En este trabajo de fin de grado se buscan diversos objetivos, tales como:
 \end_layout
 
 \begin_layout Itemize
-Estudio de diversos ejemplos de algoritmos cuánticos
+Estudio de diversos ejemplos de algoritmos cuánticos.
 \end_layout
 
 \begin_layout Itemize
 Comparación de los mismos con los algoritmos clásicos equivalentes, en términos
- como velocidad y eficiencia
+ como velocidad y eficiencia.
 \end_layout
 
 \begin_layout Itemize
-Implementación práctica personal de un algoritmo ya existente (Deutsch-Josza)
+Implementación práctica personal de un algoritmo ya existente (Deutsch-Josza).
 \end_layout
 
 \begin_layout Itemize
@@ -284,7 +302,7 @@ Implementación personal y ampliación de un algoritmo ya existente (Grover
 \begin_inset Formula $2^{3}=8$
 \end_inset
 
- posibles, incluyendo soluciones dobles)
+ posibles, incluyendo soluciones dobles).
 \end_layout
 
 \begin_layout Itemize
@@ -296,18 +314,126 @@ Ejecución de los algoritmos tanto en simuladores cuánticos, como en ordenadore
 Métodos y material
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
+Para el desarrollo de este trabajo se han empleado las siguiente herramientas:
+\end_layout
+
+\begin_layout Subsection
 Lenguaje Python para la programación de los algoritmos.
 \end_layout
 
-\begin_layout Itemize
-Librería Qiskit para, entre otras cosas, la implementación de puertas cuánticas
- de una manera simple mediante código.
+\begin_layout Standard
+El lenguaje de programación empleado es python.
+ No sólo por ser muy habitual para cualquier tipo de algoritmo hoy en día,
+ ni por su sencillez, sino principalemente por la librería ya implementada
+ existente, que se trata en el siguiente punto.
 \end_layout
 
-\begin_layout Itemize
-Cuenta gratuita de IBM Quantum Experience para acceder a la ejecución del
- código en hardware cuántico real.
+\begin_layout Subsection
+Librería Qiskit 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-qiskit-homepage,key-qiskit-wiki"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Permite, entre otras cosas, la implementación de puertas cuánticas de una
+ manera simple mediante código.
+ Las posibilidades con esta librería son infinitas, y para cualquier consulta
+ concreta lo mejor es hacer referenciar a la bibliografía añadida aquí.
+ Se entiende que los detalles de Qiskit quedan un poco al margen de la Física
+ y por ello se intenta centrar el trabajo en ella, tomando esta librería
+ como lo que es, una herramienta de la que se hace uso para un fin, como
+ podrían ser las Matemáticas en tantos campos de la Física.
+\end_layout
+
+\begin_layout Subsection
+IBM Quantum Experience 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-ibm_quantum"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+IBM ofrece la posibilidad de acceder a hardware cuántico real mediante una
+ cuenta gratuita, la cual permite ejecutar código en dicho hardware (lo
+ que sería una analogía de implementar las puertas cuánticas deseadas en
+ dicho hardware).
+\end_layout
+
+\begin_layout Standard
+Una vez creada la cuenta, el acceso a ella en el código del programa no
+ tiene mayor complicación y está detallado en la documentación de IBM referencia
+da aquí.
+ Se ha de crear un token de acceso (que sustituye a la contraseña y se guarda
+ en el propio equipo, en caso de ejecutarse el programa en otro equipo,
+ haría falta el mismo token.
+ O bien se podría modificar el código para usar la cuenta del usuario que
+ desee ejecutarlo, tras haber guardado su propio token).
+ En el caso de que no se opte por visualizar los resultados en hardware
+ cuántico real, no es necesario configurar ninguna cuenta de IBM, ya que
+ esta parte del código no se llegará a ejecutar y no daría por tanto ningún
+ error.
+\end_layout
+
+\begin_layout Subsection
+Control de versiones Github 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-github"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A la hora de codificar un programa de cualquier tipo, resulta muy útil el
+ empleo de un software para control de versiones.
+ Es más, este mismo software se puede usar para cualquier tipo de archivo
+ (siendo especialmente útil cuando dicho archivo está en texto plano, ya
+ que permite comparar versiones de una manera muy fácil e intuitiva, el
+ ejemplo serían las fuentes de \SpecialChar LaTeX
+ (para el PDF correspondiente ya no tiene
+ tanta utilidad al no estar éste en texto plano).
+\end_layout
+
+\begin_layout Subsection
+Procesador de textos \SpecialChar LyX
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-lyx"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se introdujo en el punto anterior, esta memoria se ha escrito en \SpecialChar LaTeX
+.
+ Sin embargo, si no se tiene el conocimiento de dicho lenguaje, la curva
+ de aprendizaje puede ser algo lenta al principio.
+ Resulta mucho más fácil el empleo de un procesador de textos que haga uso
+ \SpecialChar LaTeX
+, sin tener que codificar el mismo.
+ Esto es lo que logra el software libre \SpecialChar LyX
+.
+ Este documento es el segundo empleado para realizar un texto de características
+ similares y el resultado es muy satisfactorio.
 \end_layout
 
 \begin_layout Section
@@ -1358,7 +1484,7 @@ noprefix "false"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1401,6 +1527,73 @@ Circuitos cuánticos para el caso de una función constante
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+Las probabilidades obtenidas para cada uno de los casos se pueden ver en
+ las gráficas de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuitos_dj_constante_prob"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (las gráficas están en el mismo orden que los circuitos anteriores).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuitos_dj_constante_prob"
+
+\end_inset
+
+Probabilidades medidas para los circuitos cuánticos en el caso de una función
+ constante
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename dj_cte_0_prob.png
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename dj_cte_1_prob.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Desarrollando el caso análogo para una función balanceada, se llega a los
  valores mostrados en el cuadro 
 \begin_inset CommandInset ref
@@ -1914,6 +2107,69 @@ Circuitos cuánticos para el caso de una función balanceada
 
 \end_layout
 
+\begin_layout Standard
+Y se pueden añadir las probabilidades calculadas, tal y como se hizo en
+ el caso anterior, como se muestra en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuitos_dj_balanceado_prob"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, de nuevo siguiendo el mismo orden que el elegido para los circuitos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuitos_dj_balanceado_prob"
+
+\end_inset
+
+Probabilidades medidas para los circuitos cuánticos en el caso de una función
+ balanceada
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename dj_balanced_0_prob.png
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename dj_balanced_1_prob.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Algoritmo de Grover
 \end_layout
@@ -2123,7 +2379,7 @@ noprefix "false"
  algoritmo: paso 2 al principio (los qubits ya están inicializados a cero),
  primera parte del paso 3 (oráculo) tras la siguiente barrera, algoritmo
  de difusión después de la siguiente barrera y por último la medición tras
- la última barrera:
+ la última barrera (que se ha dibujado como doble en este caso):
 \end_layout
 
 \begin_layout Standard
@@ -2170,6 +2426,67 @@ Circuito para el algoritmo cuántico de Grover con 2 qubits y solución
 \end_layout
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se adjunta también la distribución de probabilidades de la medición, que
+ en este caso es del 100%, como se puede ver en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Grover-2-11_prob"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename grover_2_11_prob.png
+	width 40col%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Grover-2-11_prob"
+
+\end_inset
+
+Probabilidad medida para el algoritmo cuántico de Grover con 2 qubits y
+ solución 
+\begin_inset Quotes fld
+\end_inset
+
+11
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2258,14 +2575,20 @@ noprefix "false"
 
 \end_inset
 
-:
+.
+ En el mismo se puede apreciar, gracias a la separación mediante barreras,
+ cada una de las partes del algoritmo: en primer lugar, la superposición
+ (antes de la primera barrera).
+ A continuación, la parte del oráculo, hasta la siguiente barrera.
+ Seguidamente, el algoritmo de difusión de Grover, hasta la doble barrera
+ final, tras la cual se produce la medición.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2401,7 +2724,10 @@ noprefix "false"
 \begin_inset Quotes frd
 \end_inset
 
-:
+.
+ Gracias a los separadores resulta fácil observar que la parte del oráculo
+ y la del algoritmo de difusión están repetidas una vez, produciéndose la
+ medición después de esta repetición.
 \end_layout
 
 \begin_layout Standard
@@ -2661,13 +2987,291 @@ Probabilidad medida para el algoritmo cuántico de Grover con 3 qubits y
 
 \end_layout
 
+\begin_layout Standard
+Todos estos resultados han sido implementados en un simulador cuántico,
+ esto es, una situación ideal y teórica.
+ Adicionalmente, se ha añadido la opción al programa implementado de ejecutar
+ los distintos algoritmos en hardware cuántico real, gracias al empleo de
+ una cuenta gratuita en el programa 
+\begin_inset Quotes fld
+\end_inset
+
+IBM Quantum Experience
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Al habilitar esta opción, lo único que se hace es añadir una gráfica adicional
+ con el cálculo de probabilidades para este caso.
+ Se ha de destacar que esta parte de la simulación tardará bastante más
+ en ejecutarse, ya que el acceso al hardware cuántico es limitado y dicha
+ simulación se añadirá a una cola de ejecución.
+ El programa irá informando de la situación en la cola, y tras unos minutos
+ estarán disponibles los resultados, que se discutirán en la siguiente sección.
+\end_layout
+
 \begin_layout Section
 Discusión
 \end_layout
 
+\begin_layout Subsection
+Discusión de los errores en el hardware real
+\end_layout
+
+\begin_layout Standard
+Se estudia el caso del algoritmo de Grover para 2 qubits (como se podría
+ haber estudiado cualquier otro).
+ Se añade la opción para ejecución en hardware cuántico real.
+ En primer lugar, se muestran los resultados teóricos, ya conocidos de la
+ sección anterior (figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Grover-2-11_prob"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Tras unos pocos minutos, se obtiene también la gráfica con la distribución
+ de probabilidades del experimento realizado en dicho hardware cuántico,
+ que se muestra en la figura:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename grover_2_11_prob_qhw.png
+	width 40col%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Grover-2-11_prob_qhw"
+
+\end_inset
+
+Probabilidad medida para el algoritmo cuántico de Grover con 2 qubits y
+ solución 
+\begin_inset Quotes fld
+\end_inset
+
+11
+\begin_inset Quotes frd
+\end_inset
+
+, ejecutado en hardware cuántico real.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Parece lógico pensar que, en caso de existir errores en los resultados,
+ sea más fácil que cambie un único qubit (resultados 
+\begin_inset Quotes fld
+\end_inset
+
+01
+\begin_inset Quotes frd
+\end_inset
+
+ ó 
+\begin_inset Quotes fld
+\end_inset
+
+10
+\begin_inset Quotes frd
+\end_inset
+
+), que el caso de que ambos cambien a la vez (resultado 
+\begin_inset Quotes fld
+\end_inset
+
+00
+\begin_inset Quotes frd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Cabe plantearse si algoritmos como los estudiados en este trabajo se pueden
+ aplicar de una manera realista en la actualidad, y de no ser así, si se
+ podrá en un futuro.
+ Se puede adelantar, que hoy en día no se puede aplicar el algoritmo de
+ Grover para una cantidad de datos significativos.
+ Existen diversos problemas para ello, tales como:
+\end_layout
+
 \begin_layout Itemize
-Discusión de los errores en el hardware real.
- Explicaciones al respecto.
+Insuficiencia de qubits (no se podrá aplicar una búsqueda en una lista demasiado
+ grande)
+\end_layout
+
+\begin_layout Itemize
+Ruido en los qubits (los resultados no serán fieles a la realidad)
+\end_layout
+
+\begin_layout Itemize
+Imperfecciones en las puertas cuánticas (las salidas tras cada puerta no
+ son las esperadas).
+\end_layout
+
+\begin_layout Standard
+Al comenzar a estudiar los algoritmos, la mayoría de los resultados se obtuviero
+n en un simulador cuántico 
+\begin_inset Quotes fld
+\end_inset
+
+ideal
+\begin_inset Quotes frd
+\end_inset
+
+ (perfecto).
+ Este caso no existe en la realidad, por lo que antes o después se planteará
+ la pregunta de cómo elegir un equipo cuántico y cómo saber cómo de bueno
+ es el mismo.
+ Gracias a los criterios de DiVincenzo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-DiVincenzo"
+literal "false"
+
+\end_inset
+
+, esto resulta más fácil.
+ Dicho criterio establece cinco condiciones para establecer la calidad de
+ un ordenador cuántico:
+\end_layout
+
+\begin_layout Enumerate
+Un sistema físico escalable y con qubits bien caracterizados.
+ Esto es, qubits de un sistema con dos valores (|0> y |1>), y cuyos propiedades
+ (como podrían ser los valores de energía) están bien definidas.
+ Un qubit con valor de |1> decae a |0> con el tiempo, según una gráfica
+ de una exponencial caracterizada por un valor de tiempo de relajación,
+ 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+: 
+\begin_inset Formula $p(|1>)=K·e^{-t/T_{1}}$
+\end_inset
+
+.
+ La construcción de buenos ordenadores cuánticos se basa en tratar de aislar
+ los qubits todo lo posible, mediante el empleo de mejores materiales y
+ reducción los mecanismos de pérdidas.
+\end_layout
+
+\begin_layout Enumerate
+Posibilidad de inicializar el estado de los qubits (a uno de los valores
+ expuestos en el punto anterior, siendo |0> el valor más habitual).
+\end_layout
+
+\begin_layout Enumerate
+Largos periodos de decoherencia (tiempo en el que el qubit preserva sus
+ propiedades), mucho mayores que los tiempos de operación de las puertas
+ cuánticas.
+ Esto se caracteriza mediante un tiempo de decoherencia, llamado 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ y que se puede relacionar con el tiempo de relajación mediante la expresión:
+ 
+\begin_inset Formula $\frac{1}{T_{2}}=\frac{1}{2T_{1}}+\frac{1}{T_{\phi}}$
+\end_inset
+
+, siendo 
+\begin_inset Formula $T_{\phi}$
+\end_inset
+
+ el tiempo de desfase.
+ El resumen de estos tres puntos es tratar de aislar los qubits del entorno,
+ bien reduciendo el ruido del mismo, bien haciendo a los qubits menos susceptibl
+es a este ruido.
+\end_layout
+
+\begin_layout Enumerate
+Empleo de un conjunto universal de puertas cuánticas, tales como H, S, T,
+ CNOT.
+ El control de la respuesta de dichas puertas es complicado.
+ En la teoría una puerta va a suponer una transaformación en la esfera de
+ Bloch a un punto en concreto (ver la sección correspondien en la introducción).
+ Sin embargo, al tener dicha esfera un número infinito de puntos, las posibilida
+des de error son también infinitas.
+ Resumidamente, hay mucho margen de error.
+ Para cuantificar la calidad de las puertas cuánticas se empleará la fidelidad
+ de puerta, que no es otra cosa que el complementario de la tasa de error:
+ 
+\begin_inset Formula $f=1-\varepsilon$
+\end_inset
+
+, siendo 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ la tasa de error.
+ La medición de la fidelidad es campo en activa investigación.
+ Se podría pensar en una tasa de fidelidad 
+\begin_inset Formula $f=0,995$
+\end_inset
+
+ como una buena cifra.
+ Sin embargo, suponiendo un circuito con 100 puertas con esta tasa de fidelidad,
+ la fidelidad global sería de 
+\begin_inset Formula $f=0,995^{100}=0,6058=60,58\%$
+\end_inset
+
+.
+ Peor aún, para 200 puertas: 
+\begin_inset Formula $f=0,995^{200}=0,367=36,7\%$
+\end_inset
+
+.
+ Con 
+\begin_inset Quotes fld
+\end_inset
+
+tan sólo
+\begin_inset Quotes frd
+\end_inset
+
+ mejorar esta tasa de fidelidad de puerta a 
+\begin_inset Formula $f=0,999$
+\end_inset
+
+, los cálculos serían ahora: 
+\begin_inset Formula $f=0,999^{100}=90,48\%$
+\end_inset
+
+ o 
+\begin_inset Formula $f=0,999^{200}=81,86\%$
+\end_inset
+
+.
+ Y un circuito cuántico con 200 puertas no es nada poco habitual.
+\end_layout
+
+\begin_layout Enumerate
+Una capacidad de medida específica para qubits (si la medición no es adecuada,
+ los resultados no valen para nada).
 \end_layout
 
 \begin_layout Itemize
@@ -2675,6 +3279,7 @@ Limitaciones de los algoritmos.
  Hardware.
  Estado del arte para la generación de qubits.
  Caracterización de los circuitos y puertas cuánticas.
+ Quizás se pueda mover a conclusiones.
 \end_layout
 
 \begin_layout Section
@@ -2730,7 +3335,140 @@ grover.py
 \end_layout
 
 \begin_layout Section
+Agradecimientos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-7"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La idea de este trabajo de fin de grado nació al cursar durante el curso
+ 2020/21 el programa 
+\begin_inset Quotes fld
+\end_inset
+
+Introduction to Quantum Computing with IBM Quantum
+\begin_inset Quotes frd
+\end_inset
+
+, de 
+\begin_inset Quotes fld
+\end_inset
+
+Qubit x Qubit
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Se han tomado partes de dicho material a modo de resumen teórico, y la
+ idea de los algoritmos a plantear estaba propuesta en él.
+ Por ejemplo, se hacía una implementación básica del algoritmo de Grover
+ para 2 qubits con una solución fija, y en este trabajo se ha generalizado
+ para cualquier solución.
+ En el caso de 3 qubits, sólo se estudiaba el caso de solución única con
+ una única iteración y con una solución concreat.
+ Tras consultar bibliografía adicional, se implementó para cualquier posible
+ solución única en una o dos iteraciones, así como para una solución doble,
+ tal y como se ha explicado en la sección de resultados.
+\end_layout
+
+\begin_layout Section
 Bibliografía
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-qiskit-homepage"
+literal "false"
+
+\end_inset
+
+Qiskit homepage: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://qiskit.org/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-qiskit-wiki"
+literal "false"
+
+\end_inset
+
+Wikipedia: Qiskit (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Qiskit"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-ibm_quantum"
+literal "false"
+
+\end_inset
+
+IBM Quantum: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://quantum-computing.ibm.com/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-github"
+literal "false"
+
+\end_inset
+
+Github: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://github.com"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-lyx"
+literal "false"
+
+\end_inset
+
+Lyx: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.lyx.org/"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -2766,6 +3504,41 @@ LatexCommand href
 name "https://www.nature.com/articles/s41467-017-01904-7"
 target "https://www.nature.com/articles/s41467-017-01904-7"
 literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-DiVincenzo"
+literal "false"
+
+\end_inset
+
+Wikipedia: DiVincenzo's criteria (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/DiVincenzo%27s_criteria"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-7"
+
+\end_inset
+
+Qubit x Qubit: Programs (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.qubitbyqubit.org/programs"
 
 \end_inset
 
