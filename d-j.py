@@ -39,7 +39,7 @@ In order to evaluate the same problem with a quantum circuit (which is hopefully
 Is f(x) reversible?? Unfortunately not.
 
 This will be bypassed by using an oracle (blackbox). Our oracle will get two inputs (qubits) and yield two outputs (qubits).
-Inputs will q1 and q0. Outputs will be q1 and (y xor x). If we apply that oracle twice, we get the inputs. So, the oracle is reversible.
+Inputs will be q0(x) and q1(y). Outputs will be q1 and (y xor f(x)). If we apply that oracle twice, we get the inputs. So, the oracle is reversible.
 XOR is a classical gate, but it does have its equivalent in the quantum world: CNOT gate.
 
 The algorithm uses two of the three special properties of the quantum world: Superposition and Interference (the remaining one would be (Entanglement)
@@ -49,7 +49,7 @@ Steps:
     3: Apply H (Hadamard) gates to both qubits, to bring both qubits to a superposition state
     4: Apply the oracle
     5: Apply H gates again to both outputs (interference)
-    6: Measure x (q0). 0 means constant, 1 means balanced
+    6: Measure q0. 0 means constant, 1 means balanced
 
 The oracle was applied only once (H gates are "cheap" computationally speaking). Actually, if this expanded to n bits, the Oracle would still only need one evaluation! We would still need 2n qubits to run the algorithm though.
 So the complexity of the algorithm in general would be O(1).
@@ -120,7 +120,7 @@ def initialize():
     for i in range(num_qubits):
         qc.h(i)    # Step 3
     qc.barrier() # In order to visualize better
-    random_oracle(qc)  # Step 4, impement our oracle randomly
+    random_oracle(qc)  # Step 4, implement our oracle randomly
     qc.barrier() # In order to visualize better
     for i in range(num_qubits):
         qc.h(i) # Step 5

@@ -28,11 +28,12 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -57,6 +58,10 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 2cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 3cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -78,29 +83,48 @@
 \begin_body
 
 \begin_layout Title
-TRABAJO DE FIN DE GRADO
+Universidad Nacional de Educación a Distancia
+\begin_inset Newline newline
+\end_inset
+
+Facultad de Ciencias
+\begin_inset Newline newline
+\end_inset
+
+Departamento de Física
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename escudo_uned.png
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Memoria del Trabajo de Fin de Grado
 \begin_inset Newline newline
 \end_inset
 
 ESTUDIO DE ALGORITMOS CUÁNTICOS Y RELACIÓN DE LOS MISMOS CON LA FÍSICA
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Título a concretar
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Author
 Raúl Osuna Sánchez-Infante
+\begin_inset Newline newline
+\end_inset
+
+Tutor: Víctor Alberto Fairén Le Lay
+\begin_inset Newline newline
+\end_inset
+
+Curso 2020/21
 \end_layout
 
 \begin_layout Date
-Mayo de 2021
 \begin_inset Newpage newpage
 \end_inset
 
@@ -111,6 +135,10 @@ Mayo de 2021
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
+\end_inset
+
+
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -232,6 +260,10 @@ Algoritmos cuánticos.
 Objetivos
 \end_layout
 
+\begin_layout Standard
+En este trabajo de fin de grado se buscan diversos objetivos, tales como:
+\end_layout
+
 \begin_layout Itemize
 Estudio de diversos ejemplos de algoritmos cuánticos
 \end_layout
@@ -242,7 +274,7 @@ Comparación de los mismos con los algoritmos clásicos equivalentes, en términ
 \end_layout
 
 \begin_layout Itemize
-Implementación práctica personal de un algoritmos ya existente (Deutsch-Josza)
+Implementación práctica personal de un algoritmo ya existente (Deutsch-Josza)
 \end_layout
 
 \begin_layout Itemize
@@ -282,8 +314,2351 @@ Cuenta gratuita de IBM Quantum Experience para acceder a la ejecución del
 Resultados
 \end_layout
 
-\begin_layout Itemize
-Comparación de la mejora en la eficiencia según el número de pasos necesario
+\begin_layout Subsection
+Algoritmo de Deutsch-Josza
+\end_layout
+
+\begin_layout Standard
+El algoritmo de Deutsch-Josza resuelve un problema que no tiene ningún objetivo
+ práctico, salvo demostrar la existencia de enunciados cuya resolución a
+ partir de un algoritmo cuántico es más eficiente que el método análogo
+ correspondiente mediante computación tradicional.
+\end_layout
+
+\begin_layout Standard
+El algoritmo se basa en hallar si una función cualquiera f(x) es constante
+ o balanceada.
+ Esto quiere decir, para una entrada de un único bit, se quiere hallar si
+ su salida depende de la entrada o no.
+\end_layout
+
+\begin_layout Standard
+La forma más fácil y gráfica de visualizar cada uno de los casos es mediante
+ una tabla de la verdad, habitual en la electrónica digital.
+ Dicha tabla podría tomar dos formas en cada uno de los dos casos, como
+ se muestra en los siguientes apartados
+\end_layout
+
+\begin_layout Subsubsection
+Caso constante
+\end_layout
+
+\begin_layout Standard
+Como el propio nombre indica, la salida será siempre 0 ó 1, independientemente
+ de la entrada
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+f(x)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+f(x)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tabla-verdad-constante"
+
+\end_inset
+
+Tablas de la verdad para el caso constante
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Caso balanceado
+\end_layout
+
+\begin_layout Standard
+La salida se alterna según sea la entrada 0 ó 1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+f(x)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+f(x)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tabla-verdad-balanceado"
+
+\end_inset
+
+Tablas de la verdad para el caso balanceado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede observar para ambos casos, que se necesitan 2 evaluaciones de la
+ función para saber si la misma es constante o balanceada.
+ Generalizando, para n bits, serían necesarias 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ evaluaciones (o visto de otra manera, analizar todas las combinaciones
+ posibles de bits de entrada).
+ La complejidad del algoritmo clásico sería por tanto de 
+\begin_inset Formula $O(2^{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para la evaluación de la función mediante un algoritmo cuántico, que se
+ espera que sea más eficiente, se conoce que todas las puertas cuánticas
+ empleadas han de ser reversibles.
+ Analizando f(x), se concluye rápidamente que ésta no es reversible.
+ Se debe evitar este problema mediante la introducción de un oráculo (vocablo
+ inglés, en español se podría denominar también como 
+\begin_inset Quotes fld
+\end_inset
+
+caja negra
+\begin_inset Quotes frd
+\end_inset
+
+).
+ Dicho oráculo tendrá como entradas dos qubits y como salidas otros dos
+ qubits.
+ Las entradas serán denominadas como q0 y q1, y las salidas serán simplemente
+ q0 y la operación XOR de q1 con f(x).
+ En el mundo cuántico, la puerta XOR no existe, sin embargo sí que hay un
+ equivalente, que no es otro que la puerta CNOT.
+\end_layout
+
+\begin_layout Standard
+El algoritmo emplea dos de las propiedades del mundo cuántico antes introducidas
+ y que tanto se emplean para esta clase de algoritmos: la superposición
+ y la interferencia (en este caso no se hace uso de la tercera propiedad,
+ el entrelazamiento cuántico.
+\end_layout
+
+\begin_layout Standard
+Esquemáticamente, el algoritmo para construcción del circuito cuántico y
+ que se ha codificado en python como se puede ver en el código anexo, es
+ el siguiente:
+\end_layout
+
+\begin_layout Enumerate
+Definir dos qubits, 
+\begin_inset Quotes fld
+\end_inset
+
+x
+\begin_inset Quotes frd
+\end_inset
+
+ e 
+\begin_inset Quotes fld
+\end_inset
+
+y
+\begin_inset Quotes frd
+\end_inset
+
+, o 
+\begin_inset Quotes fld
+\end_inset
+
+q0
+\begin_inset Quotes frd
+\end_inset
+
+ y 
+\begin_inset Quotes fld
+\end_inset
+
+q1
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Invertir 
+\begin_inset Quotes fld
+\end_inset
+
+y
+\begin_inset Quotes frd
+\end_inset
+
+ o 
+\begin_inset Quotes fld
+\end_inset
+
+q1
+\begin_inset Quotes frd
+\end_inset
+
+ para tener un valor de 1 en dicho qubit (los qubit se inicializan por defecto
+ a 0).
+\end_layout
+
+\begin_layout Enumerate
+Aplicar superposición mediante la puerta H de Hadamard a ambos qubits.
+\end_layout
+
+\begin_layout Enumerate
+Aplicar el oráculo.
+\end_layout
+
+\begin_layout Enumerate
+Aplicar de nuevo puertas H a ambos qubits, mediante lo cual se estará aplicando
+ interferencia para poder medir el resultado.
+\end_layout
+
+\begin_layout Enumerate
+Medir la salida.
+ El valor de q0 codifica el tipo de función, significando 0 que dicha función
+ es constante y 1 que es balanceada.
+\end_layout
+
+\begin_layout Standard
+Se puede observar como el oráculo sólo se aplica una vez.
+ Las puertas Hadamard tienen una complejidad computacional despreciable
+ respecto al oráculo, una vez que se escala el algoritmo.
+ Se ha pasado de una complejidad exponencial, a una constante 
+\begin_inset Formula $O(1)$
+\end_inset
+
+, siendo por tanto la mejora exponencial.
+\end_layout
+
+\begin_layout Subsubsection
+Definición del oráculo
+\end_layout
+
+\begin_layout Standard
+La definición detallada del oráculo daría para otro estudio completo por
+ separado.
+ Tanto en este caso del algoritmo de Deutsch-Josza como en el siguiente
+ de Grover, no se detallarán en demasía estas 
+\begin_inset Quotes fld
+\end_inset
+
+cajas negras
+\begin_inset Quotes frd
+\end_inset
+
+ y simplemente se hará uso de ellas, suponiendo conocida su forma.
+ A la hora de codificar, la forma del oráculo se implementa conocido el
+ tipo de función, balanceada o constante (esto es en realidad la solución
+ del problema).
+ Sin embargo, no se vuelve a consultar esta solución para obtener la respuesta.
+ Esto permite centrarse en el algoritmo, tema principal de estudio de este
+ trabajo.
+ Para este caso de Deutsch-Josza, se conoce que para la entrada de dos qubits,
+ se deja el primero de ellos igual y para el segundo se efectúa una XOR
+ del mismo con la función a evaluar f(x).
+ Se analizará si hay que hacer algún procesado adicional para cada uno de
+ los cuatro casos enunciados en el punto anterior, los dos de la función
+ constante y los dos de la función balanceada.
+ 
+\end_layout
+
+\begin_layout Standard
+Con esta explicación, se procede a analizar las tablas de la verdad para
+ los cuatro casos.
+ Recuérdese que una de las salidas del oráculo es inmediata y coincide con
+ el valor del primer qubit, por lo que no se muestra en las tablas para
+ simplificar.
+ Se estudia primero la construcción del oráculo para el caso de f(x) balanceada,
+ como se muestra en el cuadro 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:tabla-verdad-oráculo-constante"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x(q0)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+y(q1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+f(x)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+y XOR f(x)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x(q0)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+y(q1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+f(x)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+y XOR f(x)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tabla-verdad-oráculo-constante"
+
+\end_inset
+
+Tablas de la verdad del oráculo para el caso constante
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede ver, en el primero de los casos la salida corresponde con
+ y(q0), y en el segundo de ellos, su valor opuesto.
+ La implementación mediante puertas cuánticas sería la que se puede observar
+ en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuitos_dj_constante"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Por simplicidad, se muestra todo el circuito y no sólo el oráculo, que
+ correspondería a lo que hay entre los separadores (barreras) segundo y
+ tercero:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuitos_dj_constante"
+
+\end_inset
+
+Circuitos cuánticos para el caso de una función constante
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename dj_cte_0.png
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename dj_cte_1.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Desarrollando el caso análogo para una función balanceada, se llega a los
+ valores mostrados en el cuadro 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:tabla-verdad-oráculo-balanceado"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x(q0)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+y(q1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+f(x)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+y XOR f(x)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x(q0)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+y(q1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+f(x)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+y XOR f(x)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tabla-verdad-oráculo-balanceado"
+
+\end_inset
+
+Tablas de la verdad del oráculo para el caso balanceado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La implementación utilizará las mencionadas puertas cuánticas CNOT, como
+ se puede mostrar en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuitos_dj_balanceado"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuitos_dj_balanceado"
+
+\end_inset
+
+Circuitos cuánticos para el caso de una función balanceada
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename dj_balanced_0.png
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename dj_balanced_1.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Algoritmo de Grover
+\end_layout
+
+\begin_layout Standard
+El algoritmo fue propuesto por Lov Grover en 1996.
+ Se trata de un algoritmo para hallar un elemento en una lista, problema
+ muy habitual en computación y cuya resolución clásica se estudia en cualquier
+ curso básico de programación.
+ Esto mismo se puede aplicar no sólo para búsquedas de una base de datos,
+ sino para problemas de optimización (que también se basan en búsquedas
+ de posibles soluciones), o estádisticas tales como la media, mediana, etc...
+ Resulta intuitivo pensar que la complejidad de un algoritmo clásico de
+ búsqueda en una lista, buscando elemento por elemento de la misma, es de
+ 
+\begin_inset Formula $O(n)$
+\end_inset
+
+.
+ Se asume que la lista no tiene estructura y se ha tomado el peor caso posible
+ (worst case scenario).
+\end_layout
+
+\begin_layout Standard
+El algoritmo cuántico a estudiar reduce la complejidad al 
+\begin_inset Formula $O(\sqrt{N})$
+\end_inset
+
+, produciendo una mejora cuadrática.
+ Análogamente al caso estudiado anteriormente de Deutsch-Josza, el algoritmo
+ se vuelve a basar en los principios de superposición e interferencia para
+ acelerar la búsqueda.
+ Se necesitarán 
+\begin_inset Formula $log_{2}N$
+\end_inset
+
+ qubits.
+ Esquemáticamente, los pasos del algoritmo serían los siguientes:
+\end_layout
+
+\begin_layout Enumerate
+Inicialización de los qubits a 0.
+\end_layout
+
+\begin_layout Enumerate
+Aplicar una puerta H de Hadamard a cada uno de los qubits (superposición).
+\end_layout
+
+\begin_layout Enumerate
+Aplicación de un oráculo a los qubits, y aplicación del algoritmo de difusión
+ de Grover (interferencia).
+\end_layout
+
+\begin_layout Enumerate
+Medición.
+\end_layout
+
+\begin_layout Standard
+Los puntos 2 y 3 se pueden repetir, para los casos en los que el algoritmo
+ precise de más de una iteración.
+ Esto se verá con más claridad en alguno de los casos de la implementación.
+\end_layout
+
+\begin_layout Subsubsection
+Aplicación a dos qubits 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-qiskit-grover"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En primer lugar, se asigna igual probabilidad a cualquiera de los elementos
+ de la lista, ya que no se presupone ninguna solución más probable que otra,
+ lo cual se consigue mediante la superposición (segundo punto).
+\end_layout
+
+\begin_layout Standard
+La mayor complejidad del algoritmo estará por tanto en el punto tercero.
+ Respecto al oráculo (
+\begin_inset Quotes fld
+\end_inset
+
+caja negra
+\begin_inset Quotes frd
+\end_inset
+
+), para este caso lo que hará será simplemente multiplicar la amplitud de
+ la probabilidad (que no es más que la raíz cuadrada de la probabilidad)
+ de la solución por un valor de (-1).
+ Recuérdese que el oráculo conoce la solución (como se introdujo anteriormente,
+ la construcción real del oráculo es un campo complicado en el que se están
+ realizando muchos estudios al respecto).
+ Analizando matemáticamente, y para un ejemplo de cuatro elementos en la
+ lista (necesitándose por tanto dos qubits), con el elemento a buscar en
+ la cuarta posición, se necesitaría pasar del vector de amplitudes de probabilid
+ad: 
+\begin_inset Formula $\frac{1}{2}\begin{pmatrix}1\\
+1\\
+1\\
+1
+\end{pmatrix}$
+\end_inset
+
+, a este otro vector: 
+\begin_inset Formula $\frac{1}{2}\begin{pmatrix}1\\
+1\\
+1\\
+-1
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este se conseguiría aplicando una puerta cuya matriz fuera: 
+\begin_inset Formula $\begin{pmatrix}1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & -1
+\end{pmatrix}$
+\end_inset
+
+, matriz que coincide con la puerta Z controlada.
+ Para el caso genérico de una posición distinta a la cuarta, se deberán
+ manipular debidamente los qubits para obtener una matriz análoga con el
+ -1 en otro punto de la diagonal principal, sin más que aplicar puertas
+ X de Pauli (equivalente a la puerta NOT de los ordenadores clásicos) antes
+ y después de la puerta Z controlada.
+ Esta implementación se puede ver en el código.
+\end_layout
+
+\begin_layout Standard
+Operando en el ejemplo anterior:
+\begin_inset Formula 
+\[
+\begin{pmatrix}1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & -1
+\end{pmatrix}·\frac{1}{2}\begin{pmatrix}1\\
+1\\
+1\\
+1
+\end{pmatrix}=\frac{1}{2}\begin{pmatrix}1\\
+1\\
+1\\
+-1
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de aquí, sólo faltaría el operador de difusión de Grover, que es
+ el que se encarga de reflejar las amplitudes respecto de la media.
+ La media de las amplitudes ahora es de 1.
+ Si se refleja la amplitud respecto a esa nueva media, las tres primeras
+ componentes del vector van a resultar nulas y la última la unidad, es decir,
+ se pasa del vector 
+\begin_inset Formula $\frac{1}{2}\begin{pmatrix}1\\
+1\\
+1\\
+-1
+\end{pmatrix}$
+\end_inset
+
+, al vector: 
+\begin_inset Formula $\begin{pmatrix}0\\
+0\\
+0\\
+1
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En este caso se puede ver como la medición nos daría la solución con una
+ probabilidad del 100% tras una única ejecución del algoritmo (recuérdese
+ que 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+ es un valor esperado para N suficientemente grande).
+ En la figura 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:Grover-2-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ se puede ver el circuito cuántico correspondiente.
+ Se han separado mediante barreras o separadores cada uno de los pasos del
+ algoritmo: paso 2 al principio (los qubits ya están inicializados a cero),
+ primera parte del paso 3 (oráculo) tras la siguiente barrera, algoritmo
+ de difusión después de la siguiente barrera y por último la medición tras
+ la última barrera:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grover_2_11.png
+	width 100col%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Grover-2-11"
+
+\end_inset
+
+Circuito para el algoritmo cuántico de Grover con 2 qubits y solución 
+\begin_inset Quotes fld
+\end_inset
+
+11
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta particularización para únicamente dos qubits se puede encontrar en
+ muchos estudios.
+ Por ello, y queriendo ampliar el algoritmo a un caso más complicado, se
+ procede a implementar el mismo para tres qubits, lo que equivaldría a la
+ búsqueda en una lista de ocho elementos.
+\end_layout
+
+\begin_layout Subsubsection
+Aplicación a tres qubits 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-artículo-3qubits"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La base es la misma que en el caso anterior.
+ Se estudirán dos casos distintos, el primero de ellos con una única solución
+ (un único elemento a buscar), y el segundo con dos elementos distintos
+ de la lista a buscar.
+\end_layout
+
+\begin_layout Standard
+Para el primero de los casos, en la bibliografía se puede ver como la probabilid
+ad de hallar el valor adecuado es de:
+\begin_inset Formula 
+\begin{equation}
+p=\left(\left[\frac{N-2t}{N}+\frac{2(N-t)}{N}\right]\frac{1}{\sqrt{N}}\right)^{2}=\left(\frac{5}{4\sqrt{2}}\right)^{2}=0,78125\label{eq:prob_grover}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En donde el parámetro 
+\begin_inset Quotes fld
+\end_inset
+
+t
+\begin_inset Quotes frd
+\end_inset
+
+ corresponde al número de soluciones a buscar.
+ Comparado con el caso clásico, el mismo valor de probabilidad sería:
+\begin_inset Formula 
+\[
+p'=\frac{t}{N}+\frac{N-t}{N}·\frac{t}{N-1}=\frac{1}{8}+\frac{7}{8}·\frac{1}{7}=0,25
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se adjunta el circuito resultante para la medición del valor 
+\begin_inset Quotes fld
+\end_inset
+
+000
+\begin_inset Quotes frd
+\end_inset
+
+ en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Grover-3-1-1-000-circ"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grover_3_1_1_000_circ.png
+	width 100col%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Grover-3-1-1-000-circ"
+
+\end_inset
+
+Circuito para el algoritmo cuántico de Grover con 3 qubits y solución 
+\begin_inset Quotes fld
+\end_inset
+
+000
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para este caso también se adjunta la probabilidad medida, como se puede
+ ver en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Grover-3-1-1-000-prob"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename grover_3_1_1_000_prob.png
+	width 40col%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Grover-3-1-1-000-prob"
+
+\end_inset
+
+Probabilidad medida para el algoritmo cuántico de Grover con 3 qubits y
+ solución 
+\begin_inset Quotes fld
+\end_inset
+
+000
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Obviamente la probabilidad para el caso cuántico repitiendo el algoritmo
+ una segunda vez mejorará, al tener 
+\begin_inset Formula $2<\sqrt{N}<3$
+\end_inset
+
+.
+ En el circuito cuántico correspondiente de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Grover-3-1-2-111-circ"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ se puede apreciar como hay una parte duplicada que corresponde a la segunda
+ iteración.
+ En este caso se está tratando de hallar la solución 
+\begin_inset Quotes fld
+\end_inset
+
+111
+\begin_inset Quotes frd
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grover_3_1_2_111_circ.png
+	width 100col%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Grover-3-1-2-111-circ"
+
+\end_inset
+
+Circuito para el algoritmo cuántico de Grover con 3 qubits, doble iteración
+ y solución 
+\begin_inset Quotes fld
+\end_inset
+
+111
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y efectivamente, la probabilidad aumenta en este caso:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename grover_3_1_2_111_prob.png
+	width 40col%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Grover-3-1-2-111-prob"
+
+\end_inset
+
+Probabilidad medida para el algoritmo cuántico de Grover con 3 qubits, doble
+ iteración y solución 
+\begin_inset Quotes fld
+\end_inset
+
+111
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se repitiera una tercera vez, el valor pasaría a empeorar (lo cual no
+ parece intuitivo a primera vista, pero se basa en la parte del algoritmo
+ de difusión de Grover, que refleja las amplitudes de probabilidad respecto
+ de la media tras invertir previamente la del valor a buscar, tal y como
+ se comentó en el punto anterior).
+\end_layout
+
+\begin_layout Standard
+Para el caso de dos soluciones a buscar, 
+\begin_inset Formula $t=2$
+\end_inset
+
+, sustituyendo en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:prob_grover"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, se obtiene 
+\begin_inset Formula $p=1$
+\end_inset
+
+ (probabilidad de encontrar al menos una de las dos soluciones), mientras
+ que el mismo caso para el algoritmo clásico obtendría 
+\begin_inset Formula $p'=0,464$
+\end_inset
+
+.
+ Por ello, en este caso no se ha permitido al algoritmo ejecutarse más de
+ una vez.
+\end_layout
+
+\begin_layout Standard
+Se puede ver un ejemplo de la ejecución del algoritmo en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Grover_3_2_1_010-100-circ"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename grover_3_2_1_010-100_circ.png
+	width 100col%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Grover_3_2_1_010-100-circ"
+
+\end_inset
+
+Circuito para el algoritmo cuántico de Grover con 3 qubits y soluciones
+ 
+\begin_inset Quotes fld
+\end_inset
+
+010
+\begin_inset Quotes frd
+\end_inset
+
+ y 
+\begin_inset Quotes fld
+\end_inset
+
+100
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y las probabilidades asociadas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename grover_3_2_1_010-100_prob.png
+	width 40col%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Grover_3_2_1_010-100-prob"
+
+\end_inset
+
+Probabilidad medida para el algoritmo cuántico de Grover con 3 qubits y
+ soluciones 
+\begin_inset Quotes fld
+\end_inset
+
+010
+\begin_inset Quotes frd
+\end_inset
+
+ y 
+\begin_inset Quotes fld
+\end_inset
+
+100
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -356,6 +2731,45 @@ grover.py
 
 \begin_layout Section
 Bibliografía
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-qiskit-grover"
+literal "false"
+
+\end_inset
+
+Qiskit reference: Grover's Algorithm (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://qiskit.org/textbook/ch-algorithms/grover.html"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-artículo-3qubits"
+literal "false"
+
+\end_inset
+
+Nature: Complete 3-Qubit Grover search on a programmable quantum computer
+ (
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.nature.com/articles/s41467-017-01904-7"
+target "https://www.nature.com/articles/s41467-017-01904-7"
+literal "false"
+
+\end_inset
+
+)
 \end_layout
 
 \end_body

@@ -78,7 +78,7 @@ def initialize():
     return qc
 
 '''
-Implement controlled Z-gate, easy to reutilize
+Implement multi controlled Z-gate, easy to reutilize
 '''
 def mctz(qc):
     qc.h(2)
