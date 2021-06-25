@@ -144,6 +144,9 @@ Curso 2020/21
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 \end_layout
 
 \begin_layout Labeling
@@ -157,8 +160,11 @@ Resumen
 >>>>>>> 0c12c27 (Update June 25th 2021)
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
+<<<<<<< HEAD
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 \end_layout
 
 \begin_layout Standard
@@ -251,6 +257,9 @@ En esta sección se presenta un conjunto de conceptos matemáticos y lógicos
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
  la bibliografía referenciada en cada sección o subsección, ya que la mayoría
 =======
  la bibligrafía referenciada en cada sección o subsección, ya que la mayoría
@@ -261,9 +270,12 @@ En esta sección se presenta un conjunto de conceptos matemáticos y lógicos
 =======
  la bibligrafía referenciada en cada sección o subsección, ya que la mayoría
 >>>>>>> 0c12c27 (Update June 25th 2021)
+<<<<<<< HEAD
 =======
  la bibligrafía referenciada en cada sección o subsección, ya que la mayoría
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
  de ellos se han empleado únicamente como herramientas.
  La descripción detallada de cada una de esas herramientas incrementaría
  la densidad del trabajo y podría retirar la atención del tema fundamental
@@ -323,6 +335,9 @@ Máquina de Turing
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
  como la primera computadora (u ordenador, como se suele denominar en España),
  diseñada para descifrar las comunicaciones alemanas durante la Segunda
 =======
@@ -337,10 +352,13 @@ Máquina de Turing
  como la primera computadora (u ordenador, como se suele denominar en España)
  diseñada para descrifrar las comunicaciones alemanas durante la Segunda
 >>>>>>> 0c12c27 (Update June 25th 2021)
+<<<<<<< HEAD
 =======
  como la primera computadora (u ordenador, como se suele denominar en España)
  diseñada para descrifrar las comunicaciones alemanas durante la Segunda
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
  Guerra Mundial (1939).
 \end_layout
 
@@ -391,6 +409,9 @@ literal "false"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Álgebra-de-Boole"
@@ -403,8 +424,11 @@ name "subsec:Álgebra-de-Boole"
 >>>>>>> 0c12c27 (Update June 25th 2021)
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
+<<<<<<< HEAD
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 Álgebra de Boole y puertas lógicas clásicas 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -489,6 +513,9 @@ tensión a cierto valor
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
  hora de representar números, ya que se tiende a pensar de una forma decimal.
  Resulta por tanto importante saber manejar esta representación binaria,
 =======
@@ -503,10 +530,13 @@ tensión a cierto valor
  hora de representar números, ya que se tendemos a pensar de una forma decimal.
  Resulta por tanto importante saber manejar esta represantación binario,
 >>>>>>> 0c12c27 (Update June 25th 2021)
+<<<<<<< HEAD
 =======
  hora de representar números, ya que se tendemos a pensar de una forma decimal.
  Resulta por tanto importante saber manejar esta represantación binario,
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
  operar con ella y transformar cuando sea necesario a o desde formato decimal.
  La ventaja de implementar los ordenadores con un lenguaje binario radica
  en la facilidad para construir el hardware y la mayor velocidad de las
@@ -620,6 +650,9 @@ status open
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 \align center
 \begin_inset Graphics
 	filename boolean.webp
@@ -633,8 +666,11 @@ status open
 >>>>>>> 0c12c27 (Update June 25th 2021)
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
+<<<<<<< HEAD
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 
 \end_layout
 
@@ -668,13 +704,19 @@ literal "false"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 =======
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
+<<<<<<< HEAD
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 \begin_inset Graphics
 	filename boolean.webp
 	width 50col%
@@ -685,8 +727,11 @@ literal "false"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0c12c27 (Update June 25th 2021)
 =======
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 >>>>>>> 0c12c27 (Update June 25th 2021)
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
@@ -710,6 +755,9 @@ Universalidad de la computación: con este término se hace referencia a que
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 Reversibilidad 
 =======
 Reversabilidad 
@@ -720,9 +768,12 @@ Reversabilidad
 =======
 Reversabilidad 
 >>>>>>> 0c12c27 (Update June 25th 2021)
+<<<<<<< HEAD
 =======
 Reversabilidad 
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-reversabilidad"
@@ -737,6 +788,9 @@ literal "false"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
  Este concepto cobra importancia en la computación cuántica y será analizado
  al introducir los postulados de la mecánica cuántica en la sección 
 \begin_inset CommandInset ref
@@ -758,9 +812,12 @@ noprefix "false"
 =======
  Este concepto cobra importancia en la computación cuántica.
 >>>>>>> 0c12c27 (Update June 25th 2021)
+<<<<<<< HEAD
 =======
  Este concepto cobra importancia en la computación cuántica.
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 \end_layout
 
 \begin_layout Subsubsection
@@ -776,6 +833,9 @@ Como se explicará en la siguiente sección, al pasar de una representación
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
  Existe una formulación matemática (de especial complejidad), que si bien
  no ha sido necesaria para codificar los algoritmos, está presente y en
  ocasiones resulta útil para poder tener otro punto de vista, especialmente
@@ -786,8 +846,11 @@ Como se explicará en la siguiente sección, al pasar de una representación
 >>>>>>> 0c12c27 (Update June 25th 2021)
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
+<<<<<<< HEAD
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
  Existe una formulación matemática, que si bien no ha sido necesaria para
  codificar los algoritmos, está presente y en ocasiones de especial complejidad
  resulta útil para poder tener otro punto de vista, especialmente en el
@@ -796,8 +859,11 @@ Como se explicará en la siguiente sección, al pasar de una representación
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0c12c27 (Update June 25th 2021)
 =======
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 >>>>>>> 0c12c27 (Update June 25th 2021)
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
@@ -816,6 +882,9 @@ Por tanto, los vectores son la representación matemática de los qubits,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
  Las matrices (también con elementos complejos) son simplemente la representació
 n matemática de las puertas cuánticas.
 =======
@@ -830,14 +899,18 @@ n matemática de las puertas cuánticas.
  Las matrices son simplemente la representación matemática de las puertas
  cuánticas.
 >>>>>>> 0c12c27 (Update June 25th 2021)
+<<<<<<< HEAD
 =======
  Las matrices son simplemente la representación matemática de las puertas
  cuánticas.
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 \end_layout
 
 \begin_layout Subsection
 Bases físicas, fundamentos y particularidades de la computación cuántica
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1370,6 +1443,11 @@ Por último, y en este caso esto es algo idéntico a la computación cuántica,
  qubits.
  
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+=======
+=======
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 \end_layout
 
 \begin_layout Subsubsection
@@ -5724,6 +5802,7 @@ Software cuántico: aquí es donde entra en especial la librería Qiskit, median
 \end_layout
 
 \begin_layout Subsubsection
+<<<<<<< HEAD
 Niveles de abstracción.
  Computación clásica vs cuántica
 \end_layout
@@ -5877,6 +5956,8 @@ Software cuántico: aquí es donde entra en especial la librería Qiskit, median
 \end_layout
 
 \begin_layout Subsubsection
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 Algoritmos
 \end_layout
 
@@ -9749,6 +9830,9 @@ Es necesario instalar previamente las librerías empleadas (qiskit o matplotlib,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 \begin_layout Standard
 Al ejecutar los programas sin parámetros, se nos mostrarán unas instrucciones,
  indicando la cantidad de parámetros y la forma de los mismos, en función
@@ -9761,8 +9845,11 @@ Al ejecutar los programas sin parámetros, se nos mostrarán unas instrucciones,
 >>>>>>> 0c12c27 (Update June 25th 2021)
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
+<<<<<<< HEAD
 =======
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 \begin_layout Section
 Agradecimientos
 \end_layout
@@ -9817,6 +9904,9 @@ LatexCommand bibitem
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 key "key-de_broglie"
 =======
 key "key-de_broglie-dualidad"
@@ -9824,6 +9914,7 @@ key "key-de_broglie-dualidad"
 key "key-de_broglie-dualidad"
 =======
 key "key-de_broglie-dualidad"
+<<<<<<< HEAD
 =======
 key "key-de_broglie-dualidad"
 literal "false"
@@ -10183,6 +10274,8 @@ target "https://electronics.stackexchange.com/questions/353915/what-is-the-role-
 LatexCommand bibitem
 key "key-qiskit-homepage"
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 literal "false"
 
 \end_inset
@@ -12017,6 +12110,9 @@ LatexCommand bibitem
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 key "key-vqe_ansatz"
 =======
 key "key-qubit-x-qubit"
@@ -12027,9 +12123,12 @@ key "key-qubit-x-qubit"
 =======
 key "key-qubit-x-qubit"
 >>>>>>> 0c12c27 (Update June 25th 2021)
+<<<<<<< HEAD
 =======
 key "key-qubit-x-qubit"
 >>>>>>> 0c12c27 (Update June 25th 2021)
+=======
+>>>>>>> 8c608d7 (Update June 25th 2021)
 literal "false"
 
 \end_inset
