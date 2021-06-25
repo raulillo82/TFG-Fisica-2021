@@ -140,6 +140,7 @@ Curso 2020/21
 \end_inset
 
 
+<<<<<<< HEAD
 \end_layout
 
 \begin_layout Labeling
@@ -147,6 +148,8 @@ Curso 2020/21
 
 \emph on
 Resumen
+=======
+>>>>>>> 0c12c27 (Update June 25th 2021)
 \end_layout
 
 \begin_layout Standard
@@ -235,7 +238,11 @@ Fundamentos matemáticos y lógicos.
 En esta sección se presenta un conjunto de conceptos matemáticos y lógicos
  de una forma muy resumida.
  En caso de ser necesario un mayor grado de detalle, se recomienda consultar
+<<<<<<< HEAD
  la bibliografía referenciada en cada sección o subsección, ya que la mayoría
+=======
+ la bibligrafía referenciada en cada sección o subsección, ya que la mayoría
+>>>>>>> 0c12c27 (Update June 25th 2021)
  de ellos se han empleado únicamente como herramientas.
  La descripción detallada de cada una de esas herramientas incrementaría
  la densidad del trabajo y podría retirar la atención del tema fundamental
@@ -291,8 +298,13 @@ Máquina de Turing
 \begin_inset Quotes frd
 \end_inset
 
+<<<<<<< HEAD
  como la primera computadora (u ordenador, como se suele denominar en España),
  diseñada para descifrar las comunicaciones alemanas durante la Segunda
+=======
+ como la primera computadora (u ordenador, como se suele denominar en España)
+ diseñada para descrifrar las comunicaciones alemanas durante la Segunda
+>>>>>>> 0c12c27 (Update June 25th 2021)
  Guerra Mundial (1939).
 \end_layout
 
@@ -339,12 +351,15 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection
+<<<<<<< HEAD
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Álgebra-de-Boole"
 
 \end_inset
 
+=======
+>>>>>>> 0c12c27 (Update June 25th 2021)
 Álgebra de Boole y puertas lógicas clásicas 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -425,8 +440,13 @@ tensión a cierto valor
 
 .
  Esta forma de representación no es muy conveniente para los humanos a la
+<<<<<<< HEAD
  hora de representar números, ya que se tiende a pensar de una forma decimal.
  Resulta por tanto importante saber manejar esta representación binaria,
+=======
+ hora de representar números, ya que se tendemos a pensar de una forma decimal.
+ Resulta por tanto importante saber manejar esta represantación binario,
+>>>>>>> 0c12c27 (Update June 25th 2021)
  operar con ella y transformar cuando sea necesario a o desde formato decimal.
  La ventaja de implementar los ordenadores con un lenguaje binario radica
  en la facilidad para construir el hardware y la mayor velocidad de las
@@ -536,6 +556,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+<<<<<<< HEAD
 \align center
 \begin_inset Graphics
 	filename boolean.webp
@@ -543,6 +564,8 @@ status open
 
 \end_inset
 
+=======
+>>>>>>> 0c12c27 (Update June 25th 2021)
 
 \end_layout
 
@@ -572,6 +595,16 @@ literal "false"
 \end_inset
 
 
+<<<<<<< HEAD
+=======
+\begin_inset Graphics
+	filename boolean.webp
+	width 50col%
+
+\end_inset
+
+
+>>>>>>> 0c12c27 (Update June 25th 2021)
 \end_layout
 
 \end_inset
@@ -586,7 +619,11 @@ Universalidad de la computación: con este término se hace referencia a que
 \end_layout
 
 \begin_layout Itemize
+<<<<<<< HEAD
 Reversibilidad 
+=======
+Reversabilidad 
+>>>>>>> 0c12c27 (Update June 25th 2021)
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-reversabilidad"
@@ -597,6 +634,7 @@ literal "false"
 : con esta propiedad se analiza si la puerta lógica (y con ello, el ordenador
  como conjunto de puertas lógicas) preserva la información original (reversible)
  o no (no reversible).
+<<<<<<< HEAD
  Este concepto cobra importancia en la computación cuántica y será analizado
  al introducir los postulados de la mecánica cuántica en la sección 
 \begin_inset CommandInset ref
@@ -609,6 +647,9 @@ noprefix "false"
 \end_inset
 
 .
+=======
+ Este concepto cobra importancia en la computación cuántica.
+>>>>>>> 0c12c27 (Update June 25th 2021)
 \end_layout
 
 \begin_layout Subsubsection
@@ -620,11 +661,19 @@ Como se explicará en la siguiente sección, al pasar de una representación
  unidimensional de la computación clásica con los bits, a una bidimensional
  con los qubits, resultan de especial utilidad los vectores y los números
  complejos para dicha representación.
+<<<<<<< HEAD
  Existe una formulación matemática (de especial complejidad), que si bien
  no ha sido necesaria para codificar los algoritmos, está presente y en
  ocasiones resulta útil para poder tener otro punto de vista, especialmente
  en el caso de disponer de una capacidad de cálculo matemático superior
  a la de la compresión de los fenómenos físicos.
+=======
+ Existe una formulación matemática, que si bien no ha sido necesaria para
+ codificar los algoritmos, está presente y en ocasiones de especial complejidad
+ resulta útil para poder tener otro punto de vista, especialmente en el
+ caso de disponer de una capacidad de cálculo matemático superior a la de
+ la compresión de los fenómenos físicos.
+>>>>>>> 0c12c27 (Update June 25th 2021)
  En dichos casos, una primera aproximación matemática permite comprender
  mejor los fenómenos físicos (aunque la intuición haga pensar que el estudio
  del fenómeno físico puede ser más sencillo, no lo es para estos casos tan
@@ -634,12 +683,543 @@ Como se explicará en la siguiente sección, al pasar de una representación
 \begin_layout Standard
 Por tanto, los vectores son la representación matemática de los qubits,
  los cuales pueden tener componentes complejas.
+<<<<<<< HEAD
  Las matrices (también con elementos complejos) son simplemente la representació
 n matemática de las puertas cuánticas.
+=======
+ Las matrices son simplemente la representación matemática de las puertas
+ cuánticas.
+>>>>>>> 0c12c27 (Update June 25th 2021)
 \end_layout
 
 \begin_layout Subsection
 Bases físicas, fundamentos y particularidades de la computación cuántica
+<<<<<<< HEAD
+=======
+\end_layout
+
+\begin_layout Subsubsection
+Historia de la computación cuántica 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-wikipedia-quantum_computing"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A modo de brevísima introducción, se enumeran algunos de los hitos de la
+ computación cuántica.
+\end_layout
+
+\begin_layout Itemize
+En 1981, Richard Feynman propuso un marco para la simulación de la evolución
+ de los sistemas cuánticos.
+\end_layout
+
+\begin_layout Itemize
+En 1984, Peter Shor demuestra que los ordenadores cuánticos son capaces
+ de factorizar eficientemente números enteros de gran magnitud.
+ Esta factorización es empleada en la actualidad para diversos mecanismos
+ de cifrado.
+ El sólo hecho de poder realizar dichas factorizaciones mucho más eficientemente
+, pondría en jaque los mecanismos actuales de cifrado, tan empleados hoy
+ en día en cualquier ámbito de la computación, en cualquier parte de Internet
+ o incluso en archivos almacenados de una forma desconectada.
+\end_layout
+
+\begin_layout Itemize
+En 1998 tuvo lugar la primera demostración de un algoritmo cuántico.
+ Se trataba de un ordenador cuántico NMR de 2 qubits.
+\end_layout
+
+\begin_layout Itemize
+En 2012 se aumenta progresivamente el número de qubits, añadiéndose asimismo
+ algoritmos de detección de errores.
+\end_layout
+
+\begin_layout Itemize
+En 2017 se ponen a disposición ordenadores cuánticos en la nube, dando la
+ posibilidad de acceso a mucha más gente.
+ Un ejemplo de esto sería el empleado en ciertas secciones de los algoritmos
+ desarrollados en este trabajo, y que se detallan en la sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Discusión"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+En septiembre 2019 Google anunció haber demostrado la supremacía cuántica
+ (postulado que afirma que un ordenador cuántico puede resolver ciertos
+ problemas para los cuales no existe actualmente solución en una cantidad
+ finita de tiempo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-quantum_supremacy"
+literal "false"
+
+\end_inset
+
+) en el Finantial Times 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-google_finantial-times"
+literal "false"
+
+\end_inset
+
+.
+ Esta demostración fue publicada posteriormente en Nature 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-google_nature"
+literal "false"
+
+\end_inset
+
+ apenas un mes después (y por cierto, con un español en el equipo, Sergio
+ Boixo), no sin cierta controversia con IBM, que argumenta que los resultados
+ de dichos estudios podrían alcanzarse con supercomputadores actuales (siendo
+ suyo el más potente hoy en día, el Summit) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-polémica-ibm1,key-polémica-ibm2,key-polémica-ibm3"
+literal "false"
+
+\end_inset
+
+.
+ Sin embargo, en diciembre del mismo año también se habría demostrado la
+ supremacía cuántica en el USTC (China) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-USTC-china"
+literal "false"
+
+\end_inset
+
+, siendo ya dos fuentes distintas las que confirmarían su existencia.
+\end_layout
+
+\begin_layout Subsubsection
+Analogía con la computación clásica
+\end_layout
+
+\begin_layout Standard
+El hecho de haber introducido anteriormente la computación clásica tenía
+ un fundamento, que no era otro que comparar ciertas partes análogas de
+ la computación cuántica actual.
+\end_layout
+
+\begin_layout Standard
+En primer lugar, la unidad de información en la computación cuántica pasa
+ a ser el qubit.
+ Si anteriormente en la computación clásica se utilizaban los bits, 
+\begin_inset Quotes fld
+\end_inset
+
+0
+\begin_inset Quotes frd
+\end_inset
+
+ y 
+\begin_inset Quotes fld
+\end_inset
+
+1
+\begin_inset Quotes frd
+\end_inset
+
+, ahora se pasa a emplear los qubits o bits cuánticos, tomando los mismos
+ los valores de |0> y |1>, donde se ha empleado la notación bra-ket formulada
+ por Dirac 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-bra_ket"
+literal "false"
+
+\end_inset
+
+, expresando los qubits como un 
+\begin_inset Quotes fld
+\end_inset
+
+ket
+\begin_inset Quotes frd
+\end_inset
+
+, que no es otra cosa que un vector columna, información que es conocida
+ de los temarios de Física Cuántica.
+\end_layout
+
+\begin_layout Standard
+Un concepto importante de que representan los qubits es el de la superposición
+ de estados.
+ Si bien un bit sólo puede tomar el valor de 
+\begin_inset Quotes fld
+\end_inset
+
+0
+\begin_inset Quotes frd
+\end_inset
+
+ ó 
+\begin_inset Quotes fld
+\end_inset
+
+1
+\begin_inset Quotes frd
+\end_inset
+
+, un qubit puede hallarse en cualquier superposición de ambos estados, tomando
+ la forma:
+\begin_inset Formula 
+\[
+|\psi>=\alpha|0>+\beta|1>
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sólamente al medir dicho qubit 
+\begin_inset Formula $|\psi>$
+\end_inset
+
+ se medirá uno de dichos valores (se tiende a expresar este concepto diciendo
+ que el qubit 
+\begin_inset Quotes fld
+\end_inset
+
+colapsa
+\begin_inset Quotes frd
+\end_inset
+
+ a un valor de 
+\begin_inset Quotes fld
+\end_inset
+
+0
+\begin_inset Quotes frd
+\end_inset
+
+ ó 
+\begin_inset Quotes fld
+\end_inset
+
+1
+\begin_inset Quotes frd
+\end_inset
+
+ al realizar la medición).
+ Los valores de las constantes 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta$
+\end_inset
+
+, que pueden ser complejos, tienen una representación física, y no es otra
+ que el cuadrado de sus respectivos módulos coincide con la probabilidad
+ de que la medición del qubit colapse al valor del qubit al que multiplican.
+ Por tanto se cumple:
+\begin_inset Formula 
+\[
+|\alpha|^{2}+|\beta|^{2}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una superposición equiprobable de 
+\begin_inset Formula $\psi$
+\end_inset
+
+ estaría dada por la expresión:
+\begin_inset Formula 
+\[
+|\psi_{1}>=\frac{1}{\sqrt{2}}|0>+\frac{1}{\sqrt{2}}|1>
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mientras que una distribución con distintas probabilidades (75% y 25%) sería
+ la siguiente:
+\begin_inset Formula 
+\[
+|\psi_{2}>=\frac{\sqrt{3}}{2}|0>+\frac{1}{2}|1>
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las puertas lógicas de la computación clásica también tienen su analogía
+ en el mundo cuántico, y se denominan, como no podría ser de otra manera
+ 
+\begin_inset Quotes fld
+\end_inset
+
+puertas cuánticas
+\begin_inset Quotes frd
+\end_inset
+
+.
+ A continuación enunciaremos las puertas cuánticas básicas, asi como algunas
+ adicionales que se han empleado en los algoritmos de este trabajo:
+\end_layout
+
+\begin_layout Itemize
+Puerta X o cambio de qubit: esta puerta cambia su qubit de entrada al opuesto
+ en la salida.
+\end_layout
+
+\begin_layout Itemize
+Puerta Z o cambio de fase: deja inalterada la salida si el qubit es |0>,
+ y añade un signo negativo si la entrada es |1>
+\end_layout
+
+\begin_layout Itemize
+Puerta H de Hadamard: crea una superposición de estados equiprobables, de
+ forma que:
+\begin_inset Formula 
+\begin{equation}
+H(|0>)=\frac{1}{\sqrt{2}}\left(|0>+|1>\right)\label{eq:h0}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+H(|1>)=\frac{1}{\sqrt{2}}\left(|0>-|1>\right)\label{eq:h1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Estas puertas se representan simplemente como una rectángulo con la letra
+ correspondiente.
+\end_layout
+
+\begin_layout Standard
+En la figura se pueden ver las puertas enunciadas, así como otros ejemplos.
+ Además, se añade la matriz correspondiente para cada puerta, que tendrá
+ importancia si se quiere hacer una representación matemática del circuito.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Puertas cuánticas, símbolos y matrices asociadas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-quantum-logic_gates"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Quantum_Logic_Gates.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Destacar que las puertas se aplican a cada estado de una posible superposición,
+ y por tanto:
+\begin_inset Formula 
+\[
+X(|\psi>)=X(\alpha|0>+\beta|1>)=\alpha(X|0>)+\beta(X|1>)=\alpha|1>+\beta|0>
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una puerta interesante y que se ha empleado en este trabajo es la CNOT,
+ (not controlado).
+ En dicha puerta se denomina qubit de control al de la parte superior, y
+ qubit objetivo (target) al inferior.
+ Si el qubit de control es 0, la puerta no hace nada, pero si es 1, el valor
+ del bit de objetivo cambiará.
+ El bit de control siempre se mantiene igual a su salida.
+\end_layout
+
+\begin_layout Standard
+La computación cuántica hace uso extensivo de tres propiedades principales
+ de la física cuántica que se detallarán más adelante, siendo las mismas:
+\end_layout
+
+\begin_layout Enumerate
+Superposición
+\end_layout
+
+\begin_layout Enumerate
+Entrelazamiento
+\end_layout
+
+\begin_layout Enumerate
+Interferencia
+\end_layout
+
+\begin_layout Standard
+Se puede introducir ya el efecto de alguna de estas propiedades, como la
+ superposición (que ya se ha explicado con la puerta H) y la interferencia:
+ el resultado de un experimento 
+\begin_inset Quotes fld
+\end_inset
+
+clásico
+\begin_inset Quotes frd
+\end_inset
+
+ de lanzar una moneda al aire dos veces nos dará un 50% de probabilidad
+ para cada uno de los resultados, cara y cruz.
+ En el mundo cuántico, tras aplicar dos veces una superposición equiprobable
+ (puerta H), sobre un qubit con estado inicial |0>, el resultado final va
+ a ser el mismo qubit |0> (con una probabilidad del 100% por tanto).
+ Es decir, los estados implicados en una superposición cuántica se pueden
+ cancelar o amplificar, lo cual es análogo al experimento de la rendija
+ estudiado en óptica 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-experimento_rendija"
+literal "false"
+
+\end_inset
+
+, y de hecho tiene la misma explicación, al estar tratando también con una
+ onda según el principio de dualidad onda-materia.
+ Con este experimento de la doble puerta de Hadamard además se puede apreciar
+ una característica adicional: la reversabilidad, de la que ya se había
+ hablabdo anteriormente.
+ En la computación cuántica, es necesario que las puertas sean reversibles.
+\end_layout
+
+\begin_layout Standard
+A modo de breve introducción respecto al entrelazamiento, decir que se trata
+ de una correlación entre varios qubits, donde el estado de un qubit, depende
+ del estado de otro qubit.
+ A modo de explicación sencilla para dos qubits, partiendo del estado:
+\begin_inset Formula 
+\[
+|\psi_{1}>=\frac{1}{\sqrt{2}}|00>+\frac{1}{\sqrt{2}}|11>
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se observa que la probabilidad de medir cada uno de los pares |00> y |11>
+ es la misma y del 50%.
+ Pero si se mide sólamente uno de los qubits, el primero, al conocer su
+ valor, inmediatamente se sabe el valor del otro qubit (que en este caso,
+ será idéntico).
+\end_layout
+
+\begin_layout Standard
+Para la creación del estado cuántico de entrelazamiento de este ejemplo,
+ 
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+, el circuito sería tan sencillo como partir de dos qubits inicializados
+ a cero, aplicar una puerta H al primero de ellos y posteriormente una puerta
+ CNOT en la que el qubit de control sería también el primero (al que se
+ le había aplicado la puerta H).
+\end_layout
+
+\begin_layout Standard
+A partir de estas tres propiedades se podrían buscar más aplicaciones a
+ la computación cuántica, las cuales no serán de estudio en este trabajo,
+ siendo algunas de ellas simplemente enunciadas en la siguiente lista:
+\end_layout
+
+\begin_layout Enumerate
+Teleportación cuántica
+\end_layout
+
+\begin_layout Enumerate
+Criptografía cuántica
+\end_layout
+
+\begin_layout Enumerate
+Codificación superdensa
+\end_layout
+
+\begin_layout Standard
+Por último, y en este caso esto es algo idéntico a la computación cuántica,
+ destacar que para la codificación de 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+ posibles estados, será necesario disponer de 
+\begin_inset Formula $N$
+\end_inset
+
+ qubits.
+ 
+>>>>>>> 0c12c27 (Update June 25th 2021)
 \end_layout
 
 \begin_layout Subsubsection
@@ -2960,6 +3540,159 @@ les a la salida (o lo que es lo mismo, la salida corresponde al estado de
  Bell |+> ).
  Si bien esta notación matemática presenta cierta complejidad operacional,
  en algunas ocasiones puede resultar práctica a fin de orientarse correctamente.
+\end_layout
+
+\begin_layout Subsubsection
+Niveles de abstracción.
+ Computación clásica vs cuántica
+\end_layout
+
+\begin_layout Standard
+Antes de plantearse cómo funciona la computación cuántica, resulta útil
+ hacerse la misma pregunta para la computación clásica.
+ Un gráfico permite hacer un gran resumen y situarse de una manera sencilla,
+ tal y como se puede ver en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Niveles-de-abstracción-computación-clásica"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Niveles-de-abstracción-computación-clásica"
+
+\end_inset
+
+Niveles de abstracción de la computación clásica 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-clasical_computing_stack_source"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename abstraction_layers.jpg
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Visto de otra forma más compacta, existen tres componentes principales (tal
+ y como se puede ver en la división de la derecha): el software, el hardware
+ y la interconexión de los mismos, que también se podría llamar 
+\begin_inset Quotes fld
+\end_inset
+
+compilador clásico
+\begin_inset Quotes frd
+\end_inset
+
+ (un compilador es un traductor de un lenguaje de programación, o en ciertos
+ casos, ensamblador, a código máquina que es ejecutado sobre el hardware
+ mediante una serie de instrucciones implementadas en el mismo).
+\end_layout
+
+\begin_layout Standard
+En el caso de la computación cuántica, al menos hoy en día, se siguen empleando
+ ordenadores clásicos en la pila de abstracción.
+ Así, la capa del software estaría dividida (de arriba a abajo), en software
+ cuántico y software clásico.
+ El compilador clásico se sustituiría por un compilador cuántico, y el hardware
+ clásico pasaría a estar dividido de nuevo en dos partes al igual que el
+ software: un hardware clásico de control, que controlaría el hardware cuántico.
+ Se hará a continuación una breve descripción de cada una de las cinco partes
+ enunciadas, de una forma ordenada:
+\end_layout
+
+\begin_layout Enumerate
+Hardware cuántico: se trata del ordenador cuántico en sí.
+ Similarmente a como sucedía en los primeros días de la computación clásica,
+ este hardware ocupa mucho espacio y se encuentra en habitaciones gigantes.
+ Suele necesitar además mantenerse a temperaturas muy bajas, cercanas al
+ cero absoluto, para proporcionar estabilidad a los qubits.
+ Existen diversas tecnologías empleadas en las diversas partes del hardware
+ cuántico, que no son parte de este estudio.
+ Se pueden nombrar algunas de las mismas, tal y como serían la resonancia
+ magnética nuclear, los iones atrapados, la superconducción, los centros
+ de diamantes NV, la fotónica o los átomos neutros, entre otros.
+\end_layout
+
+\begin_layout Enumerate
+Hardware clásico de control (del hardware cuántico): por ejemplo, los qubits
+ superconductores son controlados por medio de secuencias de pulsos de microonda
+s.
+ Al introducir diferentes formas y longitudes para los pulsos, se generan
+ puertas cuánticas distintas.
+ Una sala de control de hardware cuántico no tiene mucha diferencia con
+ su análogo de los años 50, salvando la distancia.
+ O poniendo una analogía más cercana a nuestros días, una de las primeras
+ centralitas telefónicas.
+\end_layout
+
+\begin_layout Enumerate
+Compilador: en este caso, no hay gran diferencia.
+ El compilador empleado va a seguir siendo un compilador clásico, ya que
+ la capa anterior es la que se encarga de traducir al mundo cuántico.
+\end_layout
+
+\begin_layout Enumerate
+Software clásico: se trata del lenguaje de programación junto a cualquier
+ tipo de librerías empleado.
+ En el caso de este trabajo, se empleará el lenguaje Python.
+ Asimismo, existen librerías de una gran utilidad que son utilizadas a menudo,
+ tal y como las librerías SciPy o Numpy, a fin de simplificar la programación
+ de ciertas operaciones matemáticas y científicas.
+\end_layout
+
+\begin_layout Enumerate
+Software cuántico: aquí es donde entra en especial la librería Qiskit, mediante
+ la cual se puede codificar en código la implementación de puertas cuánticas.
+ Existen otras opciones, como la implementación gráfica con las herramientas
+ de web de IBM Quantum Experience.
+ Aunque éstas se han explorado, no se usaron para la codificación de los
+ algoritmo de este trabajo.
+ En la sección de métodos y material se detalla todo esto con más detención.
 \end_layout
 
 \begin_layout Subsubsection
@@ -6831,12 +7564,15 @@ Es necesario instalar previamente las librerías empleadas (qiskit o matplotlib,
  apartado anterior permite perfectamente analizar los resultados.
 \end_layout
 
+<<<<<<< HEAD
 \begin_layout Standard
 Al ejecutar los programas sin parámetros, se nos mostrarán unas instrucciones,
  indicando la cantidad de parámetros y la forma de los mismos, en función
  del caso particular que se quiera estudiar.
 \end_layout
 
+=======
+>>>>>>> 0c12c27 (Update June 25th 2021)
 \begin_layout Section
 Agradecimientos
 \end_layout
@@ -6887,7 +7623,367 @@ Bibliografía
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+<<<<<<< HEAD
 key "key-de_broglie"
+=======
+key "key-de_broglie-dualidad"
+literal "false"
+
+\end_inset
+
+Wikipedia: Dualidad onda corpúsculo (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://es.wikipedia.org/wiki/Dualidad_onda_corp%C3%BAsculo"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-history_of_computers-video"
+literal "false"
+
+\end_inset
+
+History of computers - A Timeline (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.youtube.com/watch?v=pBiVyEfZVUU"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-moore"
+literal "false"
+
+\end_inset
+
+Wikipedia: Ley de Moore (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://es.wikipedia.org/wiki/Ley_de_Moore"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-boole"
+literal "false"
+
+\end_inset
+
+Wikipedia: Álgebra de Boole (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://es.wikipedia.org/wiki/%C3%81lgebra_de_Boole"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-logic_gates-pic"
+literal "false"
+
+\end_inset
+
+IT 1: Boolean Algebra and Digital Logic.
+ Maecel Lesther (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://maecellesther.wordpress.com/2017/10/02/it-1-boolean-algebra-and-digital-logic/"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-reversabilidad"
+literal "false"
+
+\end_inset
+
+Reversible computing (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Reversible_computing"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-wikipedia-quantum_computing"
+literal "false"
+
+\end_inset
+
+Wikipedia: Quantum computing 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Quantum_computing"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-quantum_supremacy"
+literal "false"
+
+\end_inset
+
+Wikipedia: Quantum supremacy 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Quantum_supremacy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-google_finantial-times"
+literal "false"
+
+\end_inset
+
+«Google claims to have reached quantum supremacy».
+ Financial Times, Sept 2019.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.ft.com/content/b9bb4e54-dbc1-11e9-8f9b-77216ebe1f17"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-google_nature"
+literal "false"
+
+\end_inset
+
+Arute, Frank; Arya, Kunal; Babbush, Ryan; Bacon, Dave; Bardin, Joseph C.;
+ Barends, Rami; Biswas, Rupak; Boixo, Sergio et al.
+ (2019-10).
+ «Quantum supremacy using a programmable superconducting processor».
+ Nature (en inglés) 574 (7779): 505-510.
+ ISSN 1476-4687.
+ doi:10.1038/s41586-019-1666-5.
+ Consultado el 25 de octubre de 2019.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.nature.com/articles/s41586-019-1666-5"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-polémica-ibm1"
+literal "false"
+
+\end_inset
+
+"What the Google vs.
+ IBM debate over quantum supremacy means | ZDNet".
+ www.zdnet.com.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.zdnet.com/google-amp/article/what-the-google-v-ibm-debate-over-quantum-means/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-polémica-ibm2"
+literal "false"
+
+\end_inset
+
+"On "Quantum Supremacy"".
+ IBM Research Blog.
+ 2019-10-22.
+ Retrieved 2019-10-24.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.ibm.com/blogs/research/2019/10/on-quantum-supremacy/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-polémica-ibm3"
+literal "false"
+
+\end_inset
+
+"Google Claims To Achieve Quantum Supremacy — IBM Pushes Back".
+ NPR.org.
+ Retrieved 2019-10-24.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.npr.org/2019/10/23/772710977/google-claims-to-achieve-quantum-supremacy-ibm-pushes-back"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-USTC-china"
+literal "false"
+
+\end_inset
+
+Zhong, Han-Sen; Wang, Hui; Deng, Yu-Hao; Chen, Ming-Cheng; Peng, Li-Chao;
+ Luo, Yi-Han; Qin, Jian; Wu, Dian; Ding, Xing; Hu, Yi; Hu, Peng (2020-12-03).
+ "Quantum computational advantage using photons".
+ Science.
+ 370 (6523): 1460–1463.
+ arXiv:2012.01625.
+ Bibcode:2020Sci...370.1460Z.
+ doi:10.1126/science.abe8770 (inactive 31 May 2021).
+ ISSN 0036-8075.
+ PMID 33273064.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://science.sciencemag.org/content/early/2020/12/02/science.abe8770"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-bra_ket"
+literal "false"
+
+\end_inset
+
+Wikipedia: Bra–ket notation (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-quantum-logic_gates"
+literal "false"
+
+\end_inset
+
+Wikipedia: Quantum logic gate (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Logic_gate"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-experimento_rendija"
+literal "false"
+
+\end_inset
+
+Wikipedia: Double-slit experiment (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Double-slit_experiment"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-clasical_computing_stack_source"
+literal "false"
+
+\end_inset
+
+What is the role of ISA (Instruction Set Architecture) in the comp arch
+ abstraction stack
+\begin_inset CommandInset href
+LatexCommand href
+target "https://electronics.stackexchange.com/questions/353915/what-is-the-role-of-isa-instruction-set-architecture-in-the-comp-arch-abstract"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-qiskit-homepage"
+>>>>>>> 0c12c27 (Update June 25th 2021)
 literal "false"
 
 \end_inset
@@ -7647,7 +8743,11 @@ target "https://arxiv.org/abs/quant-ph/0002077"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+<<<<<<< HEAD
 key "key-vqe_ansatz"
+=======
+key "key-qubit-x-qubit"
+>>>>>>> 0c12c27 (Update June 25th 2021)
 literal "false"
 
 \end_inset
