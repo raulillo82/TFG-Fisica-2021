@@ -91,7 +91,7 @@ Facultad de Ciencias
 \begin_inset Newline newline
 \end_inset
 
-Departamento de Física
+Departamento de Física Interdisciplinar 
 \begin_inset Newline newline
 \end_inset
 
@@ -105,7 +105,7 @@ Departamento de Física
 \begin_inset Newline newline
 \end_inset
 
-Memoria del Trabajo de Fin de Grado
+Memoria del Trabajo de Fin de Grado en Física
 \begin_inset Newline newline
 \end_inset
 
@@ -156,11 +156,63 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Section
-Resumen o abstract
+Resumen / abstract
+\end_layout
+
+\begin_layout Subsection
+Resumen
 \end_layout
 
 \begin_layout Standard
-Esta parte queda mejor si se rellena la última.
+Este trabajo estudia el estado del arte de la computación cuántica, tras
+ una detallada introducción en base matemática, computacional y física,
+ haciendo especial hincapié en ésta última.
+ Una vez introducidos los conceptos, se centra en la resolución de algunos
+ tipos de problemas mediante algoritmos cuánticos, que harán uso de ciertas
+ propiedades especiales de la mecánica cuántica, como son la superposición,
+ el entrelazamiento y la interferencia, que aplicadas a estos problemas
+ resultan en una gran mejora, a veces incluso exponencial, de la velocidad
+ de resolución de los mismos.
+ Por último, la base del trabajo se centra en la implementación de algunos
+ ejemplos de estos algoritmos, como son el algoritmo de Deutsch-Josza para
+ la demostración de la viabilidad de estos algoritmos cuánticos, así como
+ el algoritmo de Grover, que tiene una aplicación real como es la búsqueda
+ en una lista desestructurada.
+ Se emplea el lenguaje Python para la codificación de los algoritmos, ya
+ que la existencia en el mismo de la librería Qiskit permite implementar
+ fácilmente los circuitos cuánticos necesarios.
+ Se analizarán los resultados tanto teóricos como aplicados a hardware cuántico
+ real, a cuyo acceso existe la posibilidad hoy en día gracias a servicios
+ en la nube.
+ A modo de corolario, se discutirán las limitaciones de estos algoritmos
+ y posibles soluciones a las mismas.
+\end_layout
+
+\begin_layout Subsection
+Abstract
+\end_layout
+
+\begin_layout Standard
+This document studies the state of the art of quantum computing, after a
+ detailed introduction of some mathematic, computational and physic bases,
+ insisting specially on the latter.
+ Once the concepts have been introduced, the work will be focused in the
+ resolution of certain kinds of problems by quantum algorithms, which will
+ make use of certain special properties of quantum mechanics, such as superposit
+ion, entanglement and interference, which applied to these problems, result
+ in a great speed up of the resolution times, even exponentially sometimes.
+ Last but not the least, the base of this study is targeted towards the
+ implementation of a few examples of such algorithms, namely Deutsch-Josza
+ algorithm in order to demonstrate the viability of quantum algorithms,
+ together with Grover's search algorithm, which has a real application for
+ the search in an unstructured list.
+ Python language will be used to code the algorithms, as its library Qiskit
+ allows to easily implement all the needed quantum circuits.
+ The theoretical results will be studied, together with its application
+ to real quantum hardware, whose use was possible thanks to the existance
+ of tools in the cloud that allowed the access to such a hardware.
+ As a summary, the limitations of these algorithms will be presented and
+ possible solutions suggested.
 \end_layout
 
 \begin_layout Section
@@ -232,7 +284,7 @@ Máquina de Turing
 \begin_inset Quotes frd
 \end_inset
 
- como la primera computadora (u ordenador, como se suele denominar en España)
+ como la primera computadora (u ordenador, como se suele denominar en España),
  diseñada para descrifrar las comunicaciones alemanas durante la Segunda
  Guerra Mundial (1939).
 \end_layout
@@ -366,8 +418,8 @@ tensión a cierto valor
 
 .
  Esta forma de representación no es muy conveniente para los humanos a la
- hora de representar números, ya que se tendemos a pensar de una forma decimal.
- Resulta por tanto importante saber manejar esta represantación binario,
+ hora de representar números, ya que se tiende a pensar de una forma decimal.
+ Resulta por tanto importante saber manejar esta representación binaria,
  operar con ella y transformar cuando sea necesario a o desde formato decimal.
  La ventaja de implementar los ordenadores con un lenguaje binario radica
  en la facilidad para construir el hardware y la mayor velocidad de las
@@ -477,6 +529,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename boolean.webp
+	width 50col%
+
+\end_inset
+
 
 \end_layout
 
@@ -506,13 +565,6 @@ literal "false"
 \end_inset
 
 
-\begin_inset Graphics
-	filename boolean.webp
-	width 50col%
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -538,7 +590,18 @@ literal "false"
 : con esta propiedad se analiza si la puerta lógica (y con ello, el ordenador
  como conjunto de puertas lógicas) preserva la información original (reversible)
  o no (no reversible).
- Este concepto cobra importancia en la computación cuántica.
+ Este concepto cobra importancia en la computación cuántica y será analizado
+ al introducir los postulados de la mecánica cuántica en la sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Postulados"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -550,11 +613,11 @@ Como se explicará en la siguiente sección, al pasar de una representación
  unidimensional de la computación clásica con los bits, a una bidimensional
  con los qubits, resultan de especial utilidad los vectores y los números
  complejos para dicha representación.
- Existe una formulación matemática, que si bien no ha sido necesaria para
- codificar los algoritmos, está presente y en ocasiones de especial complejidad
- resulta útil para poder tener otro punto de vista, especialmente en el
- caso de disponer de una capacidad de cálculo matemático superior a la de
- la compresión de los fenómenos físicos.
+ Existe una formulación matemática (de especial complejidad), que si bien
+ no ha sido necesaria para codificar los algoritmos, está presente y en
+ ocasiones resulta útil para poder tener otro punto de vista, especialmente
+ en el caso de disponer de una capacidad de cálculo matemático superior
+ a la de la compresión de los fenómenos físicos.
  En dichos casos, una primera aproximación matemática permite comprender
  mejor los fenómenos físicos (aunque la intuición haga pensar que el estudio
  del fenómeno físico puede ser más sencillo, no lo es para estos casos tan
@@ -564,8 +627,8 @@ Como se explicará en la siguiente sección, al pasar de una representación
 \begin_layout Standard
 Por tanto, los vectores son la representación matemática de los qubits,
  los cuales pueden tener componentes complejas.
- Las matrices son simplemente la representación matemática de las puertas
- cuánticas.
+ Las matrices (también con elementos complejos) son simplemente la representació
+n matemática de las puertas cuánticas.
 \end_layout
 
 \begin_layout Subsection
@@ -599,7 +662,7 @@ En 1984, Peter Shor demuestra que los ordenadores cuánticos son capaces
  de factorizar eficientemente números enteros de gran magnitud.
  Esta factorización es empleada en la actualidad para diversos mecanismos
  de cifrado.
- El sólo hecho de poder realizar dichas factorizaciones mucho más eficientemente
+ El solo hecho de poder realizar dichas factorizaciones mucho más eficientemente
 , pondría en jaque los mecanismos actuales de cifrado, tan empleados hoy
  en día en cualquier ámbito de la computación, en cualquier parte de Internet
  o incluso en archivos almacenados de una forma desconectada.
@@ -634,7 +697,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Itemize
-En septiembre 2019 Google anunció haber demostrado la supremacía cuántica
+En septiembre de 2019, Google anunció haber demostrado la supremacía cuántica
  (postulado que afirma que un ordenador cuántico puede resolver ciertos
  problemas para los cuales no existe actualmente solución en una cantidad
  finita de tiempo 
@@ -662,7 +725,7 @@ literal "false"
 
 \end_inset
 
- apenas un mes después (y por cierto, con un español en el equipo, Sergio
+, apenas un mes después (y por cierto, con un español en el equipo, Sergio
  Boixo), no sin cierta controversia con IBM, que argumenta que los resultados
  de dichos estudios podrían alcanzarse con supercomputadores actuales (siendo
  suyo el más potente hoy en día, el Summit) 
@@ -693,7 +756,7 @@ Analogía con la computación clásica
 \begin_layout Standard
 El hecho de haber introducido anteriormente la computación clásica tenía
  un fundamento, que no era otro que comparar ciertas partes análogas de
- la computación cuántica actual.
+ la computación cuántica con la actual (clásica).
 \end_layout
 
 \begin_layout Standard
@@ -808,8 +871,9 @@ colapsa
 \end_inset
 
 , que pueden ser complejos, tienen una representación física, y no es otra
- que el cuadrado de sus respectivos módulos coincide con la probabilidad
- de que la medición del qubit colapse al valor del qubit al que multiplican.
+ que el hecho de que el cuadrado de sus respectivos módulos coincide con
+ la probabilidad de que la medición del qubit colapse al valor del qubit
+ al que preceden (multiplican).
  Por tanto se cumple:
 \begin_inset Formula 
 \[
@@ -915,6 +979,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Quantum_Logic_Gates.png
+	width 50col%
+
+\end_inset
+
 
 \end_layout
 
@@ -933,13 +1004,6 @@ literal "false"
 
 
 \end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename Quantum_Logic_Gates.png
-	width 50col%
 
 \end_inset
 
@@ -971,10 +1035,10 @@ X(|\psi>)=X(\alpha|0>+\beta|1>)=\alpha(X|0>)+\beta(X|1>)=\alpha|1>+\beta|0>
 \begin_layout Standard
 Una puerta interesante y que se ha empleado en este trabajo es la CNOT,
  (not controlado).
- En dicha puerta se denomina qubit de control al de la parte superior, y
- qubit objetivo (target) al inferior.
- Si el qubit de control es 0, la puerta no hace nada, pero si es 1, el valor
- del bit de objetivo cambiará.
+ Esta puerta, que toma como entradas dos qubits, denomina qubit de control
+ al de la parte superior, y qubit objetivo (target) al inferior.
+ Si el qubit de control es 0, la puerta no hace nada al qubit objetivo,
+ pero si es 1, el valor del bit de objetivo cambiará.
  El bit de control siempre se mantiene igual a su salida.
 \end_layout
 
@@ -1026,8 +1090,19 @@ literal "false"
  onda según el principio de dualidad onda-materia.
  Con este experimento de la doble puerta de Hadamard además se puede apreciar
  una característica adicional: la reversabilidad, de la que ya se había
- hablabdo anteriormente.
- En la computación cuántica, es necesario que las puertas sean reversibles.
+ hablado anteriormente.
+ En la computación cuántica, es necesario que las puertas sean reversibles
+ (como se explicará en la sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Postulados"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ de postulados de la mecánica cuántica).
 \end_layout
 
 \begin_layout Standard
@@ -1063,6 +1138,62 @@ Para la creación del estado cuántico de entrelazamiento de este ejemplo,
  a cero, aplicar una puerta H al primero de ellos y posteriormente una puerta
  CNOT en la que el qubit de control sería también el primero (al que se
  le había aplicado la puerta H).
+ Esto se puede ver en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito-entrelazamiento"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename circuit0.png
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito-entrelazamiento"
+
+\end_inset
+
+Circuito que implementa el entrelazamiento cuántico para 2 qubits
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1076,7 +1207,7 @@ Teleportación cuántica
 \end_layout
 
 \begin_layout Enumerate
-Criptografía cuántica
+Criptografía cuántica (BB84)
 \end_layout
 
 \begin_layout Enumerate
@@ -1198,7 +1329,8 @@ Demostrada esta dualidad de la luz, se puede aplicar la misma a cualquier
  partícula, sin más que aplicar el experimento de la doble rendija a un
  haz de electrones: si los mismos fueran sólo materia, cabría esperar simplement
 e dos franjas en la pantalla del experimento, sin embargo se verá un patrón
- de interferencia con franjas de distinta intensidad.
+ de interferencia con franjas de distinta intensidad, exactamente igual
+ que el mismo experimento realizado con un haz de luz.
  El resultado de que las partículas sean también ondas es importante, ya
  que implica que no van a tener una posición fija.
  En su lugar, estarán definidas por una función de onda, habitualmente denominad
@@ -1208,7 +1340,8 @@ a como
 
 , que no es capaz de determinar la posición exacta de la misma, sino que
  dará una estimación, o dicho de otra forma, una función de probabilidad
- para la posición.
+ para la posición (y esto mismo ocurre para otras magnitudes, como podría
+ ser el momento).
  Los qubits se comportan como ondas, y los estados de superposición de los
  mismos pueden interferir los unos con los otros.
  Un ejemplo de aplicación sería el de amplificar la probabilidad de la respuesta
@@ -1219,7 +1352,7 @@ a como
 
 \begin_layout Standard
 Para la representación matemática de estas ondas (o mejor dicho, la función
- de probabilidad de su posición) se empleará algo llamado 
+ de probabilidad de su posición) se empleará el llamado 
 \begin_inset Quotes fld
 \end_inset
 
@@ -1227,8 +1360,8 @@ operador Hamiltoniano
 \begin_inset Quotes frd
 \end_inset
 
-, que permitirá encontrar la energía los estados de energía permitidos de
- esta función de onda.
+, que permitirá encontrar la energía de los estados de energía permitidos
+ de esta función de onda.
  Este Hamiltoniano, en este contexto, se trata de un operador cuántico que
  da información acerca de la energía de un estado cuántico, o dicho de otra
  forma: 
@@ -1264,9 +1397,17 @@ operador Hamiltoniano
 \end_layout
 
 \begin_layout Standard
-Mediante la ecuación de Schrödinger es posible describir cómo un estado
- cuántico (o el estado de un qubit, que es lo que se centra este trabajo)
- cambia con el tiempo en función de sus valores de energía:
+Mediante la ecuación de Schrödinger 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-ec_schroedinger"
+literal "false"
+
+\end_inset
+
+ es posible describir cómo un estado cuántico (o el estado de un qubit,
+ que es en lo que se centra este trabajo) cambia con el tiempo en función
+ de sus valores de energía:
 \begin_inset Formula 
 \[
 i\frac{h}{2\pi}\frac{\partial}{\partial t}|\psi>=Ĥ|\psi>
@@ -1301,8 +1442,8 @@ se refiere a la constante de Planck (
 \end_layout
 
 \begin_layout Standard
-Esta ecuación de Schrödinger permite cómo se comporta el hardware cuántico
- empleado, así como conocer cómo operarlo.
+Esta ecuación de Schrödinger permite saber cómo se comporta el hardware
+ cuántico empleado, así como conocer cómo operarlo.
  Permite asimismo diseñar e implementar puertas cuánticas.
  Resulta por último interesante nombrar que la mecánica cuántica se puede
  aplicar a otros campos distintos a los de la computación cuántica, tales
@@ -1328,8 +1469,8 @@ Se refieren a sistemas cuánticos compuestos con dos valores, como podrían
 \end_inset
 
 .
- El motivo de elegir únicamente dos niveles y no, por ejemplo, tres, es
- que se puede asignar muy fácilmente un nivel a 0 y el otro a 1, es algo
+ El motivo de elegir con únicamente dos niveles y no, por ejemplo, tres,
+ es que se puede asignar muy fácilmente un nivel a 0 y el otro a 1, es algo
  a lo que ya se está acostumbrado de los sistemas clásicos y resulta fácil
  de controlar.
  Las propiedades algebraicas de estos sistemas son mucho más simples, y
@@ -1351,9 +1492,9 @@ literal "false"
 .
  En este experimento se usaban imanes, los cuales creaban un campo magnético,
  y se contraponía el resultado de hacer pasar pequeños imanes a través de
- ello (caso clásico) respecto a hacerlo con electrones (caso cuántico).
+ estos imanes (caso clásico) respecto a hacerlo con electrones (caso cuántico).
  Resumiendo el experimento, y con ánimo de no complicar en exceso el estudio,
- se llegaba a la conclusión que mientras en el caso clásico de los imanes,
+ se llegaba a la conclusión que mientras que en el caso clásico de los imanes,
  los mismos se desviaban siguiendo un espectro continuo de opciones, en
  el caso de los electrones el resultado sólo tomaba dos opciones distintas
  (como por ejemplo 
@@ -1387,10 +1528,11 @@ entrelazamiento
 \end_inset
 
 .
- Este entrelazamiento cuántico se define como la correlación cuátnica entre
+ Este entrelazamiento cuántico se define como la correlación cuántica entre
  dos o más objetos, en los cuales cada uno de sus estados depende del estado
  del otro (o de los otros).
- Un ejemplo de estado entrelazado con dos qubits sería el siguiente:
+ Anteriormente ya se expuso un ejemplo de estado entrelazado con dos qubits,
+ otra opción sería la siguiente:
 \begin_inset Formula 
 \[
 |\psi>=\sqrt{1/2}\left(|01>+|10>\right)
@@ -1419,8 +1561,8 @@ Si se mide el primer qubit, inmediatamente se conoce el valor del segundo.
 \end_layout
 
 \begin_layout Standard
-Es inmediato ver como si se mide únicamente uno de los dos qubits (cualquiera),
- el valor del otro es conocido inmediatamente.
+Es inmediato ver cómo si se mide únicamente uno de los dos qubits (cualquiera),
+ el valor del otro sigue siendo conocido inmediatamente.
 \end_layout
 
 \begin_layout Standard
@@ -1483,6 +1625,12 @@ Codificación superdensa
 \end_layout
 
 \begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Postulados"
+
+\end_inset
+
 Postulados de la mecánica cuántica 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1494,6 +1642,11 @@ literal "false"
 
 \end_layout
 
+\begin_layout Standard
+Resulta interesante proponer un marco de trabajo matemático para la mecánica
+ cuántica, mediante los siguientes postulados:
+\end_layout
+
 \begin_layout Enumerate
 Un estado cuántico se reprenta mediante un 
 \begin_inset Quotes fld
@@ -1503,7 +1656,7 @@ ket
 \begin_inset Quotes frd
 \end_inset
 
- en el espacio de estados
+ en el espacio de estados.
 \end_layout
 
 \begin_deeper
@@ -1528,7 +1681,7 @@ Los observables clásicos se introducen en la mecánica cuántica empleando
 \begin_deeper
 \begin_layout Enumerate
 Analogía clásica: en la descripción del movimiento, se puede medir (exactamente)
-la velocidad, dirección, posición, energía, momento...
+ la velocidad, dirección, posición, energía, momento...
  En el caso cuántico, se aplica un operador a la función de onda para obtener
  esos valores.
  Por ejemplo, para medir la energía cinética, se aplicaría el operador correspon
@@ -1537,7 +1690,7 @@ diente a la función de onda
 \end_inset
 
 .
- Al emplear el verbo 
+ El empleo del verbo 
 \begin_inset Quotes fld
 \end_inset
 
@@ -1545,7 +1698,7 @@ aplicar
 \begin_inset Quotes frd
 \end_inset
 
-, se refiere al producto escalar.
+, se refiere a la operación de producto escalar.
 \end_layout
 
 \begin_layout Enumerate
@@ -1563,7 +1716,7 @@ El resultado de la medida de un observable con un operador Â será únicamente
 \begin_layout Enumerate
 Analogía clásica: resulta complicado establecer una, ya que esto se trata
  de un concepto exclusivamente cuántico.
- Podríamos pensar en una cinta caminadora habitual en los gimnasios, en
+ Podríamos pensar en una cinta caminadora, habitual en los gimnasios, en
  la que velocidad se introduce en intervalos de 0,5 km/h.
  Las velocidades posibles sólo tomarían los valores de 0km/h, 0,5km/h, 1km/h,
  1,5km/h, etc...
@@ -1719,7 +1872,7 @@ El qubit es la unidad básica para la construcción de ordenadores cuánticos.
 \end_layout
 
 \begin_layout Standard
-El estado de un qubit se puede representar como un punto en la 
+El estado de un qubit se puede representar también como un punto en la 
 \begin_inset Quotes fld
 \end_inset
 
@@ -1777,8 +1930,12 @@ La explicación de por qué se pasa de dos dimensiones (notación polar) a
 \end_inset
 
  se refiere a la diferencia de fase entre ambas constantes.
- Resulta importante mencionar que en la computación cuántica esta fase no
- va a tener ningún significado físico y se puede ignorar.
+ Resulta importante mencionar que en la computación cuántica esta fase relaciona
+da con la variable 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ no va a tener ningún significado físico y se puede ignorar.
  
 \end_layout
 
@@ -1787,6 +1944,17 @@ La explicación de por qué se pasa de dos dimensiones (notación polar) a
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Bloch_sphere.svg.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1815,17 +1983,6 @@ literal "false"
 \end_layout
 
 \begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename Bloch_sphere.svg.png
-	width 50col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1836,8 +1993,8 @@ literal "false"
 
 \begin_layout Standard
 Algunos puntos interesantes de la esfera de Bloch, además de los anteriormente
- expuestos de los polos, serían el punto correspondiente a |+> y |->, que
- corresponden a sustituir los valores de 
+ expuestos de los polos, serían los puntos correspondiente a |+> y |->,
+ que corresponden a sustituir los valores de 
 \begin_inset Formula $\theta=\pi/2$
 \end_inset
 
@@ -1951,6 +2108,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename abstraction_layers.jpg
+	width 100col%
+
+\end_inset
+
 
 \end_layout
 
@@ -1975,13 +2139,6 @@ literal "false"
 
 
 \end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename abstraction_layers.jpg
-	width 100col%
 
 \end_inset
 
@@ -2014,9 +2171,9 @@ En el caso de la computación cuántica, al menos hoy en día, se siguen emplean
  ordenadores clásicos en la pila de abstracción.
  Así, la capa del software estaría dividida (de arriba a abajo), en software
  cuántico y software clásico.
- El compilador clásico se sustituiría por un compilador cuántico, y el hardware
- clásico pasaría a estar dividido de nuevo en dos partes al igual que el
- software: un hardware clásico de control, que controlaría el hardware cuántico.
+ El compilador clásico no se sustituye, y el hardware clásico pasaría a
+ estar dividido de nuevo en dos partes al igual que el software: un hardware
+ clásico de control, que controlaría la última parte, el hardware cuántico.
  Se hará a continuación una breve descripción de cada una de las cinco partes
  enunciadas, de una forma ordenada:
 \end_layout
@@ -2026,8 +2183,9 @@ Hardware cuántico: se trata del ordenador cuántico en sí.
  Similarmente a como sucedía en los primeros días de la computación clásica,
  este hardware ocupa mucho espacio y se encuentra en habitaciones gigantes.
  Suele necesitar además mantenerse a temperaturas muy bajas, cercanas al
- cero absoluto, para proporcionar estabilidad a los qubits.
- Existen diversas tecnologías empleadas en las diversas partes del hardware
+ cero absoluto, para proporcionar estabilidad a los qubits de cara al posible
+ ruido.
+ Existen diversas tecnologías empleadas en las diferentes partes del hardware
  cuántico, que no son parte de este estudio.
  Se pueden nombrar algunas de las mismas, tal y como serían la resonancia
  magnética nuclear, los iones atrapados, la superconducción, los centros
@@ -2042,8 +2200,8 @@ s.
  puertas cuánticas distintas.
  Una sala de control de hardware cuántico no tiene mucha diferencia con
  su análogo de los años 50, salvando la distancia.
- O poniendo una analogía más cercana a nuestros días, una de las primeras
- centralitas telefónicas.
+ O poniendo una analogía más habitual para el público general, una de las
+ primeras centralitas telefónicas.
 \end_layout
 
 \begin_layout Enumerate
@@ -2065,7 +2223,7 @@ Software clásico: se trata del lenguaje de programación junto a cualquier
 Software cuántico: aquí es donde entra en especial la librería Qiskit, mediante
  la cual se puede codificar en código la implementación de puertas cuánticas.
  Existen otras opciones, como la implementación gráfica con las herramientas
- de web de IBM Quantum Experience.
+ de la web de IBM Quantum Experience.
  Aunque éstas se han explorado, no se usaron para la codificación de los
  algoritmo de este trabajo.
  En la sección de métodos y material se detalla todo esto con más detención.
@@ -2078,7 +2236,7 @@ El modelo de circuito cuántico
 \begin_layout Standard
 Se trata de un concepto teórico empleado en la computación cuántica y consta
  de tres componentes fundamentales: estados, puertas y medidas.
- Los postulados de este modelo se pueden resumir en lo siguiente:
+ Los postulados de este modelo se pueden resumir en los siguiente puntos:
 \end_layout
 
 \begin_layout Itemize
@@ -2101,12 +2259,12 @@ Los estados cuánticos múltiples se representan como cadenas de qubits: |010100
 \end_layout
 
 \begin_layout Itemize
-Las operaciones cuánticas (matrices) son las puertas de la computación cuántica
+Las operaciones cuánticas (matrices) son las puertas de la computación cuántica.
 \end_layout
 
 \begin_layout Itemize
 Al contrario que para las medidas clásicas, que son deterministas, las medicione
-s cuánticas son probabilísticas
+s cuánticas son probabilísticas-
 \end_layout
 
 \begin_layout Itemize
@@ -2291,7 +2449,7 @@ literal "false"
 , se basa en que la factorización de números muy grandes en factores primos
  es especialmente complicada computacionalmente hablando.
  Sin embargo, fue su trabajo en la corrección de errores cuántica, incluyendo
- la introducción del código Shor la que aseguró que los ordenadores cuánticos
+ la introducción del código Shor, la que aseguró que los ordenadores cuánticos
  funcionaran en el mundo real.
  Esta corrección de errores permite cierta resiliencia de los qubits ante
  ciertos tipos de ruido.
@@ -2358,6 +2516,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename circuit1.png
+	width 50col%
+
+\end_inset
+
 
 \end_layout
 
@@ -2374,13 +2539,6 @@ name "fig:Circuito-de-ejemplo-1qubit"
 
 Circuito de ejemplo para 1 qubit
 \end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename circuit1.png
-	width 50col%
 
 \end_inset
 
@@ -2421,8 +2579,8 @@ Se pueden hacer algunas observaciones:
 \end_layout
 
 \begin_layout Enumerate
-Un conjunto de puertas A, B, C dispuestas consecutivamente, equivalen a
- otra puerta, cuya matriz D estaría dada por la expresión D=C·B·A
+Un conjunto de puertas A, B, C dispuestas consecutivamente (y en ese orden),
+ equivalen a otra puerta, cuya matriz D estaría dada por la expresión D=C·B·A.
 \end_layout
 
 \begin_layout Enumerate
@@ -2435,12 +2593,20 @@ que no hay nada
 \begin_inset Quotes frd
 \end_inset
 
-, sólo que el cable continúa.
- Esto resultará de especial relevancia en el siguiente apartado
+, sólo que el 
+\begin_inset Quotes fld
+\end_inset
+
+cable
+\begin_inset Quotes frd
+\end_inset
+
+ continúa.
+ Esto resultará de especial relevancia en el siguiente apartado.
 \end_layout
 
 \begin_layout Enumerate
-Por defecto se suponen los qubits de los circuitos inicializados a |0>
+Por defecto se suponen los qubits de los circuitos inicializados a |0>.
 \end_layout
 
 \begin_layout Itemize
@@ -2471,8 +2637,16 @@ Puertas con varios qubits: si se dispone de un circuito con n qubits, la
  tensoriales y productos corrientes de matrices.
  Los qubits de entrada vendrán dados por el producto tensorial de cada uno
  de los qubits, y el circuito equivalente a las puertas cuánticas en cada
- paso, se obtiene con el producto tensorial de cada una de las puertas en
- el mismo 
+ 
+\begin_inset Quotes fld
+\end_inset
+
+paso
+\begin_inset Quotes frd
+\end_inset
+
+, se obtiene con el producto tensorial de cada una de las puertas en el
+ mismo 
 \begin_inset Quotes fld
 \end_inset
 
@@ -2505,6 +2679,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename circuit2.png
+	width 50col%
+
+\end_inset
+
 
 \end_layout
 
@@ -2529,13 +2710,6 @@ paso
 
 
 \end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename circuit2.png
-	width 50col%
 
 \end_inset
 
@@ -2598,7 +2772,7 @@ paso
 \end_inset
 
  sería la siguiente (y aquí es donde se entiende el uso de la puerta identidad,
- con la matriz identidad asociada):
+ con la matriz identidad asociada).
 \begin_inset Formula 
 \[
 X\otimes I\otimes H=\begin{pmatrix}0 & 1\\
@@ -2681,6 +2855,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename circuit3.png
+	width 50col%
+
+\end_inset
+
 
 \end_layout
 
@@ -2705,13 +2886,6 @@ pasos
 
 
 \end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename circuit3.png
-	width 50col%
 
 \end_inset
 
@@ -2769,8 +2943,15 @@ pasos
 \end_inset
 
  de la evolución temporal.
+ Se ha de resaltar que en este método, el orden de los productos (tanto
+ tensoriales como matriciales) es el habitual de nuestra lectura (de arriba
+ a abajo y de izquierda a derecha), es decir, ya no se invierte el orden
+ de las matrices para el producto matricial.
  En este caso se llega a la respuesta que los estados |00> y |11> son equiprobab
-les a la salida (o lo que es lo mismo, el estado de Bell |+> ).
+les a la salida (o lo que es lo mismo, la salida corresponde al estado de
+ Bell |+> ).
+ Si bien esta notación matemática presenta cierta complejidad operacional,
+ en algunas ocasiones puede resultar práctica a fin de orientarse correctamente.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2778,12 +2959,437 @@ Algoritmos
 \end_layout
 
 \begin_layout Standard
-Algoritmos cuánticos.
- Oráculos.
- Descripción de algoritmos (Deutsch-Josza, Grover, etc...).
- Puede que haya que mover parte de la explicación dada del punto 5 aquí
- (o en su defecto, añadir una introducción aquí, pero evitando repetir informaci
-ón).
+Un algoritmo es un conjunto de instrucciones que ayudan a calcular la respuesta
+ de un problema.
+ Se podría hacer una analogía con una receta de cocina, o las instrucciones
+ de montaje de un mueble: se tienen unas entradas (alimentos o piezas),
+ y mediante ciertas instrucciones, se llega a las salidas deseadas (una
+ comida cocinada o un mueble montado).
+ Ejemplos de algoritmos reales y prácticos podrían ser las recomendaciones
+ de nuestra plataforma de streaming de contenido multimedia favorita (música
+ o vídeo), las rutas proporcionadas por el navegador de nuestro coche o
+ teléfono móvil, o la obtención de resultados mostrada por un buscador de
+ Internet.
+ Un ejemplo muy habitual en cualquier curso básico de programación sería
+ un algoritmo de búsqueda de un elemento en una lista, y será precisamente
+ eso lo que se implementará de una forma cuántica en el algoritmo de Grover.
+\end_layout
+
+\begin_layout Standard
+Resulta interesante tener una métrica para poder medir la eficiencia de
+ estos algoritmos.
+ Se podría pensar en algo tan simple como medir el tiempo de ejecución,
+ seguramente se disponga de herramientas fácilmente accesibles para ello
+ (por ejemplo, el comando 
+\begin_inset Quotes fld
+\end_inset
+
+time
+\begin_inset Quotes frd
+\end_inset
+
+ del sistema operativo GNU/Linux).
+ Sin embargo esta idea presenta una serie de problemas que no la hacen óptima:
+\end_layout
+
+\begin_layout Itemize
+Depende del hardware: no es lo mismo ejecutar un algoritmo en una supercomputado
+ra, que en un ordenador doméstico.
+\end_layout
+
+\begin_layout Itemize
+Depende de la dificultad en la distribución de las entradas: no se tardará
+ lo mismo si el elemento a buscar estaba en la primera posición de la lista,
+ que si estuviera en la última posición de millones.
+\end_layout
+
+\begin_layout Itemize
+Depende de las entradas: no es lo mismo realizar una búsqueda de un elemento
+ en una lista de 100 posibilidades, que en una de millones.
+\end_layout
+
+\begin_layout Standard
+Sin embargo, científicamente se ha desarrollado una métrica adecuada para
+ realizar comparaciones entre algoritmos.
+ Ésta se conoce como 
+\begin_inset Quotes fld
+\end_inset
+
+big O notation
+\begin_inset Quotes frd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-big_o_notation"
+literal "false"
+
+\end_inset
+
+, que en algunas fuentes se traduce en español como 
+\begin_inset Quotes fld
+\end_inset
+
+cota superior asintótica
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Los problemas antes expuestos se resuelven de la siguiente manera:
+\end_layout
+
+\begin_layout Itemize
+Se mide el número de operaciones, no el tiempo empleado
+\end_layout
+
+\begin_layout Itemize
+Se toma el peor caso posible (
+\begin_inset Quotes fld
+\end_inset
+
+worst-case scenario
+\begin_inset Quotes frd
+\end_inset
+
+, en el caso de una búsqueda en una lista, el elemento a buscar va a estar
+ siempre el último)
+\end_layout
+
+\begin_layout Itemize
+Se expresa la salida como función del tamaño de la entrada.
+ La notación va a ser de la forma 
+\begin_inset Quotes fld
+\end_inset
+
+O(x)
+\begin_inset Quotes frd
+\end_inset
+
+, siendo x la entrada (de ahí el nombre inglés de 
+\begin_inset Quotes fld
+\end_inset
+
+big O notation
+\begin_inset Quotes frd
+\end_inset
+
+.
+ En el caso del ejemplo de la búsqueda, la complejidad sería lineal y tomaría
+ precisamente la forma 
+\begin_inset Quotes fld
+\end_inset
+
+O(n)
+\begin_inset Quotes frd
+\end_inset
+
+, siendo n el número de entradas (para 1000 entradas, serían necesarias
+ 1000 operaciones).
+\end_layout
+
+\begin_layout Standard
+La complejidad de los algoritmos se ordena de la siguiente manera, de menor
+ a mayor:
+\end_layout
+
+\begin_layout Itemize
+Constante: 
+\begin_inset Formula $O(1)$
+\end_inset
+
+ (realmente sería cualquier número constante)
+\end_layout
+
+\begin_layout Itemize
+Logarítmica: 
+\begin_inset Formula $O(log(n))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Raíz cuadrada: 
+\begin_inset Formula $O(\sqrt{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Lineal: 
+\begin_inset Formula $O(n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Cuadrática: 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Exponencial: 
+\begin_inset Formula $O(2^{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Factorial: 
+\begin_inset Formula $O(n!$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Cuando se esté calculando la complejidad de un algoritmo, los términos más
+ arriba de la lista se pueden despreciar frente a los inferiores, hasta
+ quedarnos con uno sólo de ellos.
+ Por supuesto, pueden cambiar los exponentes del caso cuadrático (por ejemplo
+ ser un 3 y pasaría a llamarse 
+\begin_inset Quotes fld
+\end_inset
+
+cúbica
+\begin_inset Quotes frd
+\end_inset
+
+), o la base de la exponencial.
+ En esos casos, se tomaría el mayor valor y se despreciarían los demás,
+ constantes incluidas (una complejidad de 
+\begin_inset Formula $O(3n^{3}+8n^{2}+0,5n)$
+\end_inset
+
+ se mostraría como 
+\begin_inset Formula $O(n^{3})$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+A la hora de diseñar algoritmos, interesa obtener la mejor opción posible
+ en la notación recién introducida.
+ Por ejemplo, en lugar de una búsqueda lineal, en el mundo clásico ya se
+ diseño algo conocido como búsqueda binaria 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-binary_search"
+literal "false"
+
+\end_inset
+
+, cuando los valores de la lista están ordenados (se va dividiendo la lista
+ en mitades).
+ De esta forma, se pasa de una complejidad de 
+\begin_inset Formula $O(n)$
+\end_inset
+
+ a otra de 
+\begin_inset Formula $O(log(n))$
+\end_inset
+
+, obteniéndose una aceleración del algoritmo.
+ Se buscará esto mismo en los algoritmos cuánticos.
+\end_layout
+
+\begin_layout Standard
+Existe la creencia de que la computación cuántica podría ayudar en muchos
+ de los problemas cuya complejidad (expresada en la forma de esta notación)
+ es muy grande, tal y como la creación de rutas eficientes en un mapa, algoritmo
+s de optimización, simulaciones químicas, diseño de medicamentos, etc...
+\end_layout
+
+\begin_layout Standard
+Por último, se enuncian algunos algoritmos cuánticos, así como algún detalle
+ técnico de su implementación y sus objetivos en el cuadro 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Algoritmos-cuánticos"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (se detallarán más detenidamente los algoritmos implementados en la sección
+ de resultados):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Algoritmos-cuánticos"
+
+\end_inset
+
+Algoritmos cuánticos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Algoritmo cuántico
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Característica técnica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Objetivo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Deutsch-Josza
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Oráculo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Algoritmo de prueba
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Algoritmo de Shor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+QFT (transformada de Fourier cuántica)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Factorización de números
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Algoritmo de búsqueda de Grover
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Oráculo + Amplificación de amplitud
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Búsqueda en una lista desordenada
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -2837,7 +3443,7 @@ Lenguaje Python para la programación de los algoritmos.
 \begin_layout Standard
 El lenguaje de programación empleado es python.
  No sólo por ser muy habitual para cualquier tipo de algoritmo hoy en día,
- ni por su sencillez, sino principalemente por la librería ya implementada
+ ni por su sencillez, sino principalmente por la librería ya implementada
  existente, que se trata en el siguiente punto.
 \end_layout
 
@@ -2913,8 +3519,8 @@ literal "false"
 \begin_layout Standard
 A la hora de codificar un programa de cualquier tipo, resulta muy útil el
  empleo de un software para control de versiones.
- Es más, este mismo software se puede usar para cualquier tipo de archivo
- (siendo especialmente útil cuando dicho archivo está en texto plano, ya
+ Es más, este mismo software se puede usar para cualquier tipo de archivo,
+ siendo especialmente útil cuando dicho archivo está en texto plano, ya
  que permite comparar versiones de una manera muy fácil e intuitiva, el
  ejemplo serían las fuentes de \SpecialChar LaTeX
  (para el PDF correspondiente ya no tiene
@@ -2940,7 +3546,7 @@ Como se introdujo en el punto anterior, esta memoria se ha escrito en \SpecialCh
  Sin embargo, si no se tiene el conocimiento de dicho lenguaje, la curva
  de aprendizaje puede ser algo lenta al principio.
  Resulta mucho más fácil el empleo de un procesador de textos que haga uso
- \SpecialChar LaTeX
+ de \SpecialChar LaTeX
 , sin tener que codificar el mismo.
  Esto es lo que logra el software libre \SpecialChar LyX
 .
@@ -2953,21 +3559,29 @@ Resultados
 \end_layout
 
 \begin_layout Subsection
-Algoritmo de Deutsch-Josza
+Algoritmo de Deutsch-Josza 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-deutsch_jozsa"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 El algoritmo de Deutsch-Josza resuelve un problema que no tiene ningún objetivo
- práctico, salvo demostrar la existencia de enunciados cuya resolución a
+ práctico, salvo demostrar la existencia de problemas cuya resolución a
  partir de un algoritmo cuántico es más eficiente que el método análogo
  correspondiente mediante computación tradicional.
 \end_layout
 
 \begin_layout Standard
-El algoritmo se basa en hallar si una función cualquiera f(x) es constante
+El algoritmo trata de hallar si una función cualquiera f(x) es constante
  o balanceada.
  Esto quiere decir, para una entrada de un único bit, se quiere hallar si
- su salida depende de la entrada o no.
+ su salida depende de la entrada (balanceada) o no (constante).
 \end_layout
 
 \begin_layout Standard
@@ -2991,6 +3605,25 @@ Como el propio nombre indica, la salida será siempre 0 ó 1, independientemente
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tabla-verdad-constante"
+
+\end_inset
+
+Tablas de la verdad para el caso constante
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -3134,21 +3767,6 @@ f(x)
 </cell>
 </row>
 </lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:tabla-verdad-constante"
-
-\end_inset
-
-Tablas de la verdad para el caso constante
-\end_layout
 
 \end_inset
 
@@ -3176,6 +3794,25 @@ status open
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tabla-verdad-balanceado"
+
+\end_inset
+
+Tablas de la verdad para el caso balanceado
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
@@ -3316,21 +3953,6 @@ f(x)
 </cell>
 </row>
 </lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:tabla-verdad-balanceado"
-
-\end_inset
-
-Tablas de la verdad para el caso balanceado
-\end_layout
 
 \end_inset
 
@@ -3361,7 +3983,7 @@ Se puede observar para ambos casos, que se necesitan 2 evaluaciones de la
 \begin_layout Standard
 Para la evaluación de la función mediante un algoritmo cuántico, que se
  espera que sea más eficiente, se conoce que todas las puertas cuánticas
- empleadas han de ser reversibles.
+ empleadas han de ser reversibles, como se estudió anteriormente.
  Analizando f(x), se concluye rápidamente que ésta no es reversible.
  Se debe evitar este problema mediante la introducción de un oráculo (vocablo
  inglés, en español se podría denominar también como 
@@ -3541,6 +4163,25 @@ status open
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tabla-verdad-oráculo-constante"
+
+\end_inset
+
+Tablas de la verdad del oráculo para el caso constante
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="4">
 <features tabularvalignment="middle">
@@ -3949,21 +4590,6 @@ y XOR f(x)
 \end_inset
 
 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:tabla-verdad-oráculo-constante"
-
-\end_inset
-
-Tablas de la verdad del oráculo para el caso constante
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -3996,9 +4622,24 @@ noprefix "false"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename dj_cte_0.png
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename dj_cte_1.png
+	width 50col%
+
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -4010,23 +4651,6 @@ name "fig:Circuitos_dj_constante"
 
 Circuitos cuánticos para el caso de una función constante
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename dj_cte_0.png
-	width 50col%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename dj_cte_1.png
-	width 50col%
 
 \end_inset
 
@@ -4062,7 +4686,25 @@ noprefix "false"
 placement H
 wide false
 sideways false
-status collapsed
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename dj_cte_0_prob.png
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename dj_cte_1_prob.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -4077,23 +4719,6 @@ name "fig:Circuitos_dj_constante_prob"
 Probabilidades medidas para los circuitos cuánticos en el caso de una función
  constante
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename dj_cte_0_prob.png
-	width 50col%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename dj_cte_1_prob.png
-	width 50col%
 
 \end_inset
 
@@ -4125,6 +4750,25 @@ noprefix "false"
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tabla-verdad-oráculo-balanceado"
+
+\end_inset
+
+Tablas de la verdad del oráculo para el caso balanceado
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -4536,21 +5180,6 @@ y XOR f(x)
 \end_inset
 
 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:tabla-verdad-oráculo-balanceado"
-
-\end_inset
-
-Tablas de la verdad del oráculo para el caso balanceado
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -4580,6 +5209,24 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename dj_balanced_0.png
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename dj_balanced_1.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -4591,23 +5238,6 @@ name "fig:Circuitos_dj_balanceado"
 
 Circuitos cuánticos para el caso de una función balanceada
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename dj_balanced_0.png
-	width 50col%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename dj_balanced_1.png
-	width 50col%
 
 \end_inset
 
@@ -4642,6 +5272,24 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename dj_balanced_0_prob.png
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename dj_balanced_1_prob.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -4660,30 +5308,21 @@ Probabilidades medidas para los circuitos cuánticos en el caso de una función
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename dj_balanced_0_prob.png
-	width 50col%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename dj_balanced_1_prob.png
-	width 50col%
-
-\end_inset
-
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Subsection
-Algoritmo de Grover
+Algoritmo de Grover 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-grovers_algorithm"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4727,12 +5366,12 @@ Inicialización de los qubits a 0.
 \end_layout
 
 \begin_layout Enumerate
-Aplicar una puerta H de Hadamard a cada uno de los qubits (superposición).
+Aplicación de una puerta H de Hadamard a cada uno de los qubits (superposición).
 \end_layout
 
 \begin_layout Enumerate
 Aplicación de un oráculo a los qubits, y aplicación del algoritmo de difusión
- de Grover (interferencia).
+ de Grover para amplificar la solución (interferencia).
 \end_layout
 
 \begin_layout Enumerate
@@ -4778,7 +5417,7 @@ caja negra
  de la solución por un valor de (-1).
  Recuérdese que el oráculo conoce la solución (como se introdujo anteriormente,
  la construcción real del oráculo es un campo complicado en el que se están
- realizando muchos estudios al respecto).
+ realizando muchos estudios al respecto y fuera del alcance de este trabajo).
  Analizando matemáticamente, y para un ejemplo de cuatro elementos en la
  lista (necesitándose por tanto dos qubits), con el elemento a buscar en
  la cuarta posición, se necesitaría pasar del vector de amplitudes de probabilid
@@ -4810,12 +5449,12 @@ Este se conseguiría aplicando una puerta cuya matriz fuera:
 \end{pmatrix}$
 \end_inset
 
-, matriz que coincide con la puerta Z controlada.
+, matriz que coincide con la puerta Z controlada (CNOT).
  Para el caso genérico de una posición distinta a la cuarta, se deberán
- manipular debidamente los qubits para obtener una matriz análoga con el
- -1 en otro punto de la diagonal principal, sin más que aplicar puertas
- X de Pauli (equivalente a la puerta NOT de los ordenadores clásicos) antes
- y después de la puerta Z controlada.
+ manipular debidamente los qubits para obtener con la misma matriz el -1
+ en otro punto de la diagonal principal, sin más que aplicar puertas X de
+ Pauli (equivalente a la puerta NOT de los ordenadores clásicos) antes y
+ después de la puerta Z controlada.
  Esta implementación se puede ver en el código.
 \end_layout
 
@@ -4845,7 +5484,8 @@ Operando en el ejemplo anterior:
 
 \begin_layout Standard
 A partir de aquí, sólo faltaría el operador de difusión de Grover, que es
- el que se encarga de reflejar las amplitudes respecto de la media.
+ el que se encarga de reflejar las amplitudes respecto de la media (produciendo
+ por tanto una amplificación de la respuesta buscada).
  La media de las amplitudes ahora es de 1.
  Si se refleja la amplitud respecto a esa nueva media, las tres primeras
  componentes del vector van a resultar nulas y la última la unidad, es decir,
@@ -4905,6 +5545,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename grover_2_11.png
 	width 100col%
@@ -5009,7 +5650,7 @@ Probabilidad medida para el algoritmo cuántico de Grover con 2 qubits y
 
 \begin_layout Standard
 Esta particularización para únicamente dos qubits se puede encontrar en
- muchos estudios.
+ muchos estudios (véase la bibliografía de este apartado).
  Por ello, y queriendo ampliar el algoritmo a un caso más complicado, se
  procede a implementar el mismo para tres qubits, lo que equivaldría a la
  búsqueda en una lista de ocho elementos.
@@ -5103,6 +5744,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename grover_3_1_1_000_circ.png
 	width 100col%
@@ -5249,6 +5891,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename grover_3_1_2_111_circ.png
 	width 100col%
@@ -5339,9 +5982,9 @@ Probabilidad medida para el algoritmo cuántico de Grover con 3 qubits, doble
 
 \begin_layout Standard
 Si se repitiera una tercera vez, el valor pasaría a empeorar (lo cual no
- parece intuitivo a primera vista, pero se basa en la parte del algoritmo
+ parece intuitivo a primera vista, pero es debido a la parte del algoritmo
  de difusión de Grover, que refleja las amplitudes de probabilidad respecto
- de la media tras invertir previamente la del valor a buscar, tal y como
+ de la media, tras invertir previamente la del valor a buscar, tal y como
  se comentó en el punto anterior).
 \end_layout
 
@@ -5395,6 +6038,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename grover_3_2_1_010-100_circ.png
 	width 100col%
@@ -5502,9 +6146,9 @@ Probabilidad medida para el algoritmo cuántico de Grover con 3 qubits y
 \begin_layout Standard
 Todos estos resultados han sido implementados en un simulador cuántico,
  esto es, una situación ideal y teórica.
- Adicionalmente, se ha añadido la opción al programa implementado de ejecutar
- los distintos algoritmos en hardware cuántico real, gracias al empleo de
- una cuenta gratuita en el programa 
+ Adicionalmente, se le ha añadido la opción al programa implementado de
+ ejecutar los distintos algoritmos en hardware cuántico real, gracias al
+ empleo de una cuenta gratuita en el programa 
 \begin_inset Quotes fld
 \end_inset
 
@@ -5731,7 +6375,8 @@ Empleo de un conjunto universal de puertas cuánticas, tales como H, S, T,
  CNOT.
  El control de la respuesta de dichas puertas es complicado.
  En la teoría una puerta va a suponer una transaformación en la esfera de
- Bloch a un punto en concreto (ver la sección correspondien en la introducción).
+ Bloch a un punto en concreto (véase en la sección correspondiente en la
+ introducción).
  Sin embargo, al tener dicha esfera un número infinito de puntos, las posibilida
 des de error son también infinitas.
  Resumidamente, hay mucho margen de error.
@@ -5746,7 +6391,7 @@ des de error son también infinitas.
 \end_inset
 
  la tasa de error.
- La medición de la fidelidad es campo en activa investigación.
+ La medición de la fidelidad es un campo de activa investigación.
  Se podría pensar en una tasa de fidelidad 
 \begin_inset Formula $f=0,995$
 \end_inset
@@ -5792,16 +6437,74 @@ Una capacidad de medida específica para qubits (si la medición no es adecuada,
  los resultados no valen para nada).
 \end_layout
 
-\begin_layout Itemize
-Limitaciones de los algoritmos.
- Hardware.
- Estado del arte para la generación de qubits.
- Caracterización de los circuitos y puertas cuánticas.
- Quizás se pueda mover a conclusiones.
+\begin_layout Subsection
+Limitaciones de los algoritmos cuánticos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-hybrid_alg,key-vqe_ansatz,key-qaoa"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Actualmente los algoritmos cuánticos aún presentan grandes limitaciones.
+ Por ejemplo, el mayor número factorizado a día de hoy mediante el algoritmo
+ de Shor es únicamente 35.
+ Asimismo, los errores que fueron presentados en el apartado anterior, resultan
+ insalvables en la práctica cuando el circuito cuántico crece.
+ Es necesaria la implementación práctica de corrección de errores.
+ En el futuro será necesario disponer de un número mayor de qubits, sin
+ ruido (irrealizable, pero sí se podría conseguir que éste fuera lo suficienteme
+nte pequeño), o aún mejor, qubits para cuyos errores se implemente una correcció
+n.
+ Sin embargo las posibilidades actuales son las que son, y se dispone de
+ pocos qubits, con ruido, y una fidelidad de puertas imperfecta.
+ Es por ello que han surgido teorías para mezclar ordenadores cuánticos
+ con tradicionales, a fin de obtener un mejor resultado.
+ La idea sería medir unos resultados imperfectos mediante nuestro hardware
+ cuántico, y procesar los mismos con un ordenador tradicional.
+ Los resultados obtenidos serán introducidos de nuevo al hardware cuántico,
+ esperando obtener un mejor resultado.
+ A este tipo de algoritmos mixtos se les conoce como algoritmos variacionales,
+ y ejemplos de los mismos podrían ser el VQE (variational quantum eigensolver),
+ empleado para sistemas continuos como podrían ser simulaciones químicas,
+ o el QAOA (quantum approximate optimization algorithms), empleados para
+ optimización combinatoria.
+ Por supuesto, el detalle de este tipo de algoritmos es muy extenso y queda
+ fuera del estudio de este trabajo.
 \end_layout
 
 \begin_layout Section
 Conclusiones
+\end_layout
+
+\begin_layout Standard
+El campo de la computación cuántica se encuentra aún en sus primeros pasos,
+ una época análoga a los primeros años tras el diseño del transistor en
+ la computación clásica.
+ Demostraciones recientes como la de la supremacía cuántica expuestas anteriorme
+nte demostrarían que se está avanzando en la dirección correcta, e incluso
+ es posible ver este resultado en pequeños algoritmos de una gran simplicidad,
+ tales y como los estudiados en este trabajo en detalle, como serían los
+ algoritmos de Deutsch-Josza y el de búsqueda de Grover, así como otros
+ enunciados a lo largo de este documento, como serían el de factorización
+ de Shor.
+ Parece claro que la computación cuántica no viene a sustituir a la computación
+ tradicional, ya que como se ha insistido, esta computación cuántica presenta
+ utilidad para resolver únicamente cierto tipo de problemas, en los cuales
+ se aprovechan las propiedades extrañas para nosotros de la computación
+ cuántica, como por ejemplo la superposición, el entrelazamiento y la interferen
+cia, que resultan útiles para este tipo de problemas, de tal forma que se
+ obtiene una aceleración en la obtención de una solución, reduciendo por
+ tanto su complejidad.
+ Seguirán por tanto existiendo algoritmos para los cuales el empleo de ordenador
+es tradicionales siga siendo válido.
+ Es más, como se expuso en el apartado anterior, cabe incluso la posibilidad
+ de que ordenadores tradicionales y cuánticos trabajen juntos para resolver
+ cierto tipo de problemas.
 \end_layout
 
 \begin_layout Section
@@ -5863,6 +6566,12 @@ Es necesario instalar previamente las librerías empleadas (qiskit o matplotlib,
  apartado anterior permite perfectamente analizar los resultados.
 \end_layout
 
+\begin_layout Standard
+Al ejecutar los programas sin parámetros, se nos mostrarán unas instrucciones,
+ indicando la cantidad de parámetros y la forma de los mismos, en función
+ del caso particular que se quiera estudiar.
+\end_layout
+
 \begin_layout Section
 Agradecimientos
 \end_layout
@@ -5900,7 +6609,7 @@ literal "false"
  para 2 qubits con una solución fija, y en este trabajo se ha generalizado
  para cualquier solución.
  En el caso de 3 qubits, sólo se estudiaba el caso de solución única con
- una única iteración y con una solución concreat.
+ una única iteración y con una solución concreta.
  Tras consultar bibliografía adicional, se implementó para cualquier posible
  solución única en una o dos iteraciones, así como para una solución doble,
  tal y como se ha explicado en la sección de resultados.
@@ -6298,6 +7007,24 @@ target "https://en.wikipedia.org/wiki/Photoelectric_effect"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+key "key-ec_schroedinger"
+literal "false"
+
+\end_inset
+
+Wikipedia: Schrödinger equation (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "key-stern_gerlach"
 literal "false"
 
@@ -6497,6 +7224,42 @@ target "https://en.wikipedia.org/wiki/RSA_(cryptosystem)"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+key "key-big_o_notation"
+literal "false"
+
+\end_inset
+
+Wikipedia: Big O notation (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Big_O_notation"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-binary_search"
+literal "false"
+
+\end_inset
+
+Wikipedia: Binary search (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Binary_search_algorithm"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "key-qiskit-homepage"
 literal "false"
 
@@ -6587,6 +7350,42 @@ target "https://www.lyx.org/"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+key "key-deutsch_jozsa"
+literal "false"
+
+\end_inset
+
+Wikipedia: Deutsch–Jozsa algorithm (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-grovers_algorithm"
+literal "false"
+
+\end_inset
+
+Wikipedia: Grover's algorithm (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Grover%27s_algorithm"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "key-qiskit-grover"
 literal "false"
 
@@ -6635,6 +7434,60 @@ Wikipedia: DiVincenzo's criteria (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://en.wikipedia.org/wiki/DiVincenzo%27s_criteria"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-hybrid_alg"
+literal "false"
+
+\end_inset
+
+Wikipedia: Hybrid quantum/classical algorithms (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Quantum_algorithm#Hybrid_quantum/classical_algorithms"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-vqe_ansatz"
+literal "false"
+
+\end_inset
+
+Wikipedia: Ansatz (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Ansatz"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-qaoa"
+literal "false"
+
+\end_inset
+
+Wikipedia: Quantum optimization algorithms (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Quantum_optimization_algorithms"
 
 \end_inset
 
