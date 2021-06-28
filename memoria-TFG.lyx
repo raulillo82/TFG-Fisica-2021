@@ -280,6 +280,12 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Álgebra-de-Boole"
+
+\end_inset
+
 Álgebra de Boole y puertas lógicas clásicas 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -601,7 +607,8 @@ En 1984, Peter Shor demuestra que los ordenadores cuánticos son capaces
 
 \begin_layout Itemize
 En 1998 tuvo lugar la primera demostración de un algoritmo cuántico.
- Se trataba de un ordenador cuántico NMR de 2 qubits.
+ Se trataba de un ordenador cuántico NMR (resonancia magnética nuclear)
+ de 2 qubits.
 \end_layout
 
 \begin_layout Itemize
@@ -973,7 +980,8 @@ Una puerta interesante y que se ha empleado en este trabajo es la CNOT,
 
 \begin_layout Standard
 La computación cuántica hace uso extensivo de tres propiedades principales
- de la física cuántica que se detallarán más adelante, siendo las mismas:
+ de la física/mecánica cuántica que se detallarán más adelante, siendo las
+ mismas:
 \end_layout
 
 \begin_layout Enumerate
@@ -1089,62 +1097,829 @@ Por último, y en este caso esto es algo idéntico a la computación cuántica,
  
 \end_layout
 
+\begin_layout Subsection
+Mecánica cuántica y aplicación a algoritmos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-qubit-x-qubit"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
-Mecánica cuántica y aplicación a algoritmos
+Principios de la mecáncia cuántica
+\end_layout
+
+\begin_layout Standard
+La mecánica cuántica trata de describir objetos a pequeña escala (microscópica,
+ del orden del tamaño de los átomos).
+ Esto es incompatible con las observaciones que percibimos en el día a día,
+ ya que muestra efectos que escapan de nuestra intuición, tales y como las
+ tres propiedades expuestas en el apartado anterior (superposición, entrelazamie
+nto e interferencia).
+ La computación cuántica tratará de hacer uso de propiedades como las anteriores
+ para resolver ciertos problemas computacionales que los ordenadores clásicos
+ son incapaces de resolver a día de hoy.
+ Es por ello necesario tener una base de mecánica cuántica.
+ Sin embargo, resulta curioso fijarse que no es necesario conocer las particular
+idades de los semiconductores si se quiere emplear la computación tradicional.
+\end_layout
+
+\begin_layout Standard
+A modo de introducción, se ha de recordar que la materia es dual, tal y
+ como se ha comentado anteriormente y como expuso De Broglie 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-de_broglie-dualidad"
+literal "false"
+
+\end_inset
+
+.
+ Las partículas y las ondas son entidades distintas: las partículas tienen
+ una posición y momento definidos, y son discretas.
+ Cuando las partículas colisionan, interaccionan según los postulados conocidos
+ de la física clásica (choques elásticos o inelásticos).
+ Sin embargo, las ondas no tienen una posición definida, y dejan de ser
+ discretas para pasar a ser continuas.
+ Cuando dos ondas interaccionan (chocan) no rebotan como en un choque elástico,
+ sino que 
+\begin_inset Quotes fld
+\end_inset
+
+interfieren
+\begin_inset Quotes frd
+\end_inset
+
+, pudiendo ser esta interferencia en los casos más extremos 
+\begin_inset Quotes fld
+\end_inset
+
+constructiva
+\begin_inset Quotes frd
+\end_inset
+
+ (una onda con el doble de amplitud) o 
+\begin_inset Quotes fld
+\end_inset
+
+destructiva
+\begin_inset Quotes frd
+\end_inset
+
+ (la onda resultante se anula), tal y como se puede apreciar en el experimento
+ de la doble rendija 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-experimento_rendija"
+literal "false"
+
+\end_inset
+
+, ampliamente conocido.
+ La parte ondulatoria de la luz se puede demostrar con este experimento,
+ mientras que la parte corpuscular se demuestra a partir del efecto fotoeléctric
+o 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-efecto_fotoeléctrico"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Demostrada esta dualidad de la luz, se puede aplicar la misma a cualquier
+ partícula, sin más que aplicar el experimento de la doble rendija a un
+ haz de electrones: si los mismos fueran sólo materia, cabría esperar simplement
+e dos franjas en la pantalla del experimento, sin embargo se verá un patrón
+ de interferencia con franjas de distinta intensidad.
+ El resultado de que las partículas sean también ondas es importante, ya
+ que implica que no van a tener una posición fija.
+ En su lugar, estarán definidas por una función de onda, habitualmente denominad
+a como 
+\begin_inset Formula $\psi(x,t)$
+\end_inset
+
+, que no es capaz de determinar la posición exacta de la misma, sino que
+ dará una estimación, o dicho de otra forma, una función de probabilidad
+ para la posición.
+ Los qubits se comportan como ondas, y los estados de superposición de los
+ mismos pueden interferir los unos con los otros.
+ Un ejemplo de aplicación sería el de amplificar la probabilidad de la respuesta
+ correcta en algoritmo de búsqueda (como el de Grover que se estudiará en
+ este trabajo), dando lugar a una aceleración cuántica en la búsqueda de
+ la misma.
+\end_layout
+
+\begin_layout Standard
+Para la representación matemática de estas ondas (o mejor dicho, la función
+ de probabilidad de su posición) se empleará algo llamado 
+\begin_inset Quotes fld
+\end_inset
+
+operador Hamiltoniano
+\begin_inset Quotes frd
+\end_inset
+
+, que permitirá encontrar la energía los estados de energía permitidos de
+ esta función de onda.
+ Este Hamiltoniano, en este contexto, se trata de un operador cuántico que
+ da información acerca de la energía de un estado cuántico, o dicho de otra
+ forma: 
+\begin_inset Formula $Ĥ|\psi>=E|\psi>$
+\end_inset
+
+.
+ Los autovalores de esta expresión corresponden a soluciones permitidas
+ para los valores de energía que se pueden tomar en la ecuación de ondas.
+ Esta energía dispone de una componente cinética y otra potencial.
+ La forma más fácil de interpretar estas componentes es asociarlas al mundo
+ clásico, donde la primera se asocia a la energía debida a una velocidad
+ y otra debida a la gravedad (por la altura/distancia a la que se encuentra
+ respecto a la base de referencia, como podría ser la Tierra).
+ En el caso que nos atañe, la energía cinética es debida a la velocidad
+ de las partículas (electrones) y la potencial no sería debida a la gravedad,
+ sino a energía potencial eléctrica dependiente de la distancia al núcleo
+ en este caso.
+ La forma de la energía sería la siguiente: 
+\begin_inset Formula $E=\frac{p^{2}}{2m}+V(x)$
+\end_inset
+
+, en donde la variable 
+\begin_inset Formula $p$
+\end_inset
+
+ se refiere al momento de una partícula, estando relacionado el mismo con
+ la velocidad mediante la fórmula 
+\begin_inset Formula $p=mv$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Mediante la ecuación de Schrödinger es posible describir cómo un estado
+ cuántico (o el estado de un qubit, que es lo que se centra este trabajo)
+ cambia con el tiempo en función de sus valores de energía:
+\begin_inset Formula 
+\[
+i\frac{h}{2\pi}\frac{\partial}{\partial t}|\psi>=Ĥ|\psi>
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la expresión anterior, 
+\begin_inset Formula $h$
+\end_inset
+
+se refiere a la constante de Planck (
+\begin_inset Formula $h=6,626·10^{-34}J·s)$
+\end_inset
+
+ e 
+\begin_inset Formula $i$
+\end_inset
+
+ es la unidad imaginaria.
+ A menudo se utiliza en la expresión anterior la constante de Planck reducida,
+ o constante de Dirac, a fin de simplificar la expresión, y conocida como:
+ 
+\begin_inset Formula $\hbar=\frac{h}{2\pi}=1,055·10^{-34}J·s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Esta ecuación de Schrödinger permite cómo se comporta el hardware cuántico
+ empleado, así como conocer cómo operarlo.
+ Permite asimismo diseñar e implementar puertas cuánticas.
+ Resulta por último interesante nombrar que la mecánica cuántica se puede
+ aplicar a otros campos distintos a los de la computación cuántica, tales
+ y como serían otros campos de la física, la química o incluso campos a
+ priori tan distintos como la economía.
+\end_layout
+
+\begin_layout Subsubsection
+Sistemas cuánticos de dos valores y medición.
+ Entrelazamiento cuántico.
+\end_layout
+
+\begin_layout Standard
+Se refieren a sistemas cuánticos compuestos con dos valores, como podrían
+ ser los qubits o el spin de un electrón.
+ Para el qubit, se podría poner como ejemplo el caso de superposición antes
+ expuesto, de 
+\begin_inset Formula $|\psi>=\alpha|0>+\beta|1>$
+\end_inset
+
+, a diferencia de un posible sistema de tres niveles, como podría ser 
+\begin_inset Formula $|\psi'>=\alpha|0>+\beta|1>+\gamma|2>$
+\end_inset
+
+.
+ El motivo de elegir únicamente dos niveles y no, por ejemplo, tres, es
+ que se puede asignar muy fácilmente un nivel a 0 y el otro a 1, es algo
+ a lo que ya se está acostumbrado de los sistemas clásicos y resulta fácil
+ de controlar.
+ Las propiedades algebraicas de estos sistemas son mucho más simples, y
+ por último y no menos importante, estos sistemas de dos niveles han sido
+ estudiados durante casi un siglo.
+\end_layout
+
+\begin_layout Standard
+¿Cómo se conoce que el spin de un electrón es un ejemplo de un sistema cuántico
+ de dos valores? Para responder a este pregunta, se utilizará el experimento
+ de Stern-Gerlach 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-stern_gerlach"
+literal "false"
+
+\end_inset
+
+.
+ En este experimento se usaban imanes, los cuales creaban un campo magnético,
+ y se contraponía el resultado de hacer pasar pequeños imanes a través de
+ ello (caso clásico) respecto a hacerlo con electrones (caso cuántico).
+ Resumiendo el experimento, y con ánimo de no complicar en exceso el estudio,
+ se llegaba a la conclusión que mientras en el caso clásico de los imanes,
+ los mismos se desviaban siguiendo un espectro continuo de opciones, en
+ el caso de los electrones el resultado sólo tomaba dos opciones distintas
+ (como por ejemplo 
+\begin_inset Quotes fld
+\end_inset
+
+arriba
+\begin_inset Quotes frd
+\end_inset
+
+ o 
+\begin_inset Quotes fld
+\end_inset
+
+abajo
+\begin_inset Quotes frd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Una aplicación práctica interesante que surge a partir de estos niveles
+ de dos niveles no es otra que la propiedad introducida anteriormente conocida
+ como 
+\begin_inset Quotes fld
+\end_inset
+
+entrelazamiento
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Este entrelazamiento cuántico se define como la correlación cuátnica entre
+ dos o más objetos, en los cuales cada uno de sus estados depende del estado
+ del otro (o de los otros).
+ Un ejemplo de estado entrelazado con dos qubits sería el siguiente:
+\begin_inset Formula 
+\[
+|\psi>=\sqrt{1/2}\left(|01>+|10>\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se mide el primer qubit, inmediatamente se conoce el valor del segundo.
+ El entrelazamiento cuántico tiene la propiedad de que los qubits entrelazados
+ se mantendrán así si se aplica un operador únicamente a uno de ellos.
+ Por ejemplo, en el estado anterior, si se aplica una puerta X (recuérdese
+ que esta puerta tiene como resultado el qubit opuesto al de la entrada)
+ al primer qubit, el estado continua entrelazado:
+\begin_inset Formula 
+\[
+|\psi'>=\sqrt{1/2}\left(|11>+|00>\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es inmediato ver como si se mide únicamente uno de los dos qubits (cualquiera),
+ el valor del otro es conocido inmediatamente.
+\end_layout
+
+\begin_layout Standard
+Al conjunto de posibles estados entrelazados con dos qubits se les conoce
+ como estados de Bell 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-bell_states"
+literal "false"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Itemize
-Dualidad onda-partícula
+\begin_inset Formula $|\beta_{00}>=\sqrt{1/2}\left(|00>+|11>\right)=|+>$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Superposición
+\begin_inset Formula $|\beta_{01}>=\sqrt{1/2}\left(|01>+|01>\right)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Entrelazamiento
+\begin_inset Formula $|\beta_{10}>=\sqrt{1/2}\left(|00>-|11>\right)=|->$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Interferencia
+\begin_inset Formula $|\beta_{11}>=\sqrt{1/2}\left(|01>-|01>\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El entrelazamiento cuántico tiene aplicaciones reales, sin embargo no se
+ ha empleado en ninguno de los algoritmos implementados en este trabajo.
+ Alguno de los ejemplos serían:
 \end_layout
 
 \begin_layout Itemize
-Qubits y esfera de Bloch.
- Notación bra-ket.
- Probabilidades de un estado
+Teleportación cuántica
 \end_layout
 
 \begin_layout Itemize
-Postulados cuánticos
+Criptografía cuántica (BB84)
 \end_layout
 
 \begin_layout Itemize
-Puertas cuánticas
+Codificación superdensa
+\end_layout
+
+\begin_layout Subsubsection
+Postulados de la mecánica cuántica 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-quantum_mechanics_postulates"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Un estado cuántico se reprenta mediante un 
+\begin_inset Quotes fld
+\end_inset
+
+ket
+\begin_inset Quotes frd
+\end_inset
+
+ en el espacio de estados
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Analogía clásica: se puede crear una función clásica para expresar el movimiento.
+\end_layout
+
+\begin_layout Enumerate
+Consecuencia: la superposición de dos estados cuánticos cualesquiera no
+ es más que otro estado cuántico.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Los observables clásicos se introducen en la mecánica cuántica empleando
+ operadores.
+ Específicamente, cualquier observable (propiedad que pueda ser medida)
+ de un sistema físico se describe mediante un operador que actúa sobre los
+ kets de estado.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Analogía clásica: en la descripción del movimiento, se puede medir (exactamente)
+la velocidad, dirección, posición, energía, momento...
+ En el caso cuántico, se aplica un operador a la función de onda para obtener
+ esos valores.
+ Por ejemplo, para medir la energía cinética, se aplicaría el operador correspon
+diente a la función de onda 
+\begin_inset Formula $|\psi>$
+\end_inset
+
+.
+ Al emplear el verbo 
+\begin_inset Quotes fld
+\end_inset
+
+aplicar
+\begin_inset Quotes frd
+\end_inset
+
+, se refiere al producto escalar.
+\end_layout
+
+\begin_layout Enumerate
+Consecuencia: es posible relacionar observables que pueden ser medidos al
+ mundo cuántico.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El resultado de la medida de un observable con un operador Â será únicamente
+ un autovalor de Â.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Analogía clásica: resulta complicado establecer una, ya que esto se trata
+ de un concepto exclusivamente cuántico.
+ Podríamos pensar en una cinta caminadora habitual en los gimnasios, en
+ la que velocidad se introduce en intervalos de 0,5 km/h.
+ Las velocidades posibles sólo tomarían los valores de 0km/h, 0,5km/h, 1km/h,
+ 1,5km/h, etc...
+\end_layout
+
+\begin_layout Enumerate
+Consecuencia: la multiplicación matriz/vector se simplifica a una multiplicación
+ escalar vector: 
+\begin_inset Formula $A\vec{v}=\lambda\vec{v}$
+\end_inset
+
+, y se puede determinar los posibles resultados de una medición de un observable.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Al realizar una medida de un observable con un operador Â en un estado genérico
+ de 
+\begin_inset Formula $|\psi>$
+\end_inset
+
+, la probabilidad de obtener un cierto autovalor 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+corresponde al cuadrado del producto escalar de 
+\begin_inset Formula $|\psi>$
+\end_inset
+
+ con el correspondiente autovalor: 
+\begin_inset Formula $|<a_{i}|\psi>|^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Analogía clásica: al realizar la medida de la velocidad en el caso anterior,
+ cada uno de los resultados tiene una cierta probabilidad ya establecida.
+\end_layout
+
+\begin_layout Enumerate
+Consecuencia: es posible conocer la probabilidad de medir cada una de los
+ posibles valores de una medida.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Inmediatamente después de medir un observable A con un valor 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+, el estado del sistema es el autovalor normalizado 
+\begin_inset Formula $|a_{n}>$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Analogía clásica: antes de medir la velocidad de la caminadora, ésta no
+ era conocida.
+ Sin embargo, una vez medida, la velocidad queda establecida a ese valor.
+\end_layout
+
+\begin_layout Enumerate
+Consecuencia: el valor medido en un estado de superposición 
+\begin_inset Quotes fld
+\end_inset
+
+colapsa
+\begin_inset Quotes frd
+\end_inset
+
+ (o dicho de otra manera, 
+\begin_inset Quotes fld
+\end_inset
+
+queda establecido como
+\begin_inset Quotes frd
+\end_inset
+
+) a un estado concreto una vez realizada la medida.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Los estados cuánticos generalmente evolucionan con el tiempo.
+ Esta evolución temporal preserva la normalización del estado y es descrita
+ mediante la expresión: 
+\begin_inset Formula $|\psi(t)>=Û(t)|\psi(0)>$
+\end_inset
+
+, para cierto operador unitario Û.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Analogía clásica: cambiando la caminadora estática por un corredor real,
+ conocida la posición final y las condiciones de la carrera (quién es el
+ corredor, qué tiempo hacía, etc), se podría estimar el punto de comienzo
+ de dicha carrera.
+\end_layout
+
+\begin_layout Enumerate
+Consecuencia: la evolución temporal del estado cuántico es reversible.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+En la computación cuántica estos postulados permiten:
 \end_layout
 
 \begin_layout Itemize
-Representación matemática de los circuitos cuánticos
+Dar instrucciones sobre cómo operar el hardware cuántico.
 \end_layout
 
 \begin_layout Itemize
-Supremacía cuántica (resumen)
+Predecir qué ocurrirá tras una medida en el circuito cuántico.
 \end_layout
 
 \begin_layout Itemize
-Codificación superdensa (resumen)
+Calcular la probabilidad de obtener la respuesta adecuada basándose en el
+ conjunto de puertas cuánticas en las que se ejecuta el algoritmo
 \end_layout
 
-\begin_layout Itemize
-Criptografía cuántica (BB84) (resumen)
+\begin_layout Subsubsection
+El qubit y la esfera de Bloch 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-qubit,key-blochsphere"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Teleportación cuántica (resument)
+\begin_layout Standard
+El qubit es la unidad básica para la construcción de ordenadores cuánticos.
+ Se trata de un sistema de dos niveles y puede ser cualquier superposición
+ de ambos valores (es decir, que puede ser 0 y 1 a la vez, con distintas
+ probabilidades para cada valor).
+ Resulta muy conveniente una representación del qubit mediante números complejos
+, asignando las partes reales e imaginarias, a los valores de los dos niveles,
+ |0> y |1>.
+ La representación de un número complejo se puede hacer mediante notación
+ cartesiana, con partes reales e imaginarias separadas, o mediante forma
+ polar, representando módulo y fase.
+ 
+\end_layout
+
+\begin_layout Standard
+El estado de un qubit se puede representar como un punto en la 
+\begin_inset Quotes fld
+\end_inset
+
+espera de Bloch
+\begin_inset Quotes frd
+\end_inset
+
+, que no es más que una esfera de radio unidad y que se muestra en la figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Esfera-de-Bloch"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ El equivalente al 
+\begin_inset Quotes fld
+\end_inset
+
+polo Norte
+\begin_inset Quotes frd
+\end_inset
+
+ (como analogía respecto de la Tierra) sería el estado |0>, y el polo Sur,
+ el |1>, que son los únicos puntos posibles para un bit clásico.
+ A partir de la notación polar, y similarmente al uso de las coordenadas
+ esféricas, se puede expresar un estado cualquiera como:
+\begin_inset Formula 
+\begin{equation}
+|\Psi>=cos(\theta/2)|0>+sen(\theta/2)·e^{i\varphi}|1>\label{eq:bloch_sphere}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La explicación de por qué se pasa de dos dimensiones (notación polar) a
+ tres, se basa en que en el qubit, las constantes que expresan el porcentaje
+ de superposición, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta$
+\end_inset
+
+, pueden ser complejas, y la variable 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ se refiere a la diferencia de fase entre ambas constantes.
+ Resulta importante mencionar que en la computación cuántica esta fase no
+ va a tener ningún significado físico y se puede ignorar.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Esfera-de-Bloch"
+
+\end_inset
+
+Esfera de Bloch 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-blochsphere"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Bloch_sphere.svg.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Algunos puntos interesantes de la esfera de Bloch, además de los anteriormente
+ expuestos de los polos, serían el punto correspondiente a |+> y |->, que
+ corresponden a sustituir los valores de 
+\begin_inset Formula $\theta=\pi/2$
+\end_inset
+
+ y 
+\begin_inset Formula $\varphi=0,\pi$
+\end_inset
+
+ en la ecuación de la Esfera de Bloch 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:bloch_sphere"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Gráficamente serían los puntos anterior (eje X) y posterior (eje -X) del
+ ecuador de la esfera de Bloch.
+\end_layout
+
+\begin_layout Standard
+La relación de las puertas cuánticas con la esfera de Bloch consiste en
+ asignar un punto destino en la esfera de Bloch a un punto origen.
+ Estas puertas cuánticas se pueden representar mediante matrices, como ya
+ se introdujo anteriormente.
+ Ejemplos simples serían las puertas X, Y y Z, conocidas también como operadores
+ de Pauli.
+ Dichas puertas, interpretadas geométricamente, no hacen otra cosa que realizar
+ una rotación respecto al eje correspondiente de 180º.
+ Por ejemplo, aplicando una puerta de Pauli-X al estado |0> se obtendrá
+ |1> (rotación de 180º respecto al eje X), o al aplicar al mismo estado
+ original una puerta Pauli-Z se obtendrá el punto original, mediante una
+ rotación de 180º respecto del eje Z.
+\end_layout
+
+\begin_layout Standard
+Estas rotaciones de 180º pueden ser realmente de cualquier valor de ángulo,
+ y estarían representadas por unas puertas distintas.
+\end_layout
+
+\begin_layout Standard
+Es ahora cuando se puede volver al concepto de 
+\begin_inset Quotes fld
+\end_inset
+
+universalidad
+\begin_inset Quotes frd
+\end_inset
+
+, que si se recuerda no es otra cosa que la posibilidad de representar cualquier
+ operación cuántica como una cierta combinación de puertas.
+ Las puertas universales son: CNOT, H, S y T, siendo S una rotación de 
+\begin_inset Formula $\pi/2$
+\end_inset
+
+ respecto del eje Z, 
+\begin_inset Formula $S²=Z$
+\end_inset
+
+, y T una rotación una rotación de 
+\begin_inset Formula $\pi/4$
+\end_inset
+
+ también respecto del eje Z, con 
+\begin_inset Formula $T²=S$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
-Fundamentos computacionales
+Fundamentos computacionales 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-qubit-x-qubit"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -1210,10 +1985,6 @@ literal "false"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1298,6 +2069,708 @@ Software cuántico: aquí es donde entra en especial la librería Qiskit, median
  Aunque éstas se han explorado, no se usaron para la codificación de los
  algoritmo de este trabajo.
  En la sección de métodos y material se detalla todo esto con más detención.
+\end_layout
+
+\begin_layout Subsubsection
+El modelo de circuito cuántico
+\end_layout
+
+\begin_layout Standard
+Se trata de un concepto teórico empleado en la computación cuántica y consta
+ de tres componentes fundamentales: estados, puertas y medidas.
+ Los postulados de este modelo se pueden resumir en lo siguiente:
+\end_layout
+
+\begin_layout Itemize
+Los estados cuánticos se reducen a qubits, dados por la expresión: 
+\begin_inset Formula $|\psi>=\alpha|0>+\beta|1>$
+\end_inset
+
+, o puesto en forma de vector: 
+\begin_inset Formula $|\psi>=\begin{pmatrix}\alpha\\
+\beta
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Los estados cuánticos múltiples se representan como cadenas de qubits: |01010001
+11....>
+\end_layout
+
+\begin_layout Itemize
+Las operaciones cuánticas (matrices) son las puertas de la computación cuántica
+\end_layout
+
+\begin_layout Itemize
+Al contrario que para las medidas clásicas, que son deterministas, las medicione
+s cuánticas son probabilísticas
+\end_layout
+
+\begin_layout Itemize
+Para comprobar la distribución probabilística de un experimento en la práctica,
+ es necesario realizar las mediciones en numerosas ocasiones a fin de obtener
+ una estadística.
+\end_layout
+
+\begin_layout Standard
+En cuanto a las componentes enunciadas, se puede destacar los siguiente
+ de ellas:
+\end_layout
+
+\begin_layout Itemize
+Estados
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Se pasa del concepto clásico de 
+\begin_inset Quotes fld
+\end_inset
+
+interruptor
+\begin_inset Quotes frd
+\end_inset
+
+ al de 
+\begin_inset Quotes fld
+\end_inset
+
+dial
+\begin_inset Quotes frd
+\end_inset
+
+, por ejemplo el mando con el que se controla la tensión de un osciloscopio,
+ para el mundo cuántico.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Puertas
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+En el apartado 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "subsec:Álgebra-de-Boole"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ se hizo referencia a las puertas clásicas, que no son más que una representació
+n de cierto hardware que se puede implementar en su mayoría mediante transistore
+s.
+ Es más, como se ha podido ver en la primera sección de este punto de fundamento
+s computacionales, todos los programas escritos son compilados hasta obtener
+ lenguaje máquina, que simplemente ejecuta estas operaciones lógicas booleanas
+ en cadenas de bits.
+ Como se vio anteriormente, cada puerta tiene una relación entrada/salida
+ dada por una tabla de la verdad.
+\end_layout
+
+\begin_layout Itemize
+Para el mundo cuántico, estas puertas se representan matemáticamente como
+ matrices.
+ Las operaciones afectando a un único qubit se pueden representar como rotacione
+s en la esfera de Bloch, y estas operaciones no son otra cosa que las puertas
+ cuánticas.
+ Por supuesto, existen también puertas que afectan a múltiples qubits al
+ mismo tiempo.
+\end_layout
+
+\begin_layout Itemize
+Las puertas en un circuito se representan por recuadros (cajas), habitualmente
+ con un símbolo de puerta asociado, tal y como H, X, Y, Z, etc...
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Medidas
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+En el mundo clásico no se suele hablar demasiado de medidas para estos sistemas
+ deterministas.
+ Esto es debido a que, corrección de errores aparte, el resultado de la
+ medición es conocido a priori.
+ Por ejemplo, el resultado de la medición a la salida de una puerta NOT,
+ cuando la entrada es 0, será de 1 en un 100% de las ocasiones (obviando
+ un cierto error en los aparatos de medición).
+\end_layout
+
+\begin_layout Itemize
+Sin embargo, en el mundo cuántico, la medición es probabilística.
+ Por ejemplo, el resultado a la salida de una puerta H cuando la entrada
+ es |0>, será a veces |0>, a veces |1>.
+ Es necesario realizar un estudio de probabilidad, mediante la aplicación
+ de la ley de los grandes números, para poder llegar a un porcentaje realista.
+ En el caso del ejemplo, será de un 50%-50%.
+\end_layout
+
+\begin_layout Itemize
+La medición se representa con un símbolo de medición mostrado como una flecha
+ en un dial.
+ Se verán ejemplos en la demostración de los algoritmos implementados.
+\end_layout
+
+\begin_layout Itemize
+A partir de estas mediciones, se mostrará un diagrama con las probabilidades
+ de cada posible resultado.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Se puede destacar que hasta ahora se ha hablado de dos analogías para caracteriz
+ar los qubits: diales y la esfera de Bloch.
+ Se puede discutir que la definición de la esfera de Bloch constituiría
+ entonces una complicación innecesaria, cuando parece posible caracterizar
+ los qubits mediante una analogía más sencilla.
+ El origen de esta complicación viene de comienzos del siglo XX.
+ Por aquel entonces, había una gran expectación respecto a la computación
+ analógica, que empleaba, curiosamente, diales.
+ Sin embargo, para la década de los 60 se abandonó esta idea debido principalmen
+te a la incapacidad para corregir errores debidos al ruido.
+ Este problema se trató extensamente en las décadas de los 40 y 50 con la
+ introducción de la teoría de la información 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-information_theory"
+literal "false"
+
+\end_inset
+
+, por Claude Shannon y el desarrollo de un sistema clásico de detección/correcci
+ón de errores 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-hamming_code"
+literal "false"
+
+\end_inset
+
+, por Richard Hamming, todo esto ya de vuelta a nuestro mundo digital.
+\end_layout
+
+\begin_layout Standard
+Análogamente, en los 60, Peter Shor desarrolló un estudio similar hasta
+ dar con un método de correción cuántica de errores 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-shor_code"
+literal "false"
+
+\end_inset
+
+.
+ Shor fue más conocido por el algoritmo de factorización 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-shor_algorithm"
+literal "false"
+
+\end_inset
+
+ que lleva su nombre, el cual proporciona una aceleración exponencial en
+ la factorización de números en factores primos, la cual es muy importante
+ en el campo de la criptografía, ya que el principal algoritmo de cifrado,
+ conocido como RSA 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-rsa"
+literal "false"
+
+\end_inset
+
+, se basa en que la factorización de números muy grandes en factores primos
+ es especialmente complicada computacionalmente hablando.
+ Sin embargo, fue su trabajo en la corrección de errores cuántica, incluyendo
+ la introducción del código Shor la que aseguró que los ordenadores cuánticos
+ funcionaran en el mundo real.
+ Esta corrección de errores permite cierta resiliencia de los qubits ante
+ ciertos tipos de ruido.
+ Sin el desarrollo de esta teoría, el desarrollo de los ordenadores cuánticos
+ probablemente no habría seguido adelante y habría muerto de la misma forma
+ que los ordenadores analógicos en el mundo clásico.
+\end_layout
+
+\begin_layout Standard
+Tras estos conceptos es cuando se puede entender la introducción de la esfera
+ de Bloch.
+ Los qubits se pueden seguir asemejando a diales, pero no a uno, sino a
+ dos: un dial que controla el nivel de superposición de los estados |0>
+ y |1> (eje vertical), y un segundo dial (eje horizontal) que controla la
+ diferencia de fase entre los mismos en dicha superposición.
+\end_layout
+
+\begin_layout Subsubsection
+Formulación matemática de los circuitos cuánticos
+\end_layout
+
+\begin_layout Standard
+Existe la posibilidad de formular los circuitos cuánticos de una manera
+ totalmente matemática.
+ De esta forma, es posible calcular sobre el papel la probabilidad de cada
+ qubit en la medición, en función de la entrada y las puertas que haya por
+ el camino.
+ 
+\end_layout
+
+\begin_layout Itemize
+Puertas de un único qubit: se ha de recordar que los qubits son vectores
+ complejos, y las puertas cuánticas son matrices, también con elementos
+ complejos.
+ La concatenación de diversas puertas cuánticas equivale al producto matricial,
+ en donde el orden importa (el producto de matrices no es conmutativo).
+ Los circuitos se leen de derecha a izquierda, poniendo primero las matrices
+ de las puertas del final.
+ En el último paso, se pondrá el vector correspondiente a la entrada.
+ El valor medido a la salida vendrá dado por la superposición obtenida al
+ realizar el producto de las matrices por el vector correspondiente.
+ Un ejemplo sería el añadido en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito-de-ejemplo-1qubit"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, en donde se inicializa un qubit a 0, posteriormente se añade una puerta
+ X de Pauli (en este nomenclatura se representa mediante un signo +) y a
+ continuación, una puerta H de Hadamard.
+ Con los conocimientos hasta el momento, se sabe que la salida medida será
+ la correspondiente al qubit |-> (uno de los estados Bell mencionados anteriorme
+nte), pero la pregunta es si se puede llegar a este expresión matemáticamente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito-de-ejemplo-1qubit"
+
+\end_inset
+
+Circuito de ejemplo para 1 qubit
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename circuit1.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Operando matemáticamente, el valor a la salida será:
+\begin_inset Formula 
+\[
+H·X·|0>=\sqrt{0,5}\begin{pmatrix}1 & 1\\
+1 & -1
+\end{pmatrix}·\begin{pmatrix}0 & 1\\
+1 & 0
+\end{pmatrix}·\begin{pmatrix}1\\
+0
+\end{pmatrix}=\sqrt{0,5}\begin{pmatrix}0\\
+1
+\end{pmatrix}=|->
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se pueden hacer algunas observaciones:
+\end_layout
+
+\begin_layout Enumerate
+Un conjunto de puertas A, B, C dispuestas consecutivamente, equivalen a
+ otra puerta, cuya matriz D estaría dada por la expresión D=C·B·A
+\end_layout
+
+\begin_layout Enumerate
+Resulta de utilidad el empleo de la matriz identidad, I, cuando se quiere
+ representar 
+\begin_inset Quotes fld
+\end_inset
+
+que no hay nada
+\begin_inset Quotes frd
+\end_inset
+
+, sólo que el cable continúa.
+ Esto resultará de especial relevancia en el siguiente apartado
+\end_layout
+
+\begin_layout Enumerate
+Por defecto se suponen los qubits de los circuitos inicializados a |0>
+\end_layout
+
+\begin_layout Itemize
+Puertas con varios qubits: si se dispone de un circuito con n qubits, la
+ formulación ya no es tan sencilla como en el ejemplo anterior.
+ Existirían dos opciones de análisis: o bien resolver cada qubit individualmente
+, o bien resolver el circuito conjuntamente.
+ El primer método únicamente será válido cuando todas las puertas empleadas
+ sean puertas de un único qubit.
+ Sin embargo, existen puertas que utilizan varios qubits de entrada, tales
+ y como la CNOT, SWAP, etc.
+ Es más, estas puertas tienen asociadas matrices de dimensiones distintas
+ a las 2x2 vistas hasta ahora (en los ejemplos anteriores, 4x4).
+ La resolución matemática mediante el segundo método, analizando el circuito
+ como un conjunto, necesitará el empleo de productos tensoriales.
+ En el caso de la computación cuántica será necesario preocuparse únicamente
+ de los productos tensiorales en una (qubits) y dos (puertas cuánticas)
+ dimensiones.
+ Sin entrar en demasiados detalles matemáticos, se ha de recordar que el
+ producto tensorial de dos matrices, A y B, con dimensiones (n x m) y (p
+ x q), será otra matriz de dimensiones (n·p x m·q), y en este caso los valores
+ de n, m, p y q podrán ser cualquier valor natural (no ocurre como en el
+ producto de matrices, que sólo es posible para ciertas dimensiones de las
+ matrices asociadas).
+ Además, en general el producto tensorial de dos matrices, tal y como ocurre
+ con el producto de matrices, tampoco va a ser conmutativo.
+ A la hora de resolver los circuitos, se subdividará el mismo en productos
+ tensoriales y productos corrientes de matrices.
+ Los qubits de entrada vendrán dados por el producto tensorial de cada uno
+ de los qubits, y el circuito equivalente a las puertas cuánticas en cada
+ paso, se obtiene con el producto tensorial de cada una de las puertas en
+ el mismo 
+\begin_inset Quotes fld
+\end_inset
+
+paso>.
+ Mostremos un ejemplo, en el que hay un único 
+\begin_inset Quotes fld
+\end_inset
+
+paso
+\begin_inset Quotes frd
+\end_inset
+
+, en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito-de-ejemplo-varios-qubits-1paso"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito-de-ejemplo-varios-qubits-1paso"
+
+\end_inset
+
+Circuito de ejemplo para varios qubits y un único 
+\begin_inset Quotes fld
+\end_inset
+
+paso
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename circuit2.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Matemáticamente, se calcularía primero el vector asociado a los qubits de
+ entrada, de la forma:
+\begin_inset Formula 
+\[
+|\psi>=|0>\otimes|0>\otimes|0>=\begin{pmatrix}1\\
+0
+\end{pmatrix}\otimes\begin{pmatrix}1\\
+0
+\end{pmatrix}\otimes\begin{pmatrix}1\\
+0
+\end{pmatrix}=\begin{pmatrix}1\\
+0
+\end{pmatrix}\otimes\begin{pmatrix}1·\begin{pmatrix}1\\
+0
+\end{pmatrix}\\
+0·\begin{pmatrix}1\\
+0
+\end{pmatrix}
+\end{pmatrix}=\begin{pmatrix}1\\
+0
+\end{pmatrix}\otimes\begin{pmatrix}1\\
+0\\
+0\\
+0
+\end{pmatrix}=\begin{pmatrix}1\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y la matriz resultante para las puertas cuánticas de este único 
+\begin_inset Quotes fld
+\end_inset
+
+paso
+\begin_inset Quotes frd
+\end_inset
+
+ sería la siguiente (y aquí es donde se entiende el uso de la puerta identidad,
+ con la matriz identidad asociada):
+\begin_inset Formula 
+\[
+X\otimes I\otimes H=\begin{pmatrix}0 & 1\\
+1 & 0
+\end{pmatrix}\otimes\begin{pmatrix}1 & 0\\
+0 & 1
+\end{pmatrix}\otimes\sqrt{0,5}\begin{pmatrix}1 & 1\\
+1 & -1
+\end{pmatrix}=...=\sqrt{0,5}\begin{pmatrix}0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & -1\\
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & -1 & 0 & 0 & 0 & 0
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y ahora, realizando el producto matricial, se obtiene el estado resultante:
+\begin_inset Formula 
+\[
+|\phi>=(X\otimes I\otimes H)·|\psi>=\sqrt{0,5}·\begin{pmatrix}0\\
+0\\
+0\\
+0\\
+1\\
+1\\
+0\\
+0
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La interpretación de la respuesta es que la probabilidad está distribuida
+ al 50% (recuérdese que la probabilidad es el módulo de la amplitud al cuadrado)
+ de los estados quinto y sexto, que corresponden a |100> y |101> (se empieza
+ a contar por |000>).
+ Sin darnos cuenta se ha pasado también de la medición de un único qubit,
+ a la medición de varios simultánemente.
+\end_layout
+
+\begin_layout Standard
+Otro ejemplo, esta vez con varios 
+\begin_inset Quotes fld
+\end_inset
+
+pasos
+\begin_inset Quotes frd
+\end_inset
+
+, en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito-de-ejemplo-varios-qubits-2pasos"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito-de-ejemplo-varios-qubits-2pasos"
+
+\end_inset
+
+Circuito de ejemplo para varios qubits y varios 
+\begin_inset Quotes fld
+\end_inset
+
+pasos
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename circuit3.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El estado 
+\begin_inset Formula $|\phi>$
+\end_inset
+
+medido a la salida será:
+\begin_inset Formula 
+\[
+|\phi>=T_{2}·T_{1}·|\psi>=(H\otimes I)·(CNOT)(|0>\otimes|0>)=\left[\sqrt{0,5}\begin{pmatrix}1 & 1\\
+1 & -1
+\end{pmatrix}\otimes\begin{pmatrix}1 & 0\\
+0 & 1
+\end{pmatrix}\right]·\begin{pmatrix}1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 1 & 0
+\end{pmatrix}·\begin{pmatrix}1\\
+0\\
+0\\
+0
+\end{pmatrix}=...=\sqrt{0,5}\begin{pmatrix}1\\
+0\\
+0\\
+1
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se ha empleado la notación 
+\begin_inset Formula $T_{n}$
+\end_inset
+
+ para representar cada uno de los 
+\begin_inset Quotes fld
+\end_inset
+
+pasos
+\begin_inset Quotes frd
+\end_inset
+
+ de la evolución temporal.
+ En este caso se llega a la respuesta que los estados |00> y |11> son equiprobab
+les a la salida (o lo que es lo mismo, el estado de Bell |+> ).
 \end_layout
 
 \begin_layout Subsubsection
@@ -4554,14 +6027,32 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Quantum computing 
+Wikipedia: Quantum computing (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://en.wikipedia.org/wiki/Quantum_computing"
 
 \end_inset
 
+)
+\end_layout
 
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-nmr_quantum_computer"
+literal "false"
+
+\end_inset
+
+Wikipedia: Nuclear magnetic resonance quantum computer (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance_quantum_computer"
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -4572,14 +6063,14 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Quantum supremacy 
+Wikipedia: Quantum supremacy (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://en.wikipedia.org/wiki/Quantum_supremacy"
 
 \end_inset
 
-
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -4591,15 +6082,14 @@ literal "false"
 \end_inset
 
 «Google claims to have reached quantum supremacy».
- Financial Times, Sept 2019.
- 
+ Financial Times, Sept 2019 (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.ft.com/content/b9bb4e54-dbc1-11e9-8f9b-77216ebe1f17"
 
 \end_inset
 
-
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -4617,15 +6107,14 @@ Arute, Frank; Arya, Kunal; Babbush, Ryan; Bacon, Dave; Bardin, Joseph C.;
  Nature (en inglés) 574 (7779): 505-510.
  ISSN 1476-4687.
  doi:10.1038/s41586-019-1666-5.
- Consultado el 25 de octubre de 2019.
- 
+ Consultado el 25 de octubre de 2019 (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.nature.com/articles/s41586-019-1666-5"
 
 \end_inset
 
-
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -4638,15 +6127,14 @@ literal "false"
 
 "What the Google vs.
  IBM debate over quantum supremacy means | ZDNet".
- www.zdnet.com.
- 
+ www.zdnet.com (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.zdnet.com/google-amp/article/what-the-google-v-ibm-debate-over-quantum-means/"
 
 \end_inset
 
-
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -4660,15 +6148,14 @@ literal "false"
 "On "Quantum Supremacy"".
  IBM Research Blog.
  2019-10-22.
- Retrieved 2019-10-24.
- 
+ Retrieved 2019-10-24 (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.ibm.com/blogs/research/2019/10/on-quantum-supremacy/"
 
 \end_inset
 
-
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -4681,15 +6168,14 @@ literal "false"
 
 "Google Claims To Achieve Quantum Supremacy — IBM Pushes Back".
  NPR.org.
- Retrieved 2019-10-24.
- 
+ Retrieved 2019-10-24 (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.npr.org/2019/10/23/772710977/google-claims-to-achieve-quantum-supremacy-ibm-pushes-back"
 
 \end_inset
 
-
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -4709,15 +6195,14 @@ Zhong, Han-Sen; Wang, Hui; Deng, Yu-Hao; Chen, Ming-Cheng; Peng, Li-Chao;
  Bibcode:2020Sci...370.1460Z.
  doi:10.1126/science.abe8770 (inactive 31 May 2021).
  ISSN 0036-8075.
- PMID 33273064.
- 
+ PMID 33273064 (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://science.sciencemag.org/content/early/2020/12/02/science.abe8770"
 
 \end_inset
 
-
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -4759,6 +6244,24 @@ target "https://en.wikipedia.org/wiki/Logic_gate"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+key "key-qubit-x-qubit"
+literal "false"
+
+\end_inset
+
+Qubit x Qubit: Programs (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.qubitbyqubit.org/programs"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "key-experimento_rendija"
 literal "false"
 
@@ -4777,20 +6280,218 @@ target "https://en.wikipedia.org/wiki/Double-slit_experiment"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+key "key-efecto_fotoeléctrico"
+literal "false"
+
+\end_inset
+
+Wikipedia: Photoelectric effect (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Photoelectric_effect"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-stern_gerlach"
+literal "false"
+
+\end_inset
+
+Wikipedia: Stern–Gerlach experiment (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Stern%E2%80%93Gerlach_experiment"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-bell_states"
+literal "false"
+
+\end_inset
+
+Wikipedia: Bell state(
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Bell_state"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-quantum_mechanics_postulates"
+literal "false"
+
+\end_inset
+
+Wikipedia: Postulates of quantum mechanics (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Mathematical_formulation_of_quantum_mechanics#Postulates_of_quantum_mechanics"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-qubit"
+literal "false"
+
+\end_inset
+
+Wikipedia: Qubit (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Qubit"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-blochsphere"
+literal "false"
+
+\end_inset
+
+Wikipedia: Bloch sphere (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Bloch_sphere"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "key-clasical_computing_stack_source"
 literal "false"
 
 \end_inset
 
 What is the role of ISA (Instruction Set Architecture) in the comp arch
- abstraction stack
+ abstraction stack (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://electronics.stackexchange.com/questions/353915/what-is-the-role-of-isa-instruction-set-architecture-in-the-comp-arch-abstract"
 
 \end_inset
 
+)
+\end_layout
 
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-information_theory"
+literal "false"
+
+\end_inset
+
+Wikipedia: Information theory (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Information_theory"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-hamming_code"
+literal "false"
+
+\end_inset
+
+Wikipedia: Hamming code (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Hamming_code"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-shor_code"
+literal "false"
+
+\end_inset
+
+Wikipedia: Shor code (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Quantum_error_correction#Shor_code"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-shor_algorithm"
+literal "false"
+
+\end_inset
+
+Wikipedia: Shor's algorithm (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/Shor%27s_algorithm"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-rsa"
+literal "false"
+
+\end_inset
+
+Wikipedia: RSA (cryptosystem) (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://en.wikipedia.org/wiki/RSA_(cryptosystem)"
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -4801,14 +6502,14 @@ literal "false"
 
 \end_inset
 
-Qiskit homepage: 
+Qiskit homepage (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://qiskit.org/"
 
 \end_inset
 
-
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -4837,14 +6538,14 @@ literal "false"
 
 \end_inset
 
-IBM Quantum: 
+IBM Quantum (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://quantum-computing.ibm.com/"
 
 \end_inset
 
-
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -4855,14 +6556,14 @@ literal "false"
 
 \end_inset
 
-Github: 
+Github (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://github.com"
 
 \end_inset
 
-
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -4873,14 +6574,14 @@ literal "false"
 
 \end_inset
 
-Lyx: 
+Lyx (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.lyx.org/"
 
 \end_inset
 
-
+)
 \end_layout
 
 \begin_layout Bibliography
@@ -4934,24 +6635,6 @@ Wikipedia: DiVincenzo's criteria (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://en.wikipedia.org/wiki/DiVincenzo%27s_criteria"
-
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-qubit-x-qubit"
-literal "false"
-
-\end_inset
-
-Qubit x Qubit: Programs (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://www.qubitbyqubit.org/programs"
 
 \end_inset
 
