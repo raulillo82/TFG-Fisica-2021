@@ -142,24 +142,10 @@ Curso 2020/21
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset CommandInset toc
-LatexCommand tableofcontents
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
 
-\end_inset
-
-
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Resumen / abstract
-\end_layout
-
-\begin_layout Subsection
+\emph on
 Resumen
 \end_layout
 
@@ -186,9 +172,16 @@ Este trabajo estudia el estado del arte de la computación cuántica, tras
  en la nube.
  A modo de corolario, se discutirán las limitaciones de estos algoritmos
  y posibles soluciones a las mismas.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\emph on
 Abstract
 \end_layout
 
@@ -213,6 +206,20 @@ ion, entanglement and interference, which applied to these problems, result
  of tools in the cloud that allowed the access to such a hardware.
  As a summary, the limitations of these algorithms will be presented and
  possible solutions suggested.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -639,7 +646,7 @@ Bases físicas, fundamentos y particularidades de la computación cuántica
 Historia de la computación cuántica 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-wikipedia-quantum_computing"
+key "key-history-quantum_computing"
 literal "false"
 
 \end_inset
@@ -1400,7 +1407,7 @@ operador Hamiltoniano
 Mediante la ecuación de Schrödinger 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-ec_schroedinger"
+key "key-efecto_fotoeléctrico,key-ec_schroedinger"
 literal "false"
 
 \end_inset
@@ -1570,7 +1577,7 @@ Al conjunto de posibles estados entrelazados con dos qubits se les conoce
  como estados de Bell 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-bell_states"
+key "key-nielsen-y-chuang"
 literal "false"
 
 \end_inset
@@ -1849,7 +1856,7 @@ Calcular la probabilidad de obtener la respuesta adecuada basándose en el
 El qubit y la esfera de Bloch 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-qubit,key-blochsphere"
+key "key-bell_states,key-blochsphere"
 literal "false"
 
 \end_inset
@@ -2421,7 +2428,7 @@ Análogamente, en los 60, Peter Shor desarrolló un estudio similar hasta
  dar con un método de correción cuántica de errores 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-shor_code"
+key "key-shor_algorithm"
 literal "false"
 
 \end_inset
@@ -3451,7 +3458,7 @@ El lenguaje de programación empleado es python.
 Librería Qiskit 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-qiskit-homepage,key-qiskit-wiki"
+key "key-qiskit-homepage"
 literal "false"
 
 \end_inset
@@ -3562,7 +3569,7 @@ Resultados
 Algoritmo de Deutsch-Josza 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-deutsch_jozsa"
+key "key-nielsen-y-chuang"
 literal "false"
 
 \end_inset
@@ -5317,7 +5324,7 @@ Probabilidades medidas para los circuitos cuánticos en el caso de una función
 Algoritmo de Grover 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-grovers_algorithm"
+key "key-nielsen-y-chuang"
 literal "false"
 
 \end_inset
@@ -6441,7 +6448,7 @@ Una capacidad de medida específica para qubits (si la medición no es adecuada,
 Limitaciones de los algoritmos cuánticos 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-hybrid_alg,key-vqe_ansatz,key-qaoa"
+key "key-nielsen-y-chuang,key-vqe_ansatz,key-qaoa"
 literal "false"
 
 \end_inset
@@ -6622,19 +6629,14 @@ Bibliografía
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-de_broglie-dualidad"
+key "key-de_broglie"
 literal "false"
 
 \end_inset
 
-Wikipedia: Dualidad onda corpúsculo (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://es.wikipedia.org/wiki/Dualidad_onda_corp%C3%BAsculo"
-
-\end_inset
-
-)
+Louis de Broglie Nobel Lectur.
+ eobel Lecture, December 12, 1929 The Wave Nature of the Electron.
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -6663,14 +6665,14 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Ley de Moore (
+Moore's law: 
 \begin_inset CommandInset href
 LatexCommand href
-target "https://es.wikipedia.org/wiki/Ley_de_Moore"
+target "http://large.stanford.edu/courses/2012/ph250/lee1/docs/Excepts_A_Conversation_with_Gordon_Moore.pdf"
 
 \end_inset
 
-)
+
 \end_layout
 
 \begin_layout Bibliography
@@ -6681,10 +6683,11 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Álgebra de Boole (
+Álgebra de Boole.
+ Javier Borge Holthoefer (
 \begin_inset CommandInset href
 LatexCommand href
-target "https://es.wikipedia.org/wiki/%C3%81lgebra_de_Boole"
+target "http://serbal.pntic.mec.es/~cmunoz11/boole.pdf"
 
 \end_inset
 
@@ -6718,32 +6721,33 @@ literal "false"
 
 \end_inset
 
-Reversible computing (
+RevComp - The Reversible and Quantum Computing Research Group Reversible/Adiabat
+ic Chips: Tick, FlatTop, XRAM, Pendulum 
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Reversible_computing"
+target "https://www.cise.ufl.edu/research/revcomp/"
 
 \end_inset
 
-)
+
 \end_layout
 
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-wikipedia-quantum_computing"
+key "key-history-quantum_computing"
 literal "false"
 
 \end_inset
 
-Wikipedia: Quantum computing (
+Forbes: 27 Milestones In The History Of Quantum Computing 
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Quantum_computing"
+target "https://www.forbes.com/sites/gilpress/2021/05/18/27-milestones-in-the-history-of-quantum-computing/"
 
 \end_inset
 
-)
+
 \end_layout
 
 \begin_layout Bibliography
@@ -6754,14 +6758,14 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Nuclear magnetic resonance quantum computer (
+Nuclear Magnetic Resonance Quantum Computing (NMRQC) 
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance_quantum_computer"
+target "http://web.physics.ucsb.edu/~msteffen/nmrqc.htm"
 
 \end_inset
 
-)
+
 \end_layout
 
 \begin_layout Bibliography
@@ -6772,14 +6776,14 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Quantum supremacy (
+Why I Called It ‘Quantum Supremacy’ John Preskill, Quanta Magazine 
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Quantum_supremacy"
+target "https://www.quantamagazine.org/john-preskill-explains-quantum-supremacy-20191002/"
 
 \end_inset
 
-)
+
 \end_layout
 
 \begin_layout Bibliography
@@ -6922,14 +6926,12 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Bra–ket notation (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation"
-
-\end_inset
-
-)
+Dirac, P.
+ A.
+ M.
+ (1939).
+ "A new notation for quantum mechanics".
+ Mathematical Proceedings of the Cambridge Philosophical Society.
 \end_layout
 
 \begin_layout Bibliography
@@ -6943,7 +6945,7 @@ literal "false"
 Wikipedia: Quantum logic gate (
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Logic_gate"
+target "https://en.wikipedia.org/wiki/Quantum_logic_gate#/media/File:Quantum_Logic_Gates.png"
 
 \end_inset
 
@@ -6976,14 +6978,8 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Double-slit experiment (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/Double-slit_experiment"
-
-\end_inset
-
-)
+Óptica, Eugéne Hecht.
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -6994,14 +6990,8 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Photoelectric effect (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/Photoelectric_effect"
-
-\end_inset
-
-)
+Física cuántica.
+ Sánchez del Río, Carlos
 \end_layout
 
 \begin_layout Bibliography
@@ -7012,14 +7002,9 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Schrödinger equation (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation"
-
-\end_inset
-
-)
+Física cuántica I.
+ Alvarellos Bermejo, José Enrique; García González, Pablo; García Sanz,
+ José Javier
 \end_layout
 
 \begin_layout Bibliography
@@ -7030,32 +7015,27 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Stern–Gerlach experiment (
+Stern and Gerlach: How a Bad Cigar Helped Reorient Atomic Physics.
+ Bretislav Friedrich and Dudley Herschbach 
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Stern%E2%80%93Gerlach_experiment"
+target "https://web.archive.org/web/20070929091315/http://www.physicstoday.org/vol-56/iss-12/p53.html"
 
 \end_inset
 
-)
+
 \end_layout
 
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-bell_states"
+key "key-nielsen-y-chuang"
 literal "false"
 
 \end_inset
 
-Wikipedia: Bell state(
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/Bell_state"
-
-\end_inset
-
-)
+Quantum Computation and quantum information.
+ Nielsen, Michael A.; Chuang, Isaac L.
 \end_layout
 
 \begin_layout Bibliography
@@ -7066,32 +7046,19 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Postulates of quantum mechanics (
+Physics 8.05 Sep 12, 2007.
+ Supplementary notes on Diract notation, quantum states.
+ R.
+ L.
+ Jaffe.
+ 
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Mathematical_formulation_of_quantum_mechanics#Postulates_of_quantum_mechanics"
+target "http://web.mit.edu/8.05/handouts/jaffe1.pdf"
 
 \end_inset
 
-)
-\end_layout
 
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-qubit"
-literal "false"
-
-\end_inset
-
-Wikipedia: Qubit (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/Qubit"
-
-\end_inset
-
-)
 \end_layout
 
 \begin_layout Bibliography
@@ -7102,10 +7069,14 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Bloch sphere (
+Bloch, Felix (Oct 1946).
+ "Nuclear induction".
+ Phys.
+ Rev.
+ 70 (7–8): 460–474 (
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Bloch_sphere"
+target "https://journals.aps.org/pr/abstract/10.1103/PhysRev.70.460"
 
 \end_inset
 
@@ -7139,10 +7110,14 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Information theory (
+Shannon, C.E.
+ (1948), "A Mathematical Theory of Communication", Bell System Technical
+ Journal, 27, pp.
+ 379–423 & 623–656, July & October, 1948.
+ (
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Information_theory"
+target "http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
 
 \end_inset
 
@@ -7157,28 +7132,11 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Hamming code (
+Hamming, Richard Wesley (1950).
+ "Error detecting and error correcting codes" (
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Hamming_code"
-
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-shor_code"
-literal "false"
-
-\end_inset
-
-Wikipedia: Shor code (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/Quantum_error_correction#Shor_code"
+target "https://calhoun.nps.edu/bitstream/handle/10945/46756/Hamming_1982.pdf;jsessionid=5E608A71A351333E226F6D34F4722BB0?sequence=1"
 
 \end_inset
 
@@ -7193,10 +7151,14 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Shor's algorithm (
+Good Quantum Error-Correcting Codes Exist A.
+ R.
+ Calderbank, Peter W.
+ Shor.
+ (
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Shor%27s_algorithm"
+target "https://arxiv.org/abs/quant-ph/9512032"
 
 \end_inset
 
@@ -7211,14 +7173,9 @@ literal "false"
 
 \end_inset
 
-Wikipedia: RSA (cryptosystem) (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/RSA_(cryptosystem)"
-
-\end_inset
-
-)
+Menezes, Alfred; van Oorschot, Paul C.; Vanstone, Scott A.
+ (October 1996).
+ Handbook of Applied Cryptography 
 \end_layout
 
 \begin_layout Bibliography
@@ -7229,14 +7186,12 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Big O notation (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/Big_O_notation"
-
-\end_inset
-
-)
+Knuth, Donald (1997).
+ "1.2.11: Asymptotic Representations".
+ Fundamental Algorithms.
+ The Art of Computer Programming.
+ 1 (3rd ed.).
+ Addison-Wesley
 \end_layout
 
 \begin_layout Bibliography
@@ -7247,14 +7202,9 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Binary search (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/Binary_search_algorithm"
-
-\end_inset
-
-)
+Bentley, Jon (2000).
+ Programming pearls (2nd ed.).
+ Addison-Wesley.
 \end_layout
 
 \begin_layout Bibliography
@@ -7269,24 +7219,6 @@ Qiskit homepage (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://qiskit.org/"
-
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-qiskit-wiki"
-literal "false"
-
-\end_inset
-
-Wikipedia: Qiskit (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/Qiskit"
 
 \end_inset
 
@@ -7350,42 +7282,6 @@ target "https://www.lyx.org/"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-deutsch_jozsa"
-literal "false"
-
-\end_inset
-
-Wikipedia: Deutsch–Jozsa algorithm (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm"
-
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-grovers_algorithm"
-literal "false"
-
-\end_inset
-
-Wikipedia: Grover's algorithm (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/Grover%27s_algorithm"
-
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
 key "key-qiskit-grover"
 literal "false"
 
@@ -7430,28 +7326,15 @@ literal "false"
 
 \end_inset
 
-Wikipedia: DiVincenzo's criteria (
+DiVincenzo, David P.
+ (2000-04-13).
+ "The Physical Implementation of Quantum Computation".
+ Fortschritte der Physik.
+ 48 (9–11): 771–783.
+ (
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/DiVincenzo%27s_criteria"
-
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-hybrid_alg"
-literal "false"
-
-\end_inset
-
-Wikipedia: Hybrid quantum/classical algorithms (
-\begin_inset CommandInset href
-LatexCommand href
-target "https://en.wikipedia.org/wiki/Quantum_algorithm#Hybrid_quantum/classical_algorithms"
+target "https://arxiv.org/abs/quant-ph/0002077"
 
 \end_inset
 
@@ -7466,10 +7349,13 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Ansatz (
+Karbach, M.; Müller, G.
+ (September 10, 1998), Introduction to the Bethe ansatz I.
+ Computers in Physics 11 (1997), 36-43.
+ (
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Ansatz"
+target "http://www.phys.uri.edu/~gerhard/MSS/ms82.pdf"
 
 \end_inset
 
@@ -7484,10 +7370,18 @@ literal "false"
 
 \end_inset
 
-Wikipedia: Quantum optimization algorithms (
+Moll, Nikolaj; Barkoutsos, Panagiotis; Bishop, Lev S.; Chow, Jerry M.; Cross,
+ Andrew; Egger, Daniel J.; Filipp, Stefan; Fuhrer, Andreas; Gambetta, Jay
+ M.; Ganzhorn, Marc; Kandala, Abhinav; Mezzacapo, Antonio; Müller, Peter;
+ Riess, Walter; Salis, Gian; Smolin, John; Tavernelli, Ivano; Temme, Kristan
+ (2018).
+ "Quantum optimization using variational algorithms on near-term quantum
+ devices".
+ Quantum Science and Technology.
+ (
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Quantum_optimization_algorithms"
+target "https://arxiv.org/abs/1710.01022"
 
 \end_inset
 
