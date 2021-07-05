@@ -235,7 +235,7 @@ Fundamentos matemáticos y lógicos.
 En esta sección se presenta un conjunto de conceptos matemáticos y lógicos
  de una forma muy resumida.
  En caso de ser necesario un mayor grado de detalle, se recomienda consultar
- la bibligrafía referenciada en cada sección o subsección, ya que la mayoría
+ la bibliografía referenciada en cada sección o subsección, ya que la mayoría
  de ellos se han empleado únicamente como herramientas.
  La descripción detallada de cada una de esas herramientas incrementaría
  la densidad del trabajo y podría retirar la atención del tema fundamental
@@ -292,7 +292,7 @@ Máquina de Turing
 \end_inset
 
  como la primera computadora (u ordenador, como se suele denominar en España),
- diseñada para descrifrar las comunicaciones alemanas durante la Segunda
+ diseñada para descifrar las comunicaciones alemanas durante la Segunda
  Guerra Mundial (1939).
 \end_layout
 
@@ -586,7 +586,7 @@ Universalidad de la computación: con este término se hace referencia a que
 \end_layout
 
 \begin_layout Itemize
-Reversabilidad 
+Reversibilidad 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-reversabilidad"
@@ -839,7 +839,7 @@ Un concepto importante de que representan los qubits es el de la superposición
 \end_layout
 
 \begin_layout Standard
-Sólamente al medir dicho qubit 
+Solamente al medir dicho qubit 
 \begin_inset Formula $|\psi>$
 \end_inset
 
@@ -933,7 +933,7 @@ puertas cuánticas
 \end_inset
 
 .
- A continuación enunciaremos las puertas cuánticas básicas, asi como algunas
+ A continuación enunciaremos las puertas cuánticas básicas, así como algunas
  adicionales que se han empleado en los algoritmos de este trabajo:
 \end_layout
 
@@ -1096,7 +1096,7 @@ literal "false"
 , y de hecho tiene la misma explicación, al estar tratando también con una
  onda según el principio de dualidad onda-materia.
  Con este experimento de la doble puerta de Hadamard además se puede apreciar
- una característica adicional: la reversabilidad, de la que ya se había
+ una característica adicional: la reversibilidad, de la que ya se había
  hablado anteriormente.
  En la computación cuántica, es necesario que las puertas sean reversibles
  (como se explicará en la sección 
@@ -1130,7 +1130,7 @@ A modo de breve introducción respecto al entrelazamiento, decir que se trata
 \begin_layout Standard
 Se observa que la probabilidad de medir cada uno de los pares |00> y |11>
  es la misma y del 50%.
- Pero si se mide sólamente uno de los qubits, el primero, al conocer su
+ Pero si se mide solamente uno de los qubits, el primero, al conocer su
  valor, inmediatamente se sabe el valor del otro qubit (que en este caso,
  será idéntico).
 \end_layout
@@ -1248,7 +1248,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection
-Principios de la mecáncia cuántica
+Principios de la mecánica cuántica
 \end_layout
 
 \begin_layout Standard
@@ -2195,8 +2195,9 @@ Hardware cuántico: se trata del ordenador cuántico en sí.
  Existen diversas tecnologías empleadas en las diferentes partes del hardware
  cuántico, que no son parte de este estudio.
  Se pueden nombrar algunas de las mismas, tal y como serían la resonancia
- magnética nuclear, los iones atrapados, la superconducción, los centros
- de diamantes NV, la fotónica o los átomos neutros, entre otros.
+ magnética nuclear, los trampas de iones, la superconducción, los centros
+ NV en la estructura del diamante, la fotónica o los átomos neutros, entre
+ otros.
 \end_layout
 
 \begin_layout Enumerate
@@ -2425,7 +2426,7 @@ literal "false"
 
 \begin_layout Standard
 Análogamente, en los 60, Peter Shor desarrolló un estudio similar hasta
- dar con un método de correción cuántica de errores 
+ dar con un método de corrección cuántica de errores 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-shor_algorithm"
@@ -2630,7 +2631,7 @@ Puertas con varios qubits: si se dispone de un circuito con n qubits, la
  La resolución matemática mediante el segundo método, analizando el circuito
  como un conjunto, necesitará el empleo de productos tensoriales.
  En el caso de la computación cuántica será necesario preocuparse únicamente
- de los productos tensiorales en una (qubits) y dos (puertas cuánticas)
+ de los productos tensoriales en una (qubits) y dos (puertas cuánticas)
  dimensiones.
  Sin entrar en demasiados detalles matemáticos, se ha de recordar que el
  producto tensorial de dos matrices, A y B, con dimensiones (n x m) y (p
@@ -2640,7 +2641,7 @@ Puertas con varios qubits: si se dispone de un circuito con n qubits, la
  matrices asociadas).
  Además, en general el producto tensorial de dos matrices, tal y como ocurre
  con el producto de matrices, tampoco va a ser conmutativo.
- A la hora de resolver los circuitos, se subdividará el mismo en productos
+ A la hora de resolver los circuitos, se subdividirá el mismo en productos
  tensoriales y productos corrientes de matrices.
  Los qubits de entrada vendrán dados por el producto tensorial de cada uno
  de los qubits, y el circuito equivalente a las puertas cuánticas en cada
@@ -2830,7 +2831,7 @@ La interpretación de la respuesta es que la probabilidad está distribuida
  de los estados quinto y sexto, que corresponden a |100> y |101> (se empieza
  a contar por |000>).
  Sin darnos cuenta se ha pasado también de la medición de un único qubit,
- a la medición de varios simultánemente.
+ a la medición de varios simultáneamente.
 \end_layout
 
 \begin_layout Standard
@@ -3423,7 +3424,7 @@ Implementación práctica personal de un algoritmo ya existente (Deutsch-Josza).
 \begin_layout Itemize
 Implementación personal y ampliación de un algoritmo ya existente (Grover
  para 3 qubits, implementando la búsqueda de cualquier posible solución
- dentre de las 
+ dentro de las 
 \begin_inset Formula $2^{3}=8$
 \end_inset
 
@@ -5339,7 +5340,7 @@ El algoritmo fue propuesto por Lov Grover en 1996.
  curso básico de programación.
  Esto mismo se puede aplicar no sólo para búsquedas de una base de datos,
  sino para problemas de optimización (que también se basan en búsquedas
- de posibles soluciones), o estádisticas tales como la media, mediana, etc...
+ de posibles soluciones), o estadísticas tales como la media, mediana, etc...
  Resulta intuitivo pensar que la complejidad de un algoritmo clásico de
  búsqueda en una lista, buscando elemento por elemento de la misma, es de
  
@@ -5677,7 +5678,7 @@ literal "false"
 
 \begin_layout Standard
 La base es la misma que en el caso anterior.
- Se estudirán dos casos distintos, el primero de ellos con una única solución
+ Se estudiarán dos casos distintos, el primero de ellos con una única solución
  (un único elemento a buscar), y el segundo con dos elementos distintos
  de la lista a buscar.
 \end_layout
@@ -6381,7 +6382,7 @@ es a este ruido.
 Empleo de un conjunto universal de puertas cuánticas, tales como H, S, T,
  CNOT.
  El control de la respuesta de dichas puertas es complicado.
- En la teoría una puerta va a suponer una transaformación en la esfera de
+ En la teoría una puerta va a suponer una transformación en la esfera de
  Bloch a un punto en concreto (véase en la sección correspondiente en la
  introducción).
  Sin embargo, al tener dicha esfera un número infinito de puntos, las posibilida
@@ -6482,6 +6483,263 @@ n.
  optimización combinatoria.
  Por supuesto, el detalle de este tipo de algoritmos es muy extenso y queda
  fuera del estudio de este trabajo.
+\end_layout
+
+\begin_layout Subsection
+Implementación del hardware cuántico
+\end_layout
+
+\begin_layout Standard
+Aún siendo ésta parte del hardware cuántico la que tiene mayor relación
+ con la física de investigación (y con la mayoría del contenido estudiado
+ en el grado), gran parte de este trabajo de fin de grado se ha invertido
+ en el desarrollo en sí de los algoritmos, al despertar este tema especial
+ interés.
+ Por ello, y dada la relación fundamental con la física de este tema, se
+ va por lo menos a dar una mínima noción sobre los 
+\end_layout
+
+\begin_layout Standard
+Se podrían mencionar al menos cuatro plataformas para la implementación
+ física de los qubits, los cuales son la base para el desarrollo de algoritmos
+ cuánticos, tales y como los implementados en este trabajo.
+ El estudio de dichas tecnologías podría ser tan extenso como para alcanzar
+ un trabajo completo de similar extensión al presentado aquí, por lo que
+ sólo se hará un breve resumen, haciendo mayor hincapié en la primera de
+ las tecnologías presentadas.
+\end_layout
+
+\begin_layout Subsubsection
+Qubits superconductores 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-superconducting"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se trata de diseñar átomos artificiales empleando material superconductor,
+ el cual puede ser empleado como qubits.
+\end_layout
+
+\begin_layout Standard
+Cuando la electricidad se mueve a través de un material cualquiera, éste
+ experimenta una propiedad ya conocida que no es más que la resistencia
+ eléctrica.
+ Un material superconductor conduce la electricidad sin ninguna resistencia.
+ Esta propiedad se da en cierto materiales a unas temperaturas muy bajas.
+ Si se representara la resistividad en función de la temperatura, se observaría
+ un punto a una temperatura muy baja en la que la resistividad bajaría abruptame
+nte para un material superconductor.
+ Esto no ocurre en otros materiales.
+ Un ejemplo sería el aluminio (Al) a una temperatura cercana a 1,75 K.
+\end_layout
+
+\begin_layout Standard
+Empleando esta propiedad, se puede construir un circuito simple con una
+ inducción (bobina) y un condensador.
+ La primera almacena la energía magnética mientras el condensador almacena
+ la energía eléctrica.
+ Los niveles de energía del sistema resultante serán múltiplos de una cierta
+ cantidad 
+\begin_inset Formula $\hbar\omega_{r}$
+\end_inset
+
+, siendo 
+\begin_inset Formula $\omega_{r}$
+\end_inset
+
+ la frecuencia de resonancia dependiente de los valores de capacidad e inducción.
+ Por desgracia, el circuito resultante tendría más de dos niveles, que es
+ lo que se necesitaría para el tipo de qubit que se ha estado utilizando
+ durante todo el trabajo, con dos valores siendo los mismos |0> y |1>.
+ Este problema parece poder evitarse si se remplaza la inducción con una
+ unión de Josephson (Josephson junction), que no es más que dos superconductores
+ emparejados mediante una fina separación aislante.
+ La corriente atraviesa el aislante mediante el efecto túnel.
+ El resultado es que los múltiples niveles de energía anteriormente resultantes
+ quedan reducidos a dos (si el diseño es lo suficientemente bueno), obteniendo
+ nuestro sistema deseado de dos qubits.
+\end_layout
+
+\begin_layout Standard
+El resultado para esta tecnología es de tiempos de relajación y decoherencia
+ de centenares de microsegundos para procesadores cuánticos, aunque se han
+ observado valores para estos periodos tan altos como del orden de milisegundos.
+\end_layout
+
+\begin_layout Standard
+El tiempo medio de procesado de una puerta cuántica esta entre los diez
+ y los cien nanosegundos, y estas puertas se puede diseñar mediante pulsos
+ de microondas, empleando interacciones naturales del hardware.
+ La fidelidad de estas puertas está alrededor del 99,99% para puertas de
+ un único qubit, y mayor a 99,7% para puertas de dos qubits.
+\end_layout
+
+\begin_layout Standard
+Las ventajas de esta tecnología mediante superconductores son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+Se diseña en un chip
+\end_layout
+
+\begin_layout Itemize
+Es compatible con la tecnología de fabricación actual
+\end_layout
+
+\begin_layout Itemize
+Empleo de tecnología de microondas, que está muy desarrollada
+\end_layout
+
+\begin_layout Itemize
+Buenos valores de fidelidad de las puertas y lectura de los qubits
+\end_layout
+
+\begin_layout Standard
+Sin embargo, también tiene inconvenientes:
+\end_layout
+
+\begin_layout Itemize
+Pérdidas en el material de sustrato
+\end_layout
+
+\begin_layout Itemize
+Se requiere de temperaturas muy bajas, del orden de los mK
+\end_layout
+
+\begin_layout Itemize
+Se precisan grandes refrigeradores de disolución para grandes procesadores,
+ debido al punto anterior de las bajas temperaturas
+\end_layout
+
+\begin_layout Standard
+En la actualidad se está tratando de escalar este sistema a cada vez más
+ qubits, mejorar los tiempos de relajación y decoherencia (T1, T2) mediante
+ nuevos diseños y mejoras en los materiales, mejorar el diseño de las puertas
+ cuánticas y lograr la corrección de errores y tolerancia ante los mismos.
+\end_layout
+
+\begin_layout Subsubsection
+Centros de nitrógeno vacante (NV) en la red cristalina del diamante 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-nv_diamond,key-nv_diamond2,key-nv_diamond3"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un centro de nitrógeno vacante consiste dos posiciones adyacentes de la
+ red cristalina del diamante, cuando se sustituye uno de los átomos de carbono
+ por nitrógeno y el otro átomo queda vacante.
+ Es uno de los defectos cristalinos conocidos en la estructura del diamante,
+ que lo alejan de su estructura ideal.
+ Esto ha tenido diversas aplicaciones, pero para el tema de este estudio,
+ resulta interesante su uso como qubit.
+ Durante este siglo XXI ha habido diversos estudios físicos, teóricos y
+ experimentales en las que se han empleado las propiedades de la mecánica
+ cuántica de un centro nitrógeno vacante.
+ Al presentar su espín electrónico (S=1) un desdoblamiento a campo nulo
+ apreciable, este par 
+\begin_inset Formula $m_{s}=\pm1$
+\end_inset
+
+ se puede emplear como qubit, habiéndose llevado a cabo experimentos que
+ muestran el acoplamiento coherente entre dos de estos qubits.
+ Asimismo, se ha podido también observar dinámicas de espín coherente entre
+ el electrónico y el nuclear, 
+\begin_inset Formula $I=1/2$
+\end_inset
+
+, de algunos átomos del 
+\begin_inset Formula $^{13}C$
+\end_inset
+
+ cercanos al centro NV, que pueden considerarse como una memoria, ya que
+ está relativamente protegidos de la decoherencia.
+\end_layout
+
+\begin_layout Subsubsection
+Ordenadores cuánticos mediante trampas iónicas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-trapped_ions"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se trata de una aproximación propuesta para ordenadores cuánticos a gran
+ escala.
+ Los iones, o partículas atómicas cargadas, se pueden confinar o suspender
+ en el espacio libre empleando campos electromagnéticos.
+ Los qubits se almacenan en estados electrónicos estables de cada ion, y
+ la información cuántica se puede transferir a través de movimiento colectivo
+ cuantizado de los iones en una trampa compartida (interactuando a través
+ de la ley de Coulomb).
+ Aplicando lasers se induce el acoplamiento entre los estados de los qubits
+ (para operaciones de un único qubit) o acoplamiento entre los estados internos
+ de los qubits y los estados del movimiento externo (para qubits entrelazados).
+\end_layout
+
+\begin_layout Subsubsection
+Fotónica cuántica integrada 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-quantum_photonics"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se emplean circuitos fotónicos integrados para controlar estados cuánticos
+ fotónicos para aplicaciones en tecnologías cuánticas.
+ De esta manera, se proporciona una aproximación prometedor a la miniaturización
+ y escalado de los circuitos óptico-cuánticos.
+\end_layout
+
+\begin_layout Standard
+La fotónica cuántica es la ciencia que genera, manipula y detecta la luz
+ en regímenes donde es posible controlar coherentemente estados cuánticos
+ del campo luminoso (fotones).
+ Históricamente, la fotónica cuántica ha sido fundamental para explorar
+ fenómenos cuánticos.
+ Algunas de las ventajas de esta tecnología son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+Miniaturización: el tamaño, peso y consumo energético se reduce en órdenes
+ de magnitud debido a las menores dimensiones.
+\end_layout
+
+\begin_layout Itemize
+Estabilidad: los componentes miniaturizados y producidos mediante técnicas
+ litográficas avanzadas producen guías de onda y componentes que son inherenteme
+nte estables en la fase (coherencia) y no requieren alineamiento óptico.
+\end_layout
+
+\begin_layout Itemize
+Tamaño experimental: se puede integrar un gran número de componentes ópticos
+ en un dispositivo de apenas unos pocos centímetros cuadrados de superficie.
+\end_layout
+
+\begin_layout Itemize
+Manufacturabilidad: los dispositivos se pueden producir en masa con incremento
+ de coste muy pequeño.
 \end_layout
 
 \begin_layout Section
@@ -6665,7 +6923,9 @@ literal "false"
 
 \end_inset
 
-Moore's law: 
+Excerpts from A Conversation with Gordon Moore: Moore’s Law.
+ Intel Corporation, 306959-001US, March 2005.
+ 
 \begin_inset CommandInset href
 LatexCommand href
 target "http://large.stanford.edu/courses/2012/ph250/lee1/docs/Excepts_A_Conversation_with_Gordon_Moore.pdf"
@@ -6683,8 +6943,10 @@ literal "false"
 
 \end_inset
 
-Álgebra de Boole.
- Javier Borge Holthoefer (
+Álgebra de Boole: del silogismo aristotélico a los circuitos integrados.
+ Javier Borge Holthoefer.
+ A Parte Rei: revista de filosofía, ISSN 1137-8204, ISSN-e 2172-9069, Nº.
+ 25, 2003 (
 \begin_inset CommandInset href
 LatexCommand href
 target "http://serbal.pntic.mec.es/~cmunoz11/boole.pdf"
@@ -6703,7 +6965,9 @@ literal "false"
 \end_inset
 
 IT 1: Boolean Algebra and Digital Logic.
- Maecel Lesther (
+ Maecel Lesther.
+ 2017.
+ Self edited (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://maecellesther.wordpress.com/2017/10/02/it-1-boolean-algebra-and-digital-logic/"
@@ -6722,7 +6986,12 @@ literal "false"
 \end_inset
 
 RevComp - The Reversible and Quantum Computing Research Group Reversible/Adiabat
-ic Chips: Tick, FlatTop, XRAM, Pendulum 
+ic Chips: Tick, FlatTop, XRAM, Pendulum.
+ Michael P.
+ Frank.
+ 2003.
+ University of Florida.
+ 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.cise.ufl.edu/research/revcomp/"
@@ -6740,7 +7009,9 @@ literal "false"
 
 \end_inset
 
-Forbes: 27 Milestones In The History Of Quantum Computing 
+Forbes: 27 Milestones In The History Of Quantum Computing.
+ May 18, 2021.
+ Gil Press 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.forbes.com/sites/gilpress/2021/05/18/27-milestones-in-the-history-of-quantum-computing/"
@@ -6758,10 +7029,16 @@ literal "false"
 
 \end_inset
 
-Nuclear Magnetic Resonance Quantum Computing (NMRQC) 
+NMR Quantum Information Processing.
+ Chandrasekhar Ramanathan, Nicolas Boulant, Zhiying Chen, David G.
+ Cory, Isaac Chuang, and Matthias Steffen.
+ Quantum Information Processing, Vol.
+ 3, Nos.
+ 1–5, October 2004.
+ 
 \begin_inset CommandInset href
 LatexCommand href
-target "http://web.physics.ucsb.edu/~msteffen/nmrqc.htm"
+target "http://web.physics.ucsb.edu/~msteffen/papers/QIP_review_04.pdf"
 
 \end_inset
 
@@ -6776,7 +7053,8 @@ literal "false"
 
 \end_inset
 
-Why I Called It ‘Quantum Supremacy’ John Preskill, Quanta Magazine 
+Why I Called It ‘Quantum Supremacy’ John Preskill, Quanta Magazine.
+ October 2, 2019 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.quantamagazine.org/john-preskill-explains-quantum-supremacy-20191002/"
@@ -6789,13 +7067,13 @@ target "https://www.quantamagazine.org/john-preskill-explains-quantum-supremacy-
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-google_finantial-times"
-literal "false"
+key "key-1"
 
 \end_inset
 
 «Google claims to have reached quantum supremacy».
- Financial Times, Sept 2019 (
+ Financial Times, Sept 2019.
+ Madhumita Murgia and Richard Waters (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.ft.com/content/b9bb4e54-dbc1-11e9-8f9b-77216ebe1f17"
@@ -6840,7 +7118,9 @@ literal "false"
 
 "What the Google vs.
  IBM debate over quantum supremacy means | ZDNet".
- www.zdnet.com (
+ www.zdnet.com.
+ October 30, 2019.
+ Tiernan Ray (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.zdnet.com/google-amp/article/what-the-google-v-ibm-debate-over-quantum-means/"
@@ -6858,10 +7138,11 @@ literal "false"
 
 \end_inset
 
-"On "Quantum Supremacy"".
+"On 'Quantum Supremacy' ".
  IBM Research Blog.
  2019-10-22.
- Retrieved 2019-10-24 (
+ Retrieved 2019-10-24.
+ Edwin Pednault, John Gunnels & Dmitri Maslov, and Jay Gambetta(
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.ibm.com/blogs/research/2019/10/on-quantum-supremacy/"
@@ -6881,7 +7162,8 @@ literal "false"
 
 "Google Claims To Achieve Quantum Supremacy — IBM Pushes Back".
  NPR.org.
- Retrieved 2019-10-24 (
+ Retrieved 2019-10-24.
+ Paolo Zialcita (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.npr.org/2019/10/23/772710977/google-claims-to-achieve-quantum-supremacy-ibm-pushes-back"
@@ -6945,7 +7227,8 @@ literal "false"
 Wikipedia: Quantum logic gate (
 \begin_inset CommandInset href
 LatexCommand href
-target "https://en.wikipedia.org/wiki/Quantum_logic_gate#/media/File:Quantum_Logic_Gates.png"
+target "https://en.wikipedia.org/wiki/Quantum_logic_gate"
+literal "false"
 
 \end_inset
 
@@ -6978,8 +7261,8 @@ literal "false"
 
 \end_inset
 
-Óptica, Eugéne Hecht.
- 
+Óptica, Eugene Hecht, Adelphi University.
+ 5ª edición, Pearson, 2017.
 \end_layout
 
 \begin_layout Bibliography
@@ -6991,7 +7274,8 @@ literal "false"
 \end_inset
 
 Física cuántica.
- Sánchez del Río, Carlos
+ Sánchez del Río, Carlos.
+ 6ª edición, Pirámide, 2017.
 \end_layout
 
 \begin_layout Bibliography
@@ -7004,7 +7288,8 @@ literal "false"
 
 Física cuántica I.
  Alvarellos Bermejo, José Enrique; García González, Pablo; García Sanz,
- José Javier
+ José Javier.
+ UNED, 2017.
 \end_layout
 
 \begin_layout Bibliography
@@ -7016,7 +7301,10 @@ literal "false"
 \end_inset
 
 Stern and Gerlach: How a Bad Cigar Helped Reorient Atomic Physics.
- Bretislav Friedrich and Dudley Herschbach 
+ Bretislav Friedrich and Dudley Herschbach.
+ December 2003.
+ Physicstoday.org.
+ 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://web.archive.org/web/20070929091315/http://www.physicstoday.org/vol-56/iss-12/p53.html"
@@ -7035,6 +7323,8 @@ literal "false"
 \end_inset
 
 Quantum Computation and quantum information.
+ Cambridge University Press.
+ Second edition, 2010.
  Nielsen, Michael A.; Chuang, Isaac L.
 \end_layout
 
@@ -7051,6 +7341,7 @@ Physics 8.05 Sep 12, 2007.
  R.
  L.
  Jaffe.
+ MIT.
  
 \begin_inset CommandInset href
 LatexCommand href
@@ -7133,10 +7424,12 @@ literal "false"
 \end_inset
 
 Hamming, Richard Wesley (1950).
- "Error detecting and error correcting codes" (
+ "Error detecting and error correcting codes".
+ The Bell System Technical Journal (
 \begin_inset CommandInset href
 LatexCommand href
-target "https://calhoun.nps.edu/bitstream/handle/10945/46756/Hamming_1982.pdf;jsessionid=5E608A71A351333E226F6D34F4722BB0?sequence=1"
+target "https://calhoun.nps.edu/bitstream/handle/10945/46756/Hamming_1982.pdf"
+literal "false"
 
 \end_inset
 
@@ -7151,11 +7444,17 @@ literal "false"
 
 \end_inset
 
-Good Quantum Error-Correcting Codes Exist A.
+Good Quantum Error-Correcting Codes Exist.
+ A.
  R.
  Calderbank, Peter W.
  Shor.
- (
+ Phys.
+ Rev.
+ A, Vol.
+ 54, No.
+ 2, pp.
+ 1098-1106, 1996 (
 \begin_inset CommandInset href
 LatexCommand href
 target "https://arxiv.org/abs/quant-ph/9512032"
@@ -7175,7 +7474,8 @@ literal "false"
 
 Menezes, Alfred; van Oorschot, Paul C.; Vanstone, Scott A.
  (October 1996).
- Handbook of Applied Cryptography 
+ Handbook of Applied Cryptography.
+ CRC Press
 \end_layout
 
 \begin_layout Bibliography
@@ -7305,7 +7605,10 @@ literal "false"
 
 \end_inset
 
-Nature: Complete 3-Qubit Grover search on a programmable quantum computer
+Figgatt, C., Maslov, D., Landsman, K.A.
+ et al.
+ Complete 3-Qubit Grover search on a programmable quantum computer.
+ Nat Commun 8, 1918 (2017).
  (
 \begin_inset CommandInset href
 LatexCommand href
@@ -7352,6 +7655,7 @@ literal "false"
 Karbach, M.; Müller, G.
  (September 10, 1998), Introduction to the Bethe ansatz I.
  Computers in Physics 11 (1997), 36-43.
+ Bergische Universit ̈at Wuppertal, Fachbereich Physik, Germany.
  (
 \begin_inset CommandInset href
 LatexCommand href
@@ -7386,6 +7690,122 @@ target "https://arxiv.org/abs/1710.01022"
 \end_inset
 
 )
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-superconducting"
+literal "false"
+
+\end_inset
+
+Kelly, J.; Barends, R.; Fowler, A.
+ G.; Megrant, A.; Jeffrey, E.; White, T.
+ C.; Sank, D.; Mutus, J.
+ Y.; Campbell, B.; Chen, Yu; Chen, Z.; Chiaro, B.; Dunsworth, A.; Hoi, I.-C.; Neill,
+ C.; O’Malley, P.
+ J.
+ J.; Quintana, C.; Roushan, P.; Vainsencher, A.; Wenner, J.; Cleland, A.
+ N.; Martinis, John M.
+ (4 March 2015).
+ "State preservation by repetitive error detection in a superconducting
+ quantum circuit".
+ Nature.
+ 519 (7541): 66–69.
+ arXiv:1411.7403.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-nv_diamond"
+literal "false"
+
+\end_inset
+
+A.
+ Nizovtsev, S.
+ Kilin, F.
+ Jelezko, T.
+ Gaebal, I.
+ Popa, A.
+ Gruber y J.
+ Wrachtrup (2005 doi=10.1134/1.2034610).
+ «A Quantum Computer Based on NV Centers in Diamond: Optically Detected
+ Nutations of Single Electron and Nuclear Spins».
+ Optics and Spectroscopy 99.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-nv_diamond2"
+literal "false"
+
+\end_inset
+
+Gaebel, T.; Domhan M.; Popa, I; Wittmann, C.; Neumann, P.; Jelezko, F.; Rabeau,
+ J.R.; Stavrias, N.; Greentree, A.D.; Prawer, S.; Meijer, J.; Twamley, J.; Hemmer,
+ P.R.; Wrachtrup, J.
+ (2006).
+ «Room-temperature coherent coupling of single spins in diamond».
+ nature physics 2: 408-413
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-nv_diamond3"
+literal "false"
+
+\end_inset
+
+Childress, L.; Gurudev Dutt, M.V.; Taylor, J.M.; Zibrov, A.S.; Jelezko, F.; Wrachtrup,
+ J.; Hemmer, P.R.; Lukin, M.D.
+ (2006).
+ «Coherent dynamics of coupled electron and nuclear spins in diamond».
+ science: 281-285.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-trapped_ions"
+literal "false"
+
+\end_inset
+
+Wineland, D.
+ J.; Monroe, C.; Itano, W.
+ M.; Leibfried, D.; King, B.
+ E.; Meekhof, D.
+ M.
+ (1998).
+ "Experimental Issues in Coherent Quantum-State Manipulation of Trapped
+ Atomic Ions".
+ Journal of Research of the National Institute of Standards and Technology.
+ 103 (3): 259.
+ arXiv:quant-ph/9710025.
+ doi:10.6028/jres.103.019.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-quantum_photonics"
+literal "false"
+
+\end_inset
+
+Politi A, Matthews JC, Thompson MG, O'Brien JL (2009).
+ "Integrated Quantum Photonics".
+ IEEE Journal of Selected Topics in Quantum Electronics.
+ 15 (6): 1673–1684.
+ Bibcode:2009IJSTQ..15.1673P.
+ doi:10.1109/JSTQE.2009.2026060.
+ S2CID 12484151
 \end_layout
 
 \end_body
